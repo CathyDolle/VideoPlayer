@@ -157,7 +157,7 @@ body {
               position: relative;
               width: 100%;
               height: 3%;
-              background: #f1efff; }
+              background: white; }
               .deco_part2_bot_computer_screen_unlocked_main-bar_off {
                 position: absolute;
                 width: 5px;
@@ -167,7 +167,7 @@ body {
             .deco_part2_bot_computer_screen_unlocked_window {
               width: 100%;
               height: 97%;
-              background: #1a1a1a; }
+              background: white; }
               .deco_part2_bot_computer_screen_unlocked_window_nav {
                 display: flex;
                 align-items: center;
@@ -175,7 +175,7 @@ body {
                 height: 4%;
                 padding-left: 2px;
                 box-sizing: border-box;
-                background: #050505;
+                background: #e5e5e5;
                 border-radius: 3px 3px 0px 0px; }
                 .deco_part2_bot_computer_screen_unlocked_window_nav_close, .deco_part2_bot_computer_screen_unlocked_window_nav_mini, .deco_part2_bot_computer_screen_unlocked_window_nav_resize {
                   width: 4px;
@@ -259,13 +259,13 @@ body {
                     height: 33%; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
                       margin: 5px 0 0 0;
-                      color: white;
+                      color: black;
                       font-family: lato;
                       font-size: 10px;
                       letter-spacing: 1px; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
                       margin: 10px 0 10px 0;
-                      color: white;
+                      color: black;
                       font-family: 'Lato', sans-serif;
                       font-weight: 100;
                       font-size: 7px;

@@ -9,7 +9,7 @@
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#212222"/>
       <stop offset="0.495" stop-color="#0f0f39"/>
-      <stop offset="1" stop-color="#19497c"/>
+      <stop offset="1" stop-color="#111546"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="0.999" gradientUnits="objectBoundingBox">
       <stop offset="0.001" stop-color="#fff"/>

@@ -2,20 +2,26 @@
 COLORS
 */
 // dark mode
-$bg : rgb(40, 40, 61);
-$description : white;
-$link : rgb(255, 139, 230);
-$main-bar : rgb(241, 239, 255);
-$screen-window : rgb(26, 26, 26);
-$nav : rgb(5, 5, 5);
+// $bg : rgb(40, 40, 61);
+// $description : white;
+// $link : rgb(255, 139, 230);
+// $main-bar : rgb(241, 239, 255);
+// $screen-window : rgb(26, 26, 26);
+// $nav : rgb(5, 5, 5);
+// $desk : rgb(24, 24, 24);
+// $desk-shadow : rgb(22, 22, 22);
+// $handle : rgb(0, 0, 0);
 
 // light mode
-// $bg : #D2D2E0
-// $description : black;
-// $link : rgb(255, 139, 230);
-// $main-bar : rgb(255, 255, 255);
-// $screen-window : white;
-// $nav : #e5e5e5;
+$bg : #D2D2E0;
+$description : black;
+$link : rgb(255, 139, 230);
+$main-bar : rgb(255, 255, 255);
+$screen-window : white;
+$nav : #e5e5e5;
+$desk : white;
+$desk-shadow : #F5F5F5;
+$handle : black;
 
 
 // BODY
@@ -71,7 +77,7 @@ body {
         &_window {
             width: 400px;
             height: 500px;
-            background-image: url('../images/parisNight.svg');
+            background-image: url('../images/paris.svg');
             background-size: cover;
             border: solid 8px black;
         }
@@ -590,20 +596,20 @@ DESK
 
     // table, support
     &_table {
-        background: white;
+        background: $desk;
         width: var(--width_table);
         height: var(--height_table);
     }
 
     &_under-table {
         position: relative;
-        background: white;
+        background: $desk;
         width: calc(var(--width_table) - 10%);
         height: var(--height_table);
 
         &_shadow {
             position: absolute;
-            background: #F5F5F5;
+            background: $desk-shadow;
             width: 100%;
             height: 4px;
         }
@@ -620,20 +626,20 @@ DESK
             justify-content: center;
             align-items: center;
             position: relative;
-            background: white;
+            background: $desk;
             width: 250px;
             height: 100%;
 
             &_shadow {
                 position: absolute;
                 top: 0;
-                background: #F5F5F5;
+                background: $desk-shadow;
                 width: 100%;
                 height: 4px;
             }
 
             &_handle {
-                background: black;
+                background: $handle;
                 width: 12px;
                 height: 12px;
                 border-radius: 90px;
@@ -642,13 +648,13 @@ DESK
 
         &_foot {
             position: relative;
-            background: white;
+            background: $desk;
             width: 40px;
             height: 100%;
 
             &_shadow {
                 position: absolute;
-                background: #F5F5F5;
+                background: $desk-shadow;
                 width: 100%;
                 height: 4px;
             }
