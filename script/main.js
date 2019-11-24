@@ -304,5 +304,4 @@ windowDeco.addEventListener('click', () => {
  
         windowDeco.style.backgroundImage = "url('images/ParisNight.svg')"
         document.body.style.background = "rgb(88, 88, 110)"
-
 })
