@@ -57,8 +57,12 @@ body {
   width: 100%;
   height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.deco_part2_top_lamp img {
+  width: 80px;
 }
 .deco_part2_top_clock {
   position: relative;

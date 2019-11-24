@@ -296,36 +296,13 @@ videoElement.addEventListener('mouseout', () => {
     videoBoard.classList.add('hidden')
 })
 
-//SWITCH VIDEO 
+//DAY MODE
 
+const windowDeco = document.querySelector('.js-window')
 
+windowDeco.addEventListener('click', () => {
+ 
+        windowDeco.style.backgroundImage = "url('images/ParisNight.svg')"
+        document.body.style.background = "rgb(88, 88, 110)"
 
-
-
-
-// const video1 = document.querySelector('.js-video')
-// const video2 = document.querySelector('.js-video2')
-// const video3 = document.querySelector('.js-video3')
-// const video4 = document.querySelector('.js-video4')
-// nextVideo = document.querySelector('.js-next-video')
-
-
-// nextVideo.addEventListener('click', () => {
-//     video1.src = 'videos/ocean.mp4'
-
-// })
-
-// video2.addEventListener('click', () => {
-//     video1.src = 'videos/ocean.mp4'
-//     video1.poster = 'videos/ocean.png'
-// })
-
-// video3.addEventListener('click', () => {
-//     video1.src = 'videos/truedamage.mp4'
-//     video1.poster = 'videos/truedamage.png'
-// })
-
-// video4.addEventListener('click', () => {
-//     video1.src = 'videos/miso.mp4'
-//     video1.poster = 'videos/miso.png'
-// })
+})
