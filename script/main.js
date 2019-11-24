@@ -302,6 +302,6 @@ const windowDeco = document.querySelector('.js-window-deco')
 
 windowDeco.addEventListener('click', () => {
  
-        windowDeco.style.backgroundImage = "url('images/ParisNight.svg')"
+        windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
         document.body.style.background = "rgb(88, 88, 110)"
 })
