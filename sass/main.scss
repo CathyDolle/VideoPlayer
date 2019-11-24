@@ -2,26 +2,26 @@
 COLORS
 */
 // dark mode
-// $bg : rgb(40, 40, 61);
-// $description : white;
-// $link : rgb(255, 139, 230);
-// $main-bar : rgb(241, 239, 255);
-// $screen-window : rgb(26, 26, 26);
-// $nav : rgb(5, 5, 5);
-// $desk : rgb(24, 24, 24);
-// $desk-shadow : rgb(22, 22, 22);
-// $handle : rgb(0, 0, 0);
+$bg : rgb(88, 88, 110);
+$description : white;
+$link : rgb(255, 139, 230);
+$main-bar : rgb(241, 239, 255);
+$screen-window : rgb(26, 26, 26);
+$nav : rgb(5, 5, 5);
+$desk : rgb(33, 33, 47);
+$desk-shadow : rgb(37, 37, 51);
+$handle : rgb(0, 0, 0);
 
 // light mode
-$bg : #D2D2E0;
-$description : black;
-$link : rgb(255, 139, 230);
-$main-bar : rgb(255, 255, 255);
-$screen-window : white;
-$nav : #e5e5e5;
-$desk : white;
-$desk-shadow : #F5F5F5;
-$handle : black;
+// $bg : #D2D2E0;
+// $description : black;
+// $link : rgb(255, 139, 230);
+// $main-bar : rgb(255, 255, 255);
+// $screen-window : white;
+// $nav : #e5e5e5;
+// $desk : white;
+// $desk-shadow : #F5F5F5;
+// $handle : black;
 
 
 // BODY
@@ -77,7 +77,7 @@ body {
         &_window {
             width: 400px;
             height: 500px;
-            background-image: url('../images/paris.svg');
+            background-image: url('../images/parisNight.svg');
             background-size: cover;
             border: solid 8px black;
         }

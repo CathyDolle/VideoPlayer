@@ -1,5 +1,5 @@
 body {
-  background: #d2d2e0;
+  background: #58586e;
   margin: 0;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ body {
 .deco_part1_window {
   width: 400px;
   height: 500px;
-  background-image: url("../images/paris.svg");
+  background-image: url("../images/parisNight.svg");
   background-size: cover;
   border: solid 8px black;
 }
@@ -177,7 +177,7 @@ body {
   position: relative;
   width: 100%;
   height: 3%;
-  background: #fff;
+  background: #f1efff;
 }
 .deco_part2_bot_computer_screen_unlocked_main-bar_off {
   position: absolute;
@@ -189,7 +189,7 @@ body {
 .deco_part2_bot_computer_screen_unlocked_window {
   width: 100%;
   height: 97%;
-  background: #fff;
+  background: #1a1a1a;
 }
 .deco_part2_bot_computer_screen_unlocked_window_nav {
   display: flex;
@@ -198,7 +198,7 @@ body {
   height: 4%;
   padding-left: 2px;
   box-sizing: border-box;
-  background: #e5e5e5;
+  background: #050505;
   border-radius: 3px 3px 0px 0px;
 }
 .deco_part2_bot_computer_screen_unlocked_window_nav_close,
@@ -309,14 +309,14 @@ body {
 }
 .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
   margin: 5px 0 0 0;
-  color: #000;
+  color: #fff;
   font-family: lato;
   font-size: 10px;
   letter-spacing: 1px;
 }
 .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
   margin: 10px 0 10px 0;
-  color: #000;
+  color: #fff;
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-size: 7px;
@@ -446,19 +446,19 @@ body {
   flex-direction: column;
 }
 .desk_table {
-  background: #fff;
+  background: #21212f;
   width: var(--width_table);
   height: var(--height_table);
 }
 .desk_under-table {
   position: relative;
-  background: #fff;
+  background: #21212f;
   width: calc(var(--width_table) - 10%);
   height: var(--height_table);
 }
 .desk_under-table_shadow {
   position: absolute;
-  background: #f5f5f5;
+  background: #252533;
   width: 100%;
   height: 4px;
 }
@@ -473,14 +473,14 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: #fff;
+  background: #21212f;
   width: 250px;
   height: 100%;
 }
 .desk_bot_drawer_shadow {
   position: absolute;
   top: 0;
-  background: #f5f5f5;
+  background: #252533;
   width: 100%;
   height: 4px;
 }
@@ -492,13 +492,13 @@ body {
 }
 .desk_bot_foot {
   position: relative;
-  background: #fff;
+  background: #21212f;
   width: 40px;
   height: 100%;
 }
 .desk_bot_foot_shadow {
   position: absolute;
-  background: #f5f5f5;
+  background: #252533;
   width: 100%;
   height: 4px;
 }
