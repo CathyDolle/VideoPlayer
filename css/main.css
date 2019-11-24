@@ -262,20 +262,21 @@ body {
                       margin: 5px 0 0 0;
                       color: black;
                       font-family: lato;
+                      font-weight: 700;
                       font-size: 10px;
                       letter-spacing: 1px; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
                       margin: 10px 0 10px 0;
                       color: black;
                       font-family: 'Lato', sans-serif;
-                      font-weight: 100;
+                      font-weight: 300;
                       font-size: 7px;
                       line-height: 10px; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text a {
                       margin: 20px 0 0 0;
                       color: #ff8be6;
                       font-family: 'Lato', sans-serif;
-                      font-weight: 100;
+                      font-weight: 400;
                       font-size: 5px;
                       line-height: 10px;
                       text-decoration: none; }
