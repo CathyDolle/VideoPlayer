@@ -1,0 +1,272 @@
+body {
+  background: #d2d2e0;
+  margin: 0;
+}
+.room {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.deco {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 80%;
+}
+.deco_part1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+}
+.deco_part1_window {
+  width: 450px;
+  height: 550px;
+  background-image: url("../images/paris.svg");
+  background-size: cover;
+  border: solid 8px black;
+}
+.deco_part1_plant {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+.deco_part1_plant img {
+  width: 200px;
+}
+.deco_part2 {
+  width: 40%;
+  height: 100%;
+}
+.deco_part2_top {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deco_part2_top_clock {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 90%;
+  background: white;
+  border: solid 8px black;
+}
+.deco_part2_top_clock_hours,
+.deco_part2_top_clock_minutes,
+.deco_part2_top_clock_seconds {
+  position: absolute;
+  background: black;
+  top: 50%;
+  left: 50%;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.75, 1, 0.45, 2.35);
+}
+.deco_part2_top_clock_middle {
+  position: absolute;
+  top: calc(50% - 3px);
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  background: black;
+  z-index: 10;
+  border-radius: 50%;
+}
+.deco_part2_top_clock_hours_needle {
+  position: absolute;
+  width: 3px;
+  height: 35px;
+  background: #000;
+  bottom: -2px;
+  left: -2px;
+}
+.deco_part2_top_clock_minutes_needle {
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background: #99969b;
+  bottom: -1px;
+  left: -1px;
+}
+.deco_part2_top_clock_seconds_needle {
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  background: #ffa3fa;
+  bottom: -1px;
+  left: -1px;
+}
+.deco_part2_bot {
+  --width_computer: 450px;
+  --height_computer: 350px;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.deco_part2_bot_computer {
+  width: var(--width_computer);
+  height: var(--height_computer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.deco_part2_bot_computer_screen {
+  background: black;
+  width: 100%;
+  height: 78%;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deco_part2_bot_computer_screen_inside {
+  width: 97%;
+  height: 95%;
+  background: #1a1a1a;
+}
+.deco_part2_bot_computer_screen_inside:hover {
+  background-image: url("../images/kindred.jpg");
+  background-size: cover;
+}
+.deco_part2_bot_computer_bot {
+  width: 100%;
+  height: 10%;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.deco_part2_bot_computer_foot1 {
+  width: 20%;
+  height: 3%;
+  background: #cfcecd;
+}
+.deco_part2_bot_computer_foot2 {
+  width: 20%;
+  height: 3%;
+  background: #dbdad9;
+}
+.deco_part2_bot_computer_foot3 {
+  width: 25%;
+  height: 6%;
+  background: white;
+  clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%);
+}
+.deco_part3 {
+  width: 25%;
+  height: 100%;
+}
+.deco_part3_post {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+.deco_part3_post img {
+  width: 110px;
+}
+.deco_part3_post_idk {
+  margin-top: 110px;
+}
+.deco_part3_iphone {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+.deco_part3_iphone_screen {
+  width: 70px;
+  height: 140px;
+  background: black;
+  border: solid white 4px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.deco_part3_iphone_screen_camera {
+  width: 30px;
+  height: 5px;
+  background: white;
+  border-radius: 0px 0px 8px 8px;
+}
+.deco_part3_iphone_support {
+  width: 90px;
+  height: 8px;
+  background: #efefef;
+  border-radius: 0px 0px 5px 5px;
+}
+.desk {
+  --width_table: 100%;
+  --height_table: 18%;
+  --height_table-bot: 64%;
+  width: 90%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.desk_table {
+  background: white;
+  width: var(--width_table);
+  height: var(--height_table);
+}
+.desk_under-table {
+  position: relative;
+  background: white;
+  width: calc(var(--width_table) - 10%);
+  height: var(--height_table);
+}
+.desk_under-table_shadow {
+  position: absolute;
+  background: #f5f5f5;
+  width: 100%;
+  height: 4px;
+}
+.desk_bot {
+  width: calc(var(--width_table) - 13%);
+  height: var(--height_table-bot);
+  display: flex;
+  justify-content: space-between;
+}
+.desk_bot_drawer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: white;
+  width: 250px;
+  height: 100%;
+}
+.desk_bot_drawer_shadow {
+  position: absolute;
+  top: 0;
+  background: #f5f5f5;
+  width: 100%;
+  height: 4px;
+}
+.desk_bot_drawer_handle {
+  background: black;
+  width: 12px;
+  height: 12px;
+  border-radius: 90px;
+}
+.desk_bot_foot {
+  position: relative;
+  background: white;
+  width: 40px;
+  height: 100%;
+}
+.desk_bot_foot_shadow {
+  position: absolute;
+  background: #f5f5f5;
+  width: 100%;
+  height: 4px;
+}

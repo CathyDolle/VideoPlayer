@@ -1,0 +1,441 @@
+/*
+COLORS
+*/
+body {
+  background: #D2D2E0;
+  margin: 0;
+  overflow: hidden; }
+
+.room {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+
+.scale {
+  animation-name: scale;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+.hidden {
+  display: none !important; }
+
+.deco {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 80%; }
+  .deco_part1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%; }
+    .deco_part1_window {
+      width: 400px;
+      height: 500px;
+      background-image: url("../images/paris.svg");
+      background-size: cover;
+      border: solid 8px black; }
+    .deco_part1_plant {
+      position: absolute;
+      bottom: 0;
+      left: 100px; }
+      .deco_part1_plant img {
+        width: 200px; }
+  .deco_part2 {
+    width: 40%;
+    height: 100%; }
+    .deco_part2_top {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .deco_part2_top_clock {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        border-radius: 90%;
+        background: white;
+        border: solid 8px black; }
+        .deco_part2_top_clock_hours, .deco_part2_top_clock_minutes, .deco_part2_top_clock_seconds {
+          position: absolute;
+          background: black;
+          top: 50%;
+          left: 50%;
+          will-change: transform;
+          transition: transform 0.5s cubic-bezier(0.75, 1, 0.45, 2.35); }
+        .deco_part2_top_clock_middle {
+          position: absolute;
+          top: calc(50% - 3px);
+          left: calc(50% - 3px);
+          width: 6px;
+          height: 6px;
+          background: black;
+          z-index: 10;
+          border-radius: 50%; }
+        .deco_part2_top_clock_hours_needle {
+          position: absolute;
+          width: 3px;
+          height: 35px;
+          background: black;
+          bottom: -2px;
+          left: -2px; }
+        .deco_part2_top_clock_minutes_needle {
+          position: absolute;
+          width: 2px;
+          height: 50px;
+          background: #99969b;
+          bottom: -1px;
+          left: -1px; }
+        .deco_part2_top_clock_seconds_needle {
+          position: absolute;
+          width: 1px;
+          height: 60px;
+          background: #ffa3fa;
+          bottom: -1px;
+          left: -1px; }
+    .deco_part2_bot {
+      --width_computer: 450px;
+      --height_computer: 350px;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; }
+      .deco_part2_bot_computer {
+        width: var(--width_computer);
+        height: var(--height_computer);
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .deco_part2_bot_computer_screen {
+          background: black;
+          width: 100%;
+          height: 78%;
+          border-radius: 10px 10px 0px 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .deco_part2_bot_computer_screen_inside {
+            position: relative;
+            width: 97%;
+            height: 95%;
+            background: #1a1a1a;
+            will-change: background-image; }
+            .deco_part2_bot_computer_screen_inside_digital-clock {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              width: 140px;
+              height: 45px;
+              bottom: 14px;
+              right: 14px; }
+              .deco_part2_bot_computer_screen_inside_digital-clock h3 {
+                font-family: 'Lato', sans-serif;
+                color: white;
+                font-size: 30px;
+                letter-spacing: 6px; }
+          .deco_part2_bot_computer_screen_inside:hover {
+            animation-name: wallpaper-transition;
+            animation-duration: 1s;
+            background-image: url("../images/computer-wallpaper.jpg");
+            background-size: cover;
+            cursor: pointer; }
+          .deco_part2_bot_computer_screen_unlocked {
+            position: relative;
+            width: 97%;
+            height: 95%;
+            background: #1a1a1a; }
+            .deco_part2_bot_computer_screen_unlocked_main-bar {
+              position: relative;
+              width: 100%;
+              height: 3%;
+              background: #f1efff; }
+              .deco_part2_bot_computer_screen_unlocked_main-bar_off {
+                position: absolute;
+                width: 5px;
+                right: 3;
+                top: 1;
+                cursor: pointer; }
+            .deco_part2_bot_computer_screen_unlocked_window {
+              width: 100%;
+              height: 97%;
+              background: #1a1a1a; }
+              .deco_part2_bot_computer_screen_unlocked_window_nav {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 4%;
+                padding-left: 2px;
+                box-sizing: border-box;
+                background: #050505;
+                border-radius: 3px 3px 0px 0px; }
+                .deco_part2_bot_computer_screen_unlocked_window_nav_close, .deco_part2_bot_computer_screen_unlocked_window_nav_mini, .deco_part2_bot_computer_screen_unlocked_window_nav_resize {
+                  width: 4px;
+                  height: 4px;
+                  background: black;
+                  border-radius: 90px;
+                  margin: 0px 2px 0px 2px; }
+                .deco_part2_bot_computer_screen_unlocked_window_nav_close {
+                  background: #EF6B64; }
+                .deco_part2_bot_computer_screen_unlocked_window_nav_mini {
+                  background: #EAB700; }
+                .deco_part2_bot_computer_screen_unlocked_window_nav_resize {
+                  background: #3ADAA2; }
+              .deco_part2_bot_computer_screen_unlocked_window_site {
+                display: flex;
+                flex-direction: row;
+                height: 96%;
+                width: 100%; }
+                .deco_part2_bot_computer_screen_unlocked_window_site_main {
+                  padding: 3px;
+                  box-sizing: border-box;
+                  width: 70%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start; }
+                  .deco_part2_bot_computer_screen_unlocked_window_site_main_video {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    background: #050505; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_video video {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      -webkit-object-fit: cover;
+                      -moz-object-fit: cover; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar {
+                      position: absolute;
+                      bottom: 8%;
+                      width: 100%;
+                      height: 1px;
+                      background: rgba(255, 255, 255, 0.226);
+                      cursor: pointer; }
+                      .deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar_fill {
+                        position: absolute;
+                        bottom: 8%;
+                        width: 100%;
+                        height: 1px;
+                        left: 0;
+                        transform: scaleX(0);
+                        transform-origin: 0 0;
+                        will-change: transform;
+                        background: #ff00b3;
+                        cursor: pointer;
+                        z-index: 1; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands {
+                      bottom: 0;
+                      position: absolute;
+                      width: 100%;
+                      height: 8%;
+                      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.507)); }
+                      .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_play, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_pause, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_next, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_fullscreen, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_minimize, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_high-volume, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_muted-volume {
+                        left: 5;
+                        bottom: 3.5;
+                        position: absolute;
+                        width: 5px;
+                        cursor: pointer; }
+                      .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_next {
+                        left: 15px;
+                        bottom: 4; }
+                      .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_high-volume, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_muted-volume {
+                        left: 25px;
+                        width: 6px; }
+                      .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_fullscreen, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_minimize {
+                        left: 96.5%;
+                        width: 6px; }
+                  .deco_part2_bot_computer_screen_unlocked_window_site_main_text {
+                    margin-top: 3px;
+                    width: 100%;
+                    height: 33%; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
+                      margin: 5px 0 0 0;
+                      color: white;
+                      font-family: lato;
+                      font-size: 10px;
+                      letter-spacing: 1px; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
+                      margin: 10px 0 10px 0;
+                      color: white;
+                      font-family: 'Lato', sans-serif;
+                      font-weight: 100;
+                      font-size: 7px;
+                      line-height: 10px; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_main_text a {
+                      margin: 20px 0 0 0;
+                      color: #ff8be6;
+                      font-family: 'Lato', sans-serif;
+                      font-weight: 100;
+                      font-size: 5px;
+                      line-height: 10px;
+                      text-decoration: none; }
+                .deco_part2_bot_computer_screen_unlocked_window_site_list {
+                  width: 30%;
+                  height: 100%;
+                  padding: 0px 3px 3px 0px;
+                  box-sizing: border-box;
+                  display: flex;
+                  flex-direction: column; }
+                  .deco_part2_bot_computer_screen_unlocked_window_site_list_video {
+                    width: 100%;
+                    height: 32%;
+                    margin-top: 3px;
+                    background: white; }
+                    .deco_part2_bot_computer_screen_unlocked_window_site_list_video video {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      cursor: pointer; }
+        .deco_part2_bot_computer_bot {
+          width: 100%;
+          height: 10%;
+          background: white;
+          border-radius: 0px 0px 10px 10px; }
+        .deco_part2_bot_computer_foot1 {
+          width: 20%;
+          height: 3%;
+          background: #cfcecd; }
+        .deco_part2_bot_computer_foot2 {
+          width: 20%;
+          height: 3%;
+          background: #dbdad9; }
+        .deco_part2_bot_computer_foot3 {
+          width: 25%;
+          height: 6%;
+          background: white;
+          clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%); }
+  .deco_part3 {
+    width: 25%;
+    height: 100%; }
+    .deco_part3_post {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 70%; }
+      .deco_part3_post img {
+        width: 110px; }
+      .deco_part3_post_idk {
+        margin-top: 110px; }
+    .deco_part3_iphone {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 30%; }
+      .deco_part3_iphone_screen {
+        position: relative;
+        width: 75px;
+        height: 145px;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .deco_part3_iphone_screen_inside {
+          width: 65px;
+          height: 135px;
+          background: #1a1a1a;
+          border-radius: 6px;
+          will-change: background-image; }
+        .deco_part3_iphone_screen_inside:hover {
+          animation-name: wallpaper-transition;
+          animation-duration: 1s;
+          background-image: url("../images/iphone-wallpaper.png");
+          background-size: cover;
+          cursor: pointer; }
+        .deco_part3_iphone_screen_camera {
+          top: 5px;
+          position: absolute;
+          width: 30px;
+          height: 5px;
+          background: white;
+          border-radius: 0px 0px 8px 8px; }
+      .deco_part3_iphone_support {
+        width: 90px;
+        height: 8px;
+        background: #EFEFEF;
+        border-radius: 0px 0px 5px 5px; }
+
+/*
+DESK
+*/
+.desk {
+  --width_table: 100%;
+  --height_table: 18%;
+  --height_table-bot: 64%;
+  width: 90%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .desk_table {
+    background: white;
+    width: var(--width_table);
+    height: var(--height_table); }
+  .desk_under-table {
+    position: relative;
+    background: white;
+    width: calc(var(--width_table) - 10%);
+    height: var(--height_table); }
+    .desk_under-table_shadow {
+      position: absolute;
+      background: #F5F5F5;
+      width: 100%;
+      height: 4px; }
+  .desk_bot {
+    width: calc(var(--width_table) - 13%);
+    height: var(--height_table-bot);
+    display: flex;
+    justify-content: space-between; }
+    .desk_bot_drawer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background: white;
+      width: 250px;
+      height: 100%; }
+      .desk_bot_drawer_shadow {
+        position: absolute;
+        top: 0;
+        background: #F5F5F5;
+        width: 100%;
+        height: 4px; }
+      .desk_bot_drawer_handle {
+        background: black;
+        width: 12px;
+        height: 12px;
+        border-radius: 90px; }
+    .desk_bot_foot {
+      position: relative;
+      background: white;
+      width: 40px;
+      height: 100%; }
+      .desk_bot_foot_shadow {
+        position: absolute;
+        background: #F5F5F5;
+        width: 100%;
+        height: 4px; }
+
+@keyframes wallpaper-transition {
+  0% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+@keyframes scale {
+  0% {
+    transform: scale(1) translateX(0%) translateY(0%); }
+  100% {
+    transform: scale(2.3) translateX(-4.5%) translateY(-8%); } }
+
+/*# sourceMappingURL=main.css.map */

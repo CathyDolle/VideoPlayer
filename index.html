@@ -1,0 +1,251 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Player Flat</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png" />
+</head>
+
+<body>
+    <!-- ROOM -->
+    <main class="room">
+        <!-- DECO ON THE DESK/WALL -->
+        <section class="deco">
+            <!-- WINDOW + PLANT -->
+            <div class="deco_part1">
+                <div class="deco_part1_window"></div>
+                <div class="deco_part1_plant">
+                    <img src="images/plant.svg" alt="plant">
+                </div>
+            </div>
+            <!-- COMPUTER + CLOCK -->
+            <div class="deco_part2">
+                <!-- CLOCK -->
+                <div class="deco_part2_top">
+                    <!-- CLOCK FUNCTION -->
+                    <div class="deco_part2_top_clock js-clock">
+                        <div class="deco_part2_top_clock_middle"></div>
+                        <div class="deco_part2_top_clock_hours js-hours">
+                            <div class="deco_part2_top_clock_hours_needle"></div>
+                        </div>
+                        <div class="deco_part2_top_clock_minutes js-minutes">
+                            <div class="deco_part2_top_clock_minutes_needle"></div>
+                        </div>
+                        <div class="deco_part2_top_clock_seconds js-seconds">
+                            <div class="deco_part2_top_clock_seconds_needle"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- COMPUTER -->
+                <div class="deco_part2_bot js-bg-computer">
+                    <div class="deco_part2_bot_computer">
+                        <div class="deco_part2_bot_computer_screen">
+                            <!--INSIDE THE SCREEN-->
+                            <!-- LOCKED SCREEN -->
+                            <div class="deco_part2_bot_computer_screen_inside js-locked">
+                                <div class="deco_part2_bot_computer_screen_inside_digital-clock">
+                                    <h3 class="js-digital-clock hidden"></h3>
+                                </div>
+                            </div>
+                            <!-- UNLOCKED WINDOW -> video player -->
+                            <div class="deco_part2_bot_computer_screen_unlocked js-unlocked hidden">
+                                <!-- MAIN BAR USER -->
+                                <div class="deco_part2_bot_computer_screen_unlocked_main-bar js-main-bar js-unlocked">
+                                    <!-- OFF SCREEN -->
+                                    <img src="images/off.svg"
+                                        class="deco_part2_bot_computer_screen_unlocked_main-bar_off js-off-screen">
+
+                                </div>
+                                <!-- WINDOW -->
+                                <div class="deco_part2_bot_computer_screen_unlocked_window js-window js-unlocked">
+                                    <!--  NAV -->
+                                    <div class="deco_part2_bot_computer_screen_unlocked_window_nav js-nav js-unlocked">
+                                        <div
+                                            class="deco_part2_bot_computer_screen_unlocked_window_nav_close js-unlocked">
+                                        </div>
+                                        <div
+                                            class="deco_part2_bot_computer_screen_unlocked_window_nav_mini js-unlocked">
+                                        </div>
+                                        <div
+                                            class="deco_part2_bot_computer_screen_unlocked_window_nav_resize js-unlocked">
+                                        </div>
+                                    </div>
+                                    <!-- VIDEO PLAYER -->
+                                    <div
+                                        class="deco_part2_bot_computer_screen_unlocked_window_site js-window-site js-unlocked">
+                                        <div
+                                            class="deco_part2_bot_computer_screen_unlocked_window_site_main js-video-container js-unlocked js-player">
+                                            <!-- VIDEO MAIN -->
+                                            <div
+                                                class="deco_part2_bot_computer_screen_unlocked_window_site_main_video js-unlocked">
+                                                <!-- VIDEO MAIN SRC -->
+                                                <video class="js-unlocked js-video" src="videos/miso.mp4"></video>
+                                                <div class="js-video-board">
+                                                    <!-- SEEK BAR -->
+                                                    <div
+                                                        class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar js-seek-bar js-unlocked">
+                                                        <!-- SEEK BAR FILL -->
+                                                        <div
+                                                            class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar_fill js-seek-bar-fill js-unlocked">
+                                                        </div>
+                                                    </div>
+                                                    <!-- VIDEO COMMANDS -->
+                                                    <div
+                                                        class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands js-bg-commands js-unlocked">
+                                                    </div>
+                                                    <!-- PLAY -->
+                                                    <img src="images/play.svg"
+                                                        class="js-play js-unlocked deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_play"
+                                                        alt="play">
+                                                    <!-- PAUSE -->
+                                                    <img src="images/pause.svg"
+                                                        class="js-pause hidden js-unlocked deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_pause"
+                                                        alt="pause">
+                                                    <!-- NEXT -->
+                                                    <img src="images/next.svg"
+                                                        class="js-next deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_next js-next-video js-unlocked"
+                                                        alt="next">
+                                                    <!-- VOLUME HIGH -->
+                                                    <img src="images/high-volume.svg"
+                                                        class="js-next deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_high-volume js-high-volume js-unlocked"
+                                                        alt="high-volume">
+                                                    <!-- MUTED VOLUME -->
+                                                    <img src="images/muted-volume.svg"
+                                                        class="js-next deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_muted-volume hidden js-muted-volume js-unlocked"
+                                                        alt="muted-volume">
+                                                    <!-- FULLSCREEN -->
+                                                    <img src="images/fullscreen.svg"
+                                                        class="js-fullscreen 
+                                                        deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_fullscreen js-unlocked"
+                                                        alt="fullscreen">
+                                                    <!-- MINIMIZE -->
+                                                    <img src="images/minimize.svg"
+                                                        class="js-minimize 
+                                                           deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_minimize hidden js-unlocked"
+                                                        alt="minimize">
+                                                </div>
+                                            </div>
+                                            <div class="js-infos-video">
+                                                <!-- VIDEO TEXT INFOS VIDEO 1 -->
+                                                <div
+                                                    class="deco_part2_bot_computer_screen_unlocked_window_site_main_text js-infos-video1 js-unlocked">
+                                                    <h1 class="js-unlocked">MISO - Take Me</h1>
+                                                    <p class="js-unlocked">Written, produced by MISO 💕
+                                                        <br>
+                                                        Mixed by MISO & Joppe
+                                                        <br>
+                                                        Mastered by Joppe</p>
+                                                    <a class="js-unlocked"
+                                                        href="https://www.youtube.com/watch?v=pxAiwZlzSD8"
+                                                        target="blank_">Listen on youtube</a>
+                                                </div>
+                                                <!-- TEXT INFOS VIDEO 2 -->
+                                                <div
+                                                    class="deco_part2_bot_computer_screen_unlocked_window_site_main_text  js-infos-video2 hidden js-unlocked">
+                                                    <h1 class="js-unlocked">Phoenix - Worlds 2019</h1>
+                                                    <p class="js-unlocked">Written, produced by League of legends 💕
+                                                        <br>
+
+                                                        Overcome your doubts, face the future.
+                                                        <br>With : Cailin Russo and Chrissy Costanza<br><br>
+                                                        <a class="js-unlocked"
+                                                            href="https://www.youtube.com/watch?v=i1IKnWDecwA"
+                                                            target="blank_">Listen on youtube</a>
+                                                </div>
+                                                <!-- TEXT INFOS VIDEO 3 -->
+                                                <div
+                                                    class="deco_part2_bot_computer_screen_unlocked_window_site_main_text js-infos-video3 hidden js-unlocked">
+                                                    <h1 class="js-unlocked">True Damage - GIANTS</h1>
+                                                    <p class="js-unlocked">Written, produced by League of legends 💕
+                                                        <br>
+
+                                                        We're wide awake now. Listen to "GIANTS", the first True Damage
+                                                        single, discovered at the 2019 Worlds.
+                                                        <br><br>
+                                                        <a class="js-unlocked"
+                                                            href="https://www.youtube.com/watch?v=sVZpHFXcFJw"
+                                                            target="blank_">Listen on youtube</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- VIDEO PLAYER PLAYLSIT -->
+                                        <div
+                                            class="deco_part2_bot_computer_screen_unlocked_window_site_list js-video-playlist js-unlocked">
+                                            <div
+                                                class="deco_part2_bot_computer_screen_unlocked_window_site_list_video js-unlocked">
+                                                <video class="js-unlocked js-video2" poster="videos/phoenix.jpg"
+                                                    src="videos/phoenix.mp4"></video>
+                                            </div>
+                                            <div
+                                                class="deco_part2_bot_computer_screen_unlocked_window_site_list_video js-unlocked">
+                                                <video class="js-unlocked js-video3" poster="videos/truedamage.png"
+                                                    src="videos/truedamage.mp4"></video>
+                                            </div>
+                                            <div
+                                                class="deco_part2_bot_computer_screen_unlocked_window_site_list_video js-unlocked">
+                                                <video class="js-unlocked js-video4" poster="videos/miso.png"
+                                                    src="videos/miso.mp4"></video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- COMPUTER STYLE FOOT -->
+                        <div class="deco_part2_bot_computer_bot">
+
+                        </div>
+                        <div class="deco_part2_bot_computer_foot1">
+                        </div>
+                        <div class="deco_part2_bot_computer_foot2">
+                        </div>
+                        <div class="deco_part2_bot_computer_foot3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- POST IT + IPHONE -->
+            <div class="deco_part3">
+                <!-- POST IT -->
+                <div class="deco_part3_post">
+                    <img src="images/post-logo.svg" alt="post-logo">
+                    <img class="deco_part3_post_idk" src="images/post-idk.svg" alt="post-idk">
+                </div>
+                <!-- IPHONE -->
+                <div class="deco_part3_iphone">
+                    <div class="deco_part3_iphone_screen">
+                        <div class="deco_part3_iphone_screen_inside">
+
+                        </div>
+                        <div class="deco_part3_iphone_screen_camera"></div>
+                    </div>
+                    <div class="deco_part3_iphone_support"></div>
+                </div>
+            </div>
+        </section>
+        <!-- DESK SUPPORT -->
+        <section class="desk">
+            <div class="desk_table"></div>
+            <div class="desk_under-table">
+                <div class="desk_under-table_shadow"></div>
+            </div>
+            <div class="desk_bot">
+                <div class="desk_bot_drawer">
+                    <div class="desk_bot_drawer_shadow"></div>
+                    <div class="desk_bot_drawer_handle"></div>
+                </div>
+                <div class="desk_bot_foot">
+                    <div class="desk_bot_foot_shadow"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/gsap.min.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
+</html>

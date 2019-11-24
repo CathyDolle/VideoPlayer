@@ -1,0 +1,679 @@
+/*
+COLORS
+*/
+// dark mode
+$bg : #D2D2E0;
+$description : white;
+$link : rgb(255, 139, 230);
+$main-bar : rgb(241, 239, 255);
+$screen-window : rgb(26, 26, 26);
+$nav : rgb(5, 5, 5);
+
+// light mode
+// $bg : #D2D2E0
+// $description : black;
+// $link : rgb(255, 139, 230);
+// $main-bar : rgb(255, 255, 255);
+// $screen-window : white;
+// $nav : #e5e5e5;
+
+
+// BODY
+body {
+    background: $bg;
+    margin: 0;
+    overflow: hidden;
+}
+
+// ROOM 
+.room {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+//Animations
+.scale {
+    animation-name: scale;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+// Hidden
+
+.hidden {
+    display: none !important;
+}
+
+// DECORATIONS ON DESK + WALL
+
+.deco {
+    // background: blue;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 80%;
+
+    // WINDOW + PLANT
+    &_part1 {
+        position: relative;
+        // background: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        height: 100%;
+
+        &_window {
+            width: 400px;
+            height: 500px;
+            background-image: url('../images/paris.svg');
+            background-size: cover;
+            border: solid 8px black;
+        }
+
+        &_plant {
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+
+            & img {
+                width: 200px;
+            }
+        }
+    }
+
+    &_part2 {
+        // background: blue;
+        width: 40%;
+        // width: 100%;
+        height: 100%;
+
+        &_top {
+            width: 100%;
+            height: 40%;
+            // background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            //CLOCK
+            &_clock {
+                position: relative;
+                width: 140px;
+                height: 140px;
+                border-radius: 90%;
+                background: white;
+                border: solid 8px black;
+
+                &_hours,
+                &_minutes,
+                &_seconds {
+                    position: absolute;
+                    background: black;
+                    top: 50%;
+                    left: 50%;
+                    will-change: transform;
+                    transition: transform 0.5s cubic-bezier(0.75, 1, 0.45, 2.35);
+                }
+
+                &_middle {
+                    position: absolute;
+                    top: calc(50% - 3px);
+                    left: calc(50% - 3px);
+                    width: 6px;
+                    height: 6px;
+                    background: black;
+                    z-index: 10;
+                    border-radius: 50%;
+                }
+
+                &_hours {
+                    &_needle {
+                        position: absolute;
+                        width: 3px;
+                        height: 35px;
+                        background: rgb(0, 0, 0);
+                        bottom: -2px;
+                        left: -2px;
+                    }
+                }
+
+                &_minutes {
+                    &_needle {
+                        position: absolute;
+                        width: 2px;
+                        height: 50px;
+                        background: rgb(153, 150, 155);
+                        bottom: -1px;
+                        left: -1px;
+                    }
+                }
+
+                &_seconds {
+                    &_needle {
+                        position: absolute;
+                        width: 1px;
+                        height: 60px;
+                        background: rgb(255, 163, 250);
+                        bottom: -1px;
+                        left: -1px;
+                    }
+                }
+            }
+        }
+
+        &_bot {
+            --width_computer: 450px;
+            --height_computer: 350px;
+            // --width_computer: 850px;
+            // --height_computer: 650px;
+            width: 100%;
+            height: 60%;
+            // background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            &_computer {
+                width: var(--width_computer);
+                height: var(--height_computer);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // background: white;
+
+                &_screen {
+                    background: black;
+                    width: 100%;
+                    height: 78%;
+                    border-radius: 10px 10px 0px 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    //VIDEO PLAYER 
+                    &_inside {
+                        position: relative;
+                        width: 97%;
+                        height: 95%;
+                        background: rgb(26, 26, 26);
+                        will-change: background-image;
+
+                        &_digital-clock {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: absolute;
+                            width: 140px;
+                            // background: red;
+                            height: 45px;
+                            bottom: 14px;
+                            right: 14px;
+
+                            & h3 {
+                                font-family: 'Lato', sans-serif;
+                                color: white;
+                                font-size: 30px;
+                                letter-spacing: 6px;
+                            }
+                        }
+
+                        // PLAYER VIDEO UNLOCKED SCREEN
+                    }
+
+                    &_inside:hover {
+                        animation-name: wallpaper-transition;
+                        animation-duration: 1s;
+                        background-image: url('../images/computer-wallpaper.jpg');
+                        background-size: cover;
+                        cursor: pointer;
+                    }
+
+                    &_unlocked {
+                        position: relative;
+                        width: 97%;
+                        height: 95%;
+                        background: rgb(26, 26, 26);
+
+                        &_main-bar {
+                            position: relative;
+                            width: 100%;
+                            height: 3%;
+                            background:$main-bar;
+                            &_off{
+                                position: absolute;
+                                width: 5px;
+                                right: 3;
+                                top: 1;
+                                cursor: pointer;
+                            }
+                        }
+                        // Window
+
+                        &_window {
+                            width: 100%;
+                            height: 97%;
+                            background: $screen-window;
+
+                            // nav
+                      
+                            &_nav {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                height: 4%;
+                                padding-left: 2px;
+                                box-sizing: border-box;
+                                background: $nav;
+                                border-radius: 3px 3px 0px 0px;
+
+                                &_close,
+                                &_mini,
+                                &_resize {
+                                    width: 4px;
+                                    height: 4px;
+                                    background: black;
+                                    border-radius: 90px;
+                                    margin: 0px 2px 0px 2px;
+                                }
+
+                                &_close {
+                                    background: #EF6B64;
+                                }
+
+                                &_mini {
+                                    background: #EAB700;
+                                }
+
+                                &_resize {
+                                    background: #3ADAA2;
+                                }
+                            }
+
+                            // inside the website
+
+                            &_site {
+                                display: flex;
+                                flex-direction: row;
+                                height: 96%;
+                                width: 100%;
+
+                                &_main {
+
+                                    padding: 3px;
+                                    box-sizing: border-box;
+                                    width: 70%;
+                                    height: 100%;
+                                    // background:pink;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+
+                                    // main video
+
+                                    &_video {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100%;
+                                        // overflow: hidden;
+                                        background: rgb(5, 5, 5);
+
+                                        & video {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            -webkit-object-fit: cover;
+                                            -moz-object-fit: cover;
+                                        }
+
+                                        // seek bar
+                                        &_seek-bar {
+                                            position: absolute;
+                                            bottom: 8%;
+                                            width: 100%;
+                                            height: 1px;
+                                            background: rgba(255, 255, 255, 0.226);
+                                            cursor: pointer;
+
+                                            // seek bar fill
+
+                                            &_fill {
+                                                position: absolute;
+                                                bottom: 8%;
+                                                width: 100%;
+                                                height: 1px;
+                                                left: 0;
+                                                transform: scaleX(0);
+                                                transform-origin: 0 0;
+                                                will-change: transform;
+                                                background: rgb(255, 0, 179);
+                                                cursor: pointer;
+                                                z-index: 1;
+                                            }
+                                        }
+
+                                        // video commands
+                                        &_commands {
+                                            bottom: 0;
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 8%;
+                                            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.507));
+                                            &_play,
+                                            &_pause,
+                                            &_next,
+                                            &_fullscreen,
+                                            &_minimize,
+                                            &_high-volume,
+                                            &_muted-volume {
+                                                left: 5;
+                                                bottom: 3.5;
+                                                position: absolute;
+                                                width: 5px;
+                                                cursor: pointer;
+                                            }
+                                            &_next{
+                                            
+                                                left: 15px;
+                                                bottom: 4;
+                                            }
+                                            &_high-volume,
+                                            &_muted-volume{
+                                                left: 25px;
+                                                width: 6px;
+                                         
+                                
+                                            }
+                                            &_fullscreen,
+                                            &_minimize{
+                                                left: 96.5%;
+                                                width: 6px;
+                                            }
+                                        }
+
+       
+                                       
+                                    }
+
+                                    // main video description
+                                    &_text {          
+                                        margin-top: 3px;
+                                        width: 100%;
+                                        height: 33%;
+
+                                        & h1 {
+                                            margin: 5px 0 0 0;
+                                            color: $description ;
+                                            font-family: lato;
+                                            font-size: 10px;
+                                            letter-spacing: 1px;
+
+                                        }
+
+                                        & p {
+                                            margin: 10px 0 10px 0;
+                                            color: $description ;
+                                            font-family: 'Lato', sans-serif;
+                                            font-weight: 100;
+                                            font-size: 7px;
+                                            line-height: 10px;
+
+                                        }
+
+                                        & a {
+                                            margin: 20px 0 0 0;
+                                            color: $link;
+                                            font-family: 'Lato', sans-serif;
+                                            font-weight: 100;
+                                            font-size: 5px;
+                                            line-height: 10px;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                                // playlist
+
+                                &_list {
+                                    width: 30%;
+                                    height: 100%;
+                                    padding: 0px 3px 3px 0px;
+                                    box-sizing: border-box;
+                                    // background: blue;
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    // align-items: center;
+                                    &_video {
+                                        width: 100%;
+                                        height: 32%;
+                                        margin-top: 3px;
+                                        background: white;
+
+                                        & video {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &_bot {
+                    width: 100%;
+                    height: 10%;
+                    background: white;
+                    border-radius: 0px 0px 10px 10px;
+                }
+
+                &_foot1 {
+                    width: 20%;
+                    height: 3%;
+                    background: rgb(207, 206, 205);
+                }
+
+                &_foot2 {
+                    width: 20%;
+                    height: 3%;
+                    background: rgb(219, 218, 217);
+                }
+
+                &_foot3 {
+                    width: 25%;
+                    height: 6%;
+                    background: white;
+                    clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%);
+                }
+            }
+        }
+    }
+
+    &_part3 {
+        // background: rgb(170, 152, 170);
+        width: 25%;
+        height: 100%;
+
+        //post-it
+
+        &_post {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 70%;
+
+            // background: white;
+            & img {
+                width: 110px;
+            }
+
+            &_idk {
+                margin-top: 110px;
+            }
+        }
+
+        &_iphone {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+
+            // background: red;
+            &_screen {
+                position: relative;
+                width: 75px;
+                height: 145px;
+                background: white;
+                // border: solid white 4px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &_inside {
+                    width: 65px;
+                    height: 135px;
+                    background: rgb(26, 26, 26);
+                    border-radius: 6px;
+                    will-change: background-image;
+                }
+
+                &_inside:hover {
+                    animation-name: wallpaper-transition;
+                    animation-duration: 1s;
+                    background-image: url('../images/iphone-wallpaper.png');
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                &_camera {
+                    top: 5px;
+                    position: absolute;
+                    width: 30px;
+                    height: 5px;
+                    background: white;
+                    border-radius: 0px 0px 8px 8px;
+                }
+            }
+
+            &_support {
+                width: 90px;
+                height: 8px;
+                background: #EFEFEF;
+                border-radius: 0px 0px 5px 5px;
+            }
+        }
+    }
+}
+
+/*
+DESK
+*/
+.desk {
+    --width_table: 100%;
+    --height_table: 18%;
+    --height_table-bot: 64%;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    // table, support
+    &_table {
+        background: white;
+        width: var(--width_table);
+        height: var(--height_table);
+    }
+
+    &_under-table {
+        position: relative;
+        background: white;
+        width: calc(var(--width_table) - 10%);
+        height: var(--height_table);
+
+        &_shadow {
+            position: absolute;
+            background: #F5F5F5;
+            width: 100%;
+            height: 4px;
+        }
+    }
+
+    &_bot {
+        width: calc(var(--width_table) - 13%);
+        height: var(--height_table-bot);
+        display: flex;
+        justify-content: space-between;
+
+        &_drawer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: white;
+            width: 250px;
+            height: 100%;
+
+            &_shadow {
+                position: absolute;
+                top: 0;
+                background: #F5F5F5;
+                width: 100%;
+                height: 4px;
+            }
+
+            &_handle {
+                background: black;
+                width: 12px;
+                height: 12px;
+                border-radius: 90px;
+            }
+        }
+
+        &_foot {
+            position: relative;
+            background: white;
+            width: 40px;
+            height: 100%;
+
+            &_shadow {
+                position: absolute;
+                background: #F5F5F5;
+                width: 100%;
+                height: 4px;
+            }
+        }
+    }
+}
+
+//animations 
+
+@keyframes wallpaper-transition {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1) translateX(0%) translateY(0%);
+    }
+
+    100% {
+        transform: scale(2.3) translateX(-4.5%) translateY(-8%);
+    }
+}
