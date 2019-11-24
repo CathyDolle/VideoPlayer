@@ -2,7 +2,7 @@
 COLORS
 */
 // dark mode
-$bg : #D2D2E0;
+$bg : rgb(40, 40, 61);
 $description : white;
 $link : rgb(255, 139, 230);
 $main-bar : rgb(241, 239, 255);
@@ -71,7 +71,7 @@ body {
         &_window {
             width: 400px;
             height: 500px;
-            background-image: url('../images/paris.svg');
+            background-image: url('../images/parisNight.svg');
             background-size: cover;
             border: solid 8px black;
         }
