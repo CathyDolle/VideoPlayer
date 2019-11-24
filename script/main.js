@@ -298,7 +298,7 @@ videoElement.addEventListener('mouseout', () => {
 
 //DAY MODE
 
-const windowDeco = document.querySelector('.js-window')
+const windowDeco = document.querySelector('.js-window-deco')
 
 windowDeco.addEventListener('click', () => {
  
