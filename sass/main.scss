@@ -414,7 +414,8 @@ body {
                                         height: 33%;
 
                                         & h1 {
-                                            margin: 5px 0 0 0;
+                                            margin:0;
+                                            padding-top: 7px;
                                             color: $description ;
                                             font-family: lato;
                                             font-weight: 700;
@@ -424,7 +425,7 @@ body {
                                         }
 
                                         & p {
-                                            margin: 10px 0 10px 0;
+                                            margin: 8px 0 8px 0;
                                             color: $description ;
                                             font-family: 'Lato', sans-serif;
                                             font-weight: 300;

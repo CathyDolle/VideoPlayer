@@ -259,14 +259,15 @@ body {
                     width: 100%;
                     height: 33%; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
-                      margin: 5px 0 0 0;
+                      margin: 0;
+                      padding-top: 7px;
                       color: white;
                       font-family: lato;
                       font-weight: 700;
                       font-size: 10px;
                       letter-spacing: 1px; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
-                      margin: 10px 0 10px 0;
+                      margin: 8px 0 8px 0;
                       color: white;
                       font-family: 'Lato', sans-serif;
                       font-weight: 300;
