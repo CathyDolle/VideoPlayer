@@ -91,12 +91,14 @@ body {
             background-size: cover;
             border: solid 6px black;
             cursor: pointer;
+            z-index : 3;
         }
 
         &_plant {
             position: absolute;
             bottom: 0;
             left: 100px;
+            z-index : 3;
 
             & img {
                 width: 200px;
@@ -202,7 +204,6 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                z-index: 3;
                 // background: white;
 
                 &_screen {
@@ -213,6 +214,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    z-index: 3;
 
                     //VIDEO PLAYER 
                     &_inside {
@@ -263,13 +265,16 @@ body {
                             width: 100%;
                             height: 3%;
                             background: $main-bar;
+                            z-index: 1;
 
                             &_off {
                                 position: absolute;
                                 width: 5px;
                                 right: 3;
                                 top: 1;
+                                z-index: 1;
                                 cursor: pointer;
+                            
                             }
                         }
 
@@ -342,6 +347,7 @@ body {
                                         height: 100%;
                                         // overflow: hidden;
                                         background: rgb(5, 5, 5);
+                                        cursor: pointer;
 
                                         & video {
                                             width: 100%;

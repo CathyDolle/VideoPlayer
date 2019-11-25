@@ -44,6 +44,13 @@ const digitalTick = () => {
 }
 window.setInterval(digitalTick, 1000)
 
+// OFF SCREEN
+
+const offScreen = document.querySelector('.js-off-screen')
+const videoElement = document.querySelector('.js-video')
+const pauseElement = document.querySelector('.js-pause')
+const playElement = document.querySelector('.js-play')
+
 /*
 SCALE COMPUTER SCREEN & IPHONE SCREEN
 */
@@ -75,13 +82,27 @@ room.addEventListener('click', (e) => {
     // scale computer screen
     if (e.target.classList.contains("js-room-scale")) {
         room.style.transform = ('scale(1)')
-    } 
+    }
     // scale iphone screen
     else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
         room.style.transform = ('scale(4) translateX(-30%) translateY(-20%)')
         iphoneScreen.classList.add('hidden')
         iphoneScreenUnlocked.classList.remove('hidden')
-    } 
+    }
+    // off screen
+    else if (e.target.classList.contains("js-off-screen")) {
+        room.style.transform = ('scale(1)')
+        computerScreen.classList.remove('hidden')
+        computerScreenUnlocked.classList.add('hidden')
+        videoElement.pause()
+        playElement.classList.remove('hidden')
+        pauseElement.classList.add('hidden')
+    }
+    // for window & post it
+    else if (e.target.classList.contains("js-no-scale")) {
+        room.style.transform = ('scale(1)')
+    }
+    // scale computer
     else {
         room.style.transform = ('scale(2.3) translateY(-8%)')
         computerScreen.classList.add('hidden')
@@ -266,21 +287,6 @@ class Player {
 
 const player1 = new Player(document.querySelector('.js-player'))
 
-// OFF SCREEN
-
-const offScreen = document.querySelector('.js-off-screen')
-const videoElement = document.querySelector('.js-video')
-const pauseElement = document.querySelector('.js-pause')
-const playElement = document.querySelector('.js-play')
-
-offScreen.addEventListener('click', () => {
-    computerScreen.classList.remove('hidden')
-    computerScreenUnlocked.classList.add('hidden')
-    videoElement.pause()
-    playElement.classList.remove('hidden')
-    pauseElement.classList.add('hidden')
-})
-
 // hide commands
 const videoBoard = document.querySelector('.js-video-board')
 
@@ -304,8 +310,15 @@ videoElement.addEventListener('mouseout', () => {
 
 const windowDeco = document.querySelector('.js-window-deco')
 
-windowDeco.addEventListener('click', () => {
 
-    windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
-    document.body.style.background = "rgb(88, 88, 110)"
+windowDeco.addEventListener('click', (a) => {
+    if (a.target.classList.contains("js-day")) {
+        windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
+        document.body.style.background = "rgb(88, 88, 110)"
+        windowDeco.classList.remove('js-day')
+    } else {
+        windowDeco.style.backgroundImage = "url('images/paris.svg')"
+        document.body.style.background = "#D2D2E0"
+        windowDeco.classList.add('js-day')
+    }
 })
