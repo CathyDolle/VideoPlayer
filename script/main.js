@@ -73,38 +73,19 @@ computerScreen.addEventListener('mouseout', () => {
 // Event : click the computer or iphone screen -> unlocked + scale
 room.addEventListener('click', (e) => {
     // scale computer screen
-    if (e.target.classList.contains("js-computer-locked") || e.target.classList.contains("js-computer-unlocked")) {
-        gsap.to(".room", {
-            duration: 0.3,
-            scale: 2.3,
-            x: '0%',
-            y: '-18%',
-        })
-        // room.style.transform = ('scale(2.3) translateY(-8%)')
-        computerScreen.classList.add('hidden')
-        computerScreenUnlocked.classList.remove('hidden')
+    if (e.target.classList.contains("js-room-scale")) {
+        room.style.transform = ('scale(1)')
     } 
     // scale iphone screen
     else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
-        gsap.to(".room", {
-            duration: 0.3,
-            scale: 4,
-            x: '-125%',
-            y: '-70%',
-        })
+        room.style.transform = ('scale(4) translateX(-30%) translateY(-20%)')
         iphoneScreen.classList.add('hidden')
         iphoneScreenUnlocked.classList.remove('hidden')
     } 
-    // default size
     else {
-        gsap.to(".room", {
-            duration: 0.3,
-            scale: 1,
-            x: '0%',
-            y: '0%',
-        })
-        // computerScreen.classList.remove('hidden')
-        // computerScreenUnlocked.classList.add('hidden')
+        room.style.transform = ('scale(2.3) translateY(-8%)')
+        computerScreen.classList.add('hidden')
+        computerScreenUnlocked.classList.remove('hidden')
     }
 })
 
@@ -180,12 +161,6 @@ class Player {
         this.videoElement.addEventListener('timeupdate', () => {
             const ratio = this.videoElement.currentTime / this.videoElement.duration
             fillElement.style.transform = `scaleX(${ratio})`
-
-            gsap.to(seekBarElement, {
-                duration: 1,
-                ease: Power1.easeOut
-            })
-
 
         })
 
@@ -330,7 +305,7 @@ videoElement.addEventListener('mouseout', () => {
 const windowDeco = document.querySelector('.js-window-deco')
 
 windowDeco.addEventListener('click', () => {
- 
-        windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
-        document.body.style.background = "rgb(88, 88, 110)"
+
+    windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
+    document.body.style.background = "rgb(88, 88, 110)"
 })
