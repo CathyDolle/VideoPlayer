@@ -33,15 +33,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35%;
+    width: 30%;
     height: 100%; }
     .deco_part1_window {
       cursor: pointer;
-      width: 400px;
+      width: 350px;
       height: 500px;
       background-image: url("../images/paris.svg");
       background-size: cover;
-      border: solid 8px black; }
+      border: solid 6px black; }
     .deco_part1_plant {
       position: absolute;
       bottom: 0;
@@ -63,7 +63,7 @@ body {
         height: 140px;
         border-radius: 90%;
         background: white;
-        border: solid 8px black; }
+        border: solid 6px black; }
         .deco_part2_top_clock_hours, .deco_part2_top_clock_minutes, .deco_part2_top_clock_seconds {
           position: absolute;
           background: black;
@@ -317,7 +317,7 @@ body {
           background: white;
           clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%); }
   .deco_part3 {
-    width: 25%;
+    width: 30%;
     height: 100%; }
     .deco_part3_post {
       display: flex;
@@ -337,10 +337,10 @@ body {
       height: 30%; }
       .deco_part3_iphone_screen {
         position: relative;
-        width: 75px;
-        height: 145px;
+        width: 72px;
+        height: 142px;
         background: white;
-        border-radius: 10px;
+        border-radius: 9px;
         display: flex;
         justify-content: center;
         align-items: center; }
@@ -348,8 +348,14 @@ body {
           width: 65px;
           height: 135px;
           background: #1a1a1a;
-          border-radius: 6px;
+          border-radius: 8px;
           will-change: background-image; }
+          .deco_part3_iphone_screen_inside_unlocked {
+            cursor: pointer;
+            width: 65px;
+            height: 135px;
+            background: #1a1a1a;
+            border-radius: 7px; }
         .deco_part3_iphone_screen_inside:hover {
           animation-name: wallpaper-transition;
           animation-duration: 1s;
@@ -357,7 +363,7 @@ body {
           background-size: cover;
           cursor: pointer; }
         .deco_part3_iphone_screen_camera {
-          top: 5px;
+          top: 3px;
           position: absolute;
           width: 30px;
           height: 5px;

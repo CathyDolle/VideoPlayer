@@ -71,16 +71,16 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 35%;
+        width: 30%;
         height: 100%;
 
         &_window {
             cursor: pointer;
-            width: 400px;
+            width: 350px;
             height: 500px;
             background-image: url('../images/paris.svg');
             background-size: cover;
-            border: solid 8px black;
+            border: solid 6px black;
         }
 
         &_plant {
@@ -115,7 +115,7 @@ body {
                 height: 140px;
                 border-radius: 90%;
                 background: white;
-                border: solid 8px black;
+                border: solid 6px black;
 
                 &_hours,
                 &_minutes,
@@ -507,7 +507,7 @@ body {
 
     &_part3 {
         // background: rgb(170, 152, 170);
-        width: 25%;
+        width: 30%;
         height: 100%;
 
         //post-it
@@ -539,11 +539,11 @@ body {
             // background: red;
             &_screen {
                 position: relative;
-                width: 75px;
-                height: 145px;
+                width: 72px;
+                height: 142px;
                 background: white;
                 // border: solid white 4px;
-                border-radius: 10px;
+                border-radius: 9px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -552,8 +552,15 @@ body {
                     width: 65px;
                     height: 135px;
                     background: rgb(26, 26, 26);
-                    border-radius: 6px;
+                    border-radius: 8px;
                     will-change: background-image;
+                    &_unlocked{
+                        cursor: pointer;
+                        width: 65px;
+                        height: 135px;
+                        background: rgb(26, 26, 26);
+                        border-radius: 7px;
+                    }
                 }
 
                 &_inside:hover {
@@ -565,7 +572,7 @@ body {
                 }
 
                 &_camera {
-                    top: 5px;
+                    top: 3px;
                     position: absolute;
                     width: 30px;
                     height: 5px;

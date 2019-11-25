@@ -45,32 +45,57 @@ const digitalTick = () => {
 window.setInterval(digitalTick, 1000)
 
 /*
-SCALE SCREEN
+SCALE COMPUTER SCREEN & IPHONE SCREEN
 */
-const computerScreenUnlocked = document.querySelector('.js-unlocked')
-const computerScreen = document.querySelector('.js-locked')
-const digitalClock = document.querySelector('.js-digital-clock')
-const room = document.querySelector('.room')
 
+// Scale items
+// Const room (main scale)
+const room = document.querySelector('.room')
+// Const for scale computer screen
+const computerScreenUnlocked = document.querySelector('.js-computer-unlocked')
+const computerScreen = document.querySelector('.js-computer-locked')
+// Clock element on computer screen (locked)
+const digitalClock = document.querySelector('.js-digital-clock')
+// show screen + time on hover
 computerScreen.addEventListener('mouseover', () => {
     digitalClock.classList.remove('hidden')
 })
+// Const for scale iphone screen
+const iphoneScreenUnlocked = document.querySelector('.js-iphone-unlocked')
+const iphoneScreen = document.querySelector('.js-iphone-locked')
+
+// dont show screen + time
 
 computerScreen.addEventListener('mouseout', () => {
     digitalClock.classList.add('hidden')
 })
 
+// Event : click the computer or iphone screen -> unlocked + scale
 room.addEventListener('click', (e) => {
-    if (e.target.classList.contains("js-locked") || e.target.classList.contains("js-unlocked")) {
+    // scale computer screen
+    if (e.target.classList.contains("js-computer-locked") || e.target.classList.contains("js-computer-unlocked")) {
         gsap.to(".room", {
             duration: 0.3,
             scale: 2.3,
-            x: '-11%',
+            x: '0%',
             y: '-18%',
         })
         computerScreen.classList.add('hidden')
         computerScreenUnlocked.classList.remove('hidden')
-    } else {
+    } 
+    // scale iphone screen
+    else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
+        gsap.to(".room", {
+            duration: 0.3,
+            scale: 4,
+            x: '-125%',
+            y: '-70%',
+        })
+        iphoneScreen.classList.add('hidden')
+        iphoneScreenUnlocked.classList.remove('hidden')
+    } 
+    // default size
+    else {
         gsap.to(".room", {
             duration: 0.3,
             scale: 1,
@@ -81,6 +106,9 @@ room.addEventListener('click', (e) => {
         // computerScreenUnlocked.classList.add('hidden')
     }
 })
+
+
+
 
 // PLAYER
 
