@@ -75,12 +75,13 @@ body {
         height: 100%;
 
         &_window {
-            cursor: pointer;
+            
             width: 350px;
             height: 500px;
             background-image: url('../images/paris.svg');
             background-size: cover;
             border: solid 6px black;
+            cursor: pointer;
         }
 
         &_plant {
@@ -251,8 +252,9 @@ body {
                             position: relative;
                             width: 100%;
                             height: 3%;
-                            background:$main-bar;
-                            &_off{
+                            background: $main-bar;
+
+                            &_off {
                                 position: absolute;
                                 width: 5px;
                                 right: 3;
@@ -260,6 +262,7 @@ body {
                                 cursor: pointer;
                             }
                         }
+
                         // Window
 
                         &_window {
@@ -268,7 +271,7 @@ body {
                             background: $screen-window;
 
                             // nav
-                      
+
                             &_nav {
                                 display: flex;
                                 align-items: center;
@@ -371,6 +374,7 @@ body {
                                             width: 100%;
                                             height: 8%;
                                             background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.507));
+
                                             &_play,
                                             &_pause,
                                             &_next,
@@ -384,39 +388,42 @@ body {
                                                 width: 5px;
                                                 cursor: pointer;
                                             }
-                                            &_next{
-                                            
+
+                                            &_next {
+
                                                 left: 15px;
                                                 bottom: 4;
                                             }
+
                                             &_high-volume,
-                                            &_muted-volume{
+                                            &_muted-volume {
                                                 left: 25px;
                                                 width: 7px;
-                                         
-                                
+
+
                                             }
+
                                             &_fullscreen,
-                                            &_minimize{
+                                            &_minimize {
                                                 left: 96.5%;
                                                 width: 6px;
                                             }
                                         }
 
-       
-                                       
+
+
                                     }
 
                                     // main video description
-                                    &_text {          
+                                    &_text {
                                         margin-top: 3px;
                                         width: 100%;
                                         height: 33%;
 
                                         & h1 {
-                                            margin:0;
+                                            margin: 0;
                                             padding-top: 7px;
-                                            color: $description ;
+                                            color: $description;
                                             font-family: lato;
                                             font-weight: 700;
                                             font-size: 10px;
@@ -426,7 +433,7 @@ body {
 
                                         & p {
                                             margin: 8px 0 8px 0;
-                                            color: $description ;
+                                            color: $description;
                                             font-family: 'Lato', sans-serif;
                                             font-weight: 300;
                                             font-size: 7px;
@@ -445,6 +452,7 @@ body {
                                         }
                                     }
                                 }
+
                                 // playlist
 
                                 &_list {
@@ -528,64 +536,91 @@ body {
             }
         }
 
-        &_iphone {
+        &_bot {
             display: flex;
-            justify-content: flex-end;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
+            justify-content: center;
+            align-items: flex-end;
+            width: 95%;
             height: 30%;
-
-            // background: red;
-            &_screen {
-                position: relative;
-                width: 72px;
-                height: 142px;
-                background: white;
-                // border: solid white 4px;
-                border-radius: 9px;
+            &_coffee {
                 display: flex;
                 justify-content: center;
-                align-items: center;
-
-                &_inside {
-                    width: 65px;
-                    height: 135px;
-                    background: rgb(26, 26, 26);
-                    border-radius: 8px;
-                    will-change: background-image;
-                    &_unlocked{
-                        cursor: pointer;
-                        width: 65px;
-                        height: 135px;
-                        background: rgb(26, 26, 26);
-                        border-radius: 7px;
-                    }
-                }
-
-                &_inside:hover {
-                    animation-name: wallpaper-transition;
-                    animation-duration: 1s;
-                    background-image: url('../images/iphone-wallpaper.png');
-                    background-size: cover;
-                    cursor: pointer;
-                }
-
-                &_camera {
-                    top: 3px;
-                    position: absolute;
+                position: relative;
+                // background: red;
+                height: 70%;
+                width: 30%;
+                &_smoke{
                     width: 30px;
-                    height: 5px;
-                    background: white;
-                    border-radius: 0px 0px 8px 8px;
+                    animation: smoke 2s infinite;
+                }
+                &_cup{
+                    width: 90px;
+                    position: absolute;
+                    bottom: 0;
                 }
             }
 
-            &_support {
-                width: 90px;
-                height: 8px;
-                background: #EFEFEF;
-                border-radius: 0px 0px 5px 5px;
+            &_iphone {
+                // background: pink;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+                height: 100%;
+
+                // background: red;
+                &_screen {
+                    position: relative;
+                    width: 72px;
+                    height: 142px;
+                    background: white;
+                    // border: solid white 4px;
+                    border-radius: 9px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &_inside {
+                        width: 65px;
+                        height: 135px;
+                        background: rgb(26, 26, 26);
+                        border-radius: 8px;
+                        will-change: background-image;
+
+                        &_unlocked {
+                            width: 65px;
+                            height: 135px;
+                            background: rgb(26, 26, 26);
+                            border-radius: 7px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &_inside:hover {
+                        animation-name: wallpaper-transition;
+                        animation-duration: 1s;
+                        background-image: url('../images/iphone-wallpaper.png');
+                        background-size: cover;
+                        cursor: pointer;
+                    }
+
+                    &_camera {
+                        top: 3px;
+                        position: absolute;
+                        width: 30px;
+                        height: 5px;
+                        background: white;
+                        border-radius: 0px 0px 8px 8px;
+                    }
+                }
+
+                &_support {
+                    width: 90px;
+                    height: 8px;
+                    background: #EFEFEF;
+                    border-radius: 0px 0px 5px 5px;
+                }
             }
         }
     }
@@ -683,6 +718,12 @@ DESK
         opacity: 1;
     }
 }
+
+@keyframes smoke {
+    0%{transform: translateY(0px); opacity: 1;}
+    50%{ opacity: .5;}
+    100%{transform: translateY(-10px); opacity: 0;}
+  }
 
 @keyframes scale {
     0% {

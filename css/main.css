@@ -36,12 +36,12 @@ body {
     width: 30%;
     height: 100%; }
     .deco_part1_window {
-      cursor: pointer;
       width: 350px;
       height: 500px;
       background-image: url("../images/paris.svg");
       background-size: cover;
-      border: solid 6px black; }
+      border: solid 6px black;
+      cursor: pointer; }
     .deco_part1_plant {
       position: absolute;
       bottom: 0;
@@ -328,52 +328,71 @@ body {
         width: 110px; }
       .deco_part3_post_idk {
         margin-top: 110px; }
-    .deco_part3_iphone {
+    .deco_part3_bot {
       display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+      justify-content: center;
+      align-items: flex-end;
+      width: 95%;
       height: 30%; }
-      .deco_part3_iphone_screen {
-        position: relative;
-        width: 72px;
-        height: 142px;
-        background: white;
-        border-radius: 9px;
+      .deco_part3_bot_coffee {
         display: flex;
         justify-content: center;
-        align-items: center; }
-        .deco_part3_iphone_screen_inside {
-          width: 65px;
-          height: 135px;
-          background: #1a1a1a;
-          border-radius: 8px;
-          will-change: background-image; }
-          .deco_part3_iphone_screen_inside_unlocked {
-            cursor: pointer;
+        position: relative;
+        height: 70%;
+        width: 30%; }
+        .deco_part3_bot_coffee_smoke {
+          width: 30px;
+          animation: smoke 2s infinite; }
+        .deco_part3_bot_coffee_cup {
+          width: 90px;
+          position: absolute;
+          bottom: 0; }
+      .deco_part3_bot_iphone {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: 100%; }
+        .deco_part3_bot_iphone_screen {
+          position: relative;
+          width: 72px;
+          height: 142px;
+          background: white;
+          border-radius: 9px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .deco_part3_bot_iphone_screen_inside {
             width: 65px;
             height: 135px;
             background: #1a1a1a;
-            border-radius: 7px; }
-        .deco_part3_iphone_screen_inside:hover {
-          animation-name: wallpaper-transition;
-          animation-duration: 1s;
-          background-image: url("../images/iphone-wallpaper.png");
-          background-size: cover;
-          cursor: pointer; }
-        .deco_part3_iphone_screen_camera {
-          top: 3px;
-          position: absolute;
-          width: 30px;
-          height: 5px;
-          background: white;
-          border-radius: 0px 0px 8px 8px; }
-      .deco_part3_iphone_support {
-        width: 90px;
-        height: 8px;
-        background: #EFEFEF;
-        border-radius: 0px 0px 5px 5px; }
+            border-radius: 8px;
+            will-change: background-image; }
+            .deco_part3_bot_iphone_screen_inside_unlocked {
+              width: 65px;
+              height: 135px;
+              background: #1a1a1a;
+              border-radius: 7px;
+              cursor: pointer; }
+          .deco_part3_bot_iphone_screen_inside:hover {
+            animation-name: wallpaper-transition;
+            animation-duration: 1s;
+            background-image: url("../images/iphone-wallpaper.png");
+            background-size: cover;
+            cursor: pointer; }
+          .deco_part3_bot_iphone_screen_camera {
+            top: 3px;
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background: white;
+            border-radius: 0px 0px 8px 8px; }
+        .deco_part3_bot_iphone_support {
+          width: 90px;
+          height: 8px;
+          background: #EFEFEF;
+          border-radius: 0px 0px 5px 5px; }
 
 /*
 DESK
@@ -441,6 +460,15 @@ DESK
     opacity: 0.5; }
   100% {
     opacity: 1; } }
+@keyframes smoke {
+  0% {
+    transform: translateY(0px);
+    opacity: 1; }
+  50% {
+    opacity: .5; }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0; } }
 @keyframes scale {
   0% {
     transform: scale(1) translateX(0%) translateY(0%); }
