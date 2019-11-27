@@ -93,7 +93,7 @@ room.addEventListener('click', (e) => {
     else if (e.target.classList.contains("js-off-screen")) {
         room.style.transform = ('scale(1)')
         computerScreen.classList.remove('hidden')
-        computerScreenUnlocked.classList.add('hidden')
+        computerScreenUnlocked.style.opacity = ('0')
         videoElement.pause()
         playElement.classList.remove('hidden')
         pauseElement.classList.add('hidden')
@@ -106,7 +106,7 @@ room.addEventListener('click', (e) => {
     else {
         room.style.transform = ('scale(2.3) translateY(-8%)')
         computerScreen.classList.add('hidden')
-        computerScreenUnlocked.classList.remove('hidden')
+        computerScreenUnlocked.style.opacity = ('1')
     }
 })
 

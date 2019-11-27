@@ -8,23 +8,44 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Groupe_1" data-name="Groupe 1" transform="translate(23.927 1.992)">
-    <g id="Groupe_1152" data-name="Groupe 1152" transform="translate(0 9.171)">
-      <g id="Groupe_1148" data-name="Groupe 1148" transform="translate(0)">
-        <g id="Groupe_1096" data-name="Groupe 1096">
-          <g transform="matrix(1, 0, 0, 1, -23.93, -11.16)" filter="url(#Rectangle_102)">
-            <rect id="Rectangle_102-2" data-name="Rectangle 102" width="178" height="179" transform="translate(24 11)" fill="#fff"/>
-          </g>
-          <g id="NJS" transform="translate(45.091 66.491)" style="isolation: isolate">
-            <g id="Groupe_1097" data-name="Groupe 1097" transform="translate(0 0)" style="isolation: isolate">
-              <path id="Tracé_11909" data-name="Tracé 11909" d="M726.131,758.645a6.987,6.987,0,0,1-1.689,4.919,6.721,6.721,0,0,1-5.265,1.987h-2.931v-5.912h1.042q2.683,0,2.683-2.484V736.688H707.7v28.862h-6.11V736.688h-3.477v-6.011h12.071v-4.868h6.161v4.868h9.786Z" transform="translate(-698.114 -725.809)" fill="rgba(255,255,255,0.87)"/>
-              <path id="Tracé_11910" data-name="Tracé 11910" d="M760.279,749.168H756.6v16a13.9,13.9,0,0,1-2.781,8.246,67.815,67.815,0,0,1-5.465,5.862l-3.377-3.875a30.881,30.881,0,0,0,3.775-4.173,9.322,9.322,0,0,0,1.788-5.266l-.05-16.792h-3.726v-6.109h3.626V738.19h-3.626v-6.011h13.513v6.011h-3.825v4.868h3.825Z" transform="translate(-709.162 -727.311)" fill="rgba(255,255,255,0.87)"/>
-              <path id="Tracé_11911" data-name="Tracé 11911" d="M805.09,738.19H789.144a6.119,6.119,0,0,0-4.049,1.068q-1.216,1.068-1.217,3.8H805.04v9.588q0,7.452-5.315,11.226-4.669,3.33-12.568,3.329-1.34,0-4.619-.1-2.982-.05-4.67-.05V761.14h7.154q13.957,0,14.008-9.687l-.05-2.334H777.867v-7.352a9.372,9.372,0,0,1,2.832-7.055,9.256,9.256,0,0,1,6.607-2.533H805.09Z" transform="translate(-716.915 -727.311)" fill="rgba(255,255,255,0.87)"/>
+  <g id="Groupe_3630" data-name="Groupe 3630" transform="translate(-2056 -671)">
+    <g id="Groupe_3629" data-name="Groupe 3629" transform="translate(-27 31)">
+      <g id="Groupe_3627" data-name="Groupe 3627" transform="translate(2106.928 641.992)">
+        <g id="Groupe_1152" data-name="Groupe 1152" transform="translate(0 9.171)">
+          <g id="Groupe_1148" data-name="Groupe 1148" transform="translate(0)">
+            <g id="Groupe_1096" data-name="Groupe 1096">
+              <g transform="matrix(1, 0, 0, 1, -23.93, -11.16)" filter="url(#Rectangle_102)">
+                <rect id="Rectangle_102-2" data-name="Rectangle 102" width="178" height="179" transform="translate(24 11)" fill="#fff"/>
+              </g>
+              <g id="NJS" transform="translate(45.091 66.491)" style="isolation: isolate">
+                <g id="Groupe_1097" data-name="Groupe 1097" transform="translate(0 0)" style="isolation: isolate">
+                  <path id="Tracé_11909" data-name="Tracé 11909" d="M726.131,758.645a6.987,6.987,0,0,1-1.689,4.919,6.721,6.721,0,0,1-5.265,1.987h-2.931v-5.912h1.042q2.683,0,2.683-2.484V736.688H707.7v28.862h-6.11V736.688h-3.477v-6.011h12.071v-4.868h6.161v4.868h9.786Z" transform="translate(-698.114 -725.809)" fill="rgba(255,255,255,0.87)"/>
+                  <path id="Tracé_11910" data-name="Tracé 11910" d="M760.279,749.168H756.6v16a13.9,13.9,0,0,1-2.781,8.246,67.815,67.815,0,0,1-5.465,5.862l-3.377-3.875a30.881,30.881,0,0,0,3.775-4.173,9.322,9.322,0,0,0,1.788-5.266l-.05-16.792h-3.726v-6.109h3.626V738.19h-3.626v-6.011h13.513v6.011h-3.825v4.868h3.825Z" transform="translate(-709.162 -727.311)" fill="rgba(255,255,255,0.87)"/>
+                  <path id="Tracé_11911" data-name="Tracé 11911" d="M805.09,738.19H789.144a6.119,6.119,0,0,0-4.049,1.068q-1.216,1.068-1.217,3.8H805.04v9.588q0,7.452-5.315,11.226-4.669,3.33-12.568,3.329-1.34,0-4.619-.1-2.982-.05-4.67-.05V761.14h7.154q13.957,0,14.008-9.687l-.05-2.334H777.867v-7.352a9.372,9.372,0,0,1,2.832-7.055,9.256,9.256,0,0,1,6.607-2.533H805.09Z" transform="translate(-716.915 -727.311)" fill="rgba(255,255,255,0.87)"/>
+                </g>
+              </g>
             </g>
           </g>
         </g>
+        <rect id="Rectangle_145" data-name="Rectangle 145" width="72" height="18" transform="translate(53.073 0.008)" fill="#ff33d8" opacity="0.278"/>
+      </g>
+      <g id="tea" transform="translate(2031.585 627.882)">
+        <path id="Tracé_12478" data-name="Tracé 12478" d="M136,178.8V176h67.191v2.8l-11.2,97.987H147.2Z" transform="translate(-5.2 -102.669)" fill="#f4f4f4"/>
+        <path id="Tracé_12479" data-name="Tracé 12479" d="M149.575,302.789h44.794L204.288,216H139.656Z" transform="translate(-7.577 -128.671)" fill="#b9ccf2"/>
+        <path id="Tracé_12481" data-name="Tracé 12481" d="M128,152h72.791v11.2H128Z" transform="translate(0 -87.068)" fill="#ededed"/>
+        <g id="Groupe_3628" data-name="Groupe 3628" transform="translate(141.686 146.062)" opacity="0.304">
+          <ellipse id="Ellipse_44" data-name="Ellipse 44" cx="7.5" cy="7" rx="7.5" ry="7" transform="translate(-0.271 14.056)" fill="#cd8e5e"/>
+          <ellipse id="Ellipse_45" data-name="Ellipse 45" cx="6.5" cy="7" rx="6.5" ry="7" transform="translate(14.729 14.056)" fill="#cd8e5e"/>
+          <ellipse id="Ellipse_46" data-name="Ellipse 46" cx="7.5" cy="7" rx="7.5" ry="7" transform="translate(27.729 14.056)" fill="#cd8e5e"/>
+          <circle id="Ellipse_47" data-name="Ellipse 47" cx="7" cy="7" r="7" transform="translate(8.729 0.056)" fill="#cd8e5e"/>
+          <circle id="Ellipse_48" data-name="Ellipse 48" cx="7" cy="7" r="7" transform="translate(22.729 0.056)" fill="#cd8e5e"/>
+        </g>
+        <circle id="Ellipse_49" data-name="Ellipse 49" cx="1" cy="1" r="1" transform="translate(153.415 149.118)" fill="#f2f2f2" opacity="0.285"/>
+        <circle id="Ellipse_50" data-name="Ellipse 50" cx="1" cy="1" r="1" transform="translate(167.415 150.118)" fill="#f2f2f2" opacity="0.285"/>
+        <circle id="Ellipse_51" data-name="Ellipse 51" cx="1" cy="1" r="1" transform="translate(159.415 163.118)" fill="#f2f2f2" opacity="0.285"/>
+        <circle id="Ellipse_52" data-name="Ellipse 52" cx="1" cy="1" r="1" transform="translate(171.415 164.118)" fill="#f2f2f2" opacity="0.285"/>
+        <circle id="Ellipse_53" data-name="Ellipse 53" cx="1" cy="1" r="1" transform="translate(144.415 163.118)" fill="#f2f2f2" opacity="0.285"/>
       </g>
     </g>
-    <rect id="Rectangle_145" data-name="Rectangle 145" width="72" height="18" transform="translate(53.073 0.008)" fill="#f3f" opacity="0.278"/>
   </g>
 </svg>

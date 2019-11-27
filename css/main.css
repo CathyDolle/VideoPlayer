@@ -53,10 +53,10 @@ body {
     .deco_part1_plant {
       position: absolute;
       bottom: 0;
-      left: 100px;
+      left: 110px;
       z-index: 3; }
       .deco_part1_plant img {
-        width: 200px; }
+        width: 180px; }
   .deco_part2 {
     width: 40%;
     height: 100%; }
@@ -125,6 +125,7 @@ body {
         flex-direction: column;
         align-items: center; }
         .deco_part2_bot_computer_screen {
+          position: relative;
           background: black;
           width: 100%;
           height: 78%;
@@ -134,11 +135,12 @@ body {
           align-items: center;
           z-index: 3; }
           .deco_part2_bot_computer_screen_inside {
-            position: relative;
+            position: absolute;
             width: 97%;
             height: 95%;
             background: #1a1a1a;
-            will-change: background-image; }
+            will-change: background-image;
+            z-index: 3; }
             .deco_part2_bot_computer_screen_inside_digital-clock {
               display: flex;
               justify-content: center;
@@ -163,7 +165,8 @@ body {
             position: relative;
             width: 97%;
             height: 95%;
-            background: #1a1a1a; }
+            background: #1a1a1a;
+            opacity: 0; }
             .deco_part2_bot_computer_screen_unlocked_main-bar {
               position: relative;
               width: 100%;
@@ -335,12 +338,20 @@ body {
     .deco_part3_post {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 100%;
       height: 70%; }
       .deco_part3_post img {
-        width: 110px; }
+        width: 110px;
+        height: 110px;
+        z-index: 3;
+        cursor: pointer; }
+      .deco_part3_post img:hover {
+        transition-duration: 0.5s;
+        transform: scale(1.03); }
       .deco_part3_post_idk {
-        margin-top: 110px; }
+        margin-top: 110px;
+        z-index: 3; }
     .deco_part3_bot {
       display: flex;
       justify-content: center;
@@ -384,11 +395,19 @@ body {
             border-radius: 8px;
             will-change: background-image; }
             .deco_part3_bot_iphone_screen_inside_unlocked {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               width: 65px;
               height: 135px;
               background: #1a1a1a;
               border-radius: 7px;
               cursor: pointer; }
+              .deco_part3_bot_iphone_screen_inside_unlocked_album {
+                width: 45px;
+                height: 45px;
+                background: white; }
           .deco_part3_bot_iphone_screen_inside:hover {
             animation-name: wallpaper-transition;
             animation-duration: 1s;

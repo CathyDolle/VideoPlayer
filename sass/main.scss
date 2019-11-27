@@ -97,11 +97,11 @@ body {
         &_plant {
             position: absolute;
             bottom: 0;
-            left: 100px;
+            left: 110px;
             z-index : 3;
 
             & img {
-                width: 200px;
+                width: 180px;
             }
         }
     }
@@ -207,6 +207,7 @@ body {
                 // background: white;
 
                 &_screen {
+                    position: relative;
                     background: black;
                     width: 100%;
                     height: 78%;
@@ -218,11 +219,12 @@ body {
 
                     //VIDEO PLAYER 
                     &_inside {
-                        position: relative;
+                        position: absolute;
                         width: 97%;
                         height: 95%;
                         background: rgb(26, 26, 26);
                         will-change: background-image;
+                        z-index: 3;
 
                         &_digital-clock {
                             display: flex;
@@ -259,6 +261,7 @@ body {
                         width: 97%;
                         height: 95%;
                         background: rgb(26, 26, 26);
+                        opacity: 0;
 
                         &_main-bar {
                             position: relative;
@@ -539,16 +542,26 @@ body {
         &_post {
             display: flex;
             justify-content: center;
+            align-items: center;
             width: 100%;
             height: 70%;
 
             // background: white;
             & img {
                 width: 110px;
+                height: 110px;
+                z-index: 3;
+                cursor: pointer;
+            }
+
+            & img:hover{
+                transition-duration: 0.5s;
+                transform : scale(1.03);
             }
 
             &_idk {
                 margin-top: 110px;
+                z-index: 3;
             }
         }
 
@@ -606,11 +619,20 @@ body {
                         will-change: background-image;
 
                         &_unlocked {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             width: 65px;
                             height: 135px;
                             background: rgb(26, 26, 26);
                             border-radius: 7px;
                             cursor: pointer;
+                            &_album{
+                                width: 45px;
+                                height: 45px;
+                                background: white;
+                            }
                         }
                     }
 
