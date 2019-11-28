@@ -246,7 +246,7 @@ body {
   padding: 3px;
   box-sizing: border-box;
   width: 70%;
-  height: 100%;
+  height: 65%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -287,6 +287,7 @@ body {
   z-index: 1;
 }
 .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands {
+  display: flex;
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -302,7 +303,6 @@ body {
 .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_muted-volume {
   left: 5;
   bottom: 3.5;
-  position: absolute;
   width: 5px;
   cursor: pointer;
 }
@@ -328,7 +328,7 @@ body {
 .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
   margin: 0;
   padding-top: 7px;
-  color: #fff;
+  color: white;
   font-family: lato;
   font-weight: 700;
   font-size: 10px;
@@ -336,7 +336,7 @@ body {
 }
 .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
   margin: 8px 0 8px 0;
-  color: #fff;
+  color: white;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 7px;
@@ -591,13 +591,13 @@ body {
   flex-direction: column;
 }
 .desk_table {
-  background: #fff;
+  background: white;
   width: var(--width_table);
   height: var(--height_table);
 }
 .desk_under-table {
   position: relative;
-  background: #fff;
+  background: white;
   width: calc(var(--width_table) - 10%);
   height: var(--height_table);
 }
@@ -618,7 +618,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: #fff;
+  background: white;
   width: 250px;
   height: 100%;
 }
@@ -630,14 +630,14 @@ body {
   height: 4px;
 }
 .desk_bot_drawer_handle {
-  background: #000;
+  background: black;
   width: 12px;
   height: 12px;
   border-radius: 90px;
 }
 .desk_bot_foot {
   position: relative;
-  background: #fff;
+  background: white;
   width: 40px;
   height: 100%;
 }

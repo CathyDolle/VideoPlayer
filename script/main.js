@@ -129,24 +129,40 @@ class Player {
     setPlayPause() {
         //play
         const playElement = this.element.querySelector('.js-play')
-        playElement.addEventListener('click', () => {
-            this.videoElement.play()
-            pauseElement.classList.remove('hidden')
-            playElement.classList.add('hidden')
-        })
-        this.videoElement.addEventListener('click', () => {
-            if (this.videoElement.paused == false) {
-                this.videoElement.pause()
+
+        function playvideo() {
+            if (videoElement.paused == false) {
+                videoElement.pause()
                 pauseElement.classList.add('hidden')
                 playElement.classList.remove('hidden')
             } else {
-                this.videoElement.play()
+                videoElement.play()
                 pauseElement.classList.remove('hidden')
                 playElement.classList.add('hidden')
             }
+        }
+
+        // play button
+
+        playElement.addEventListener('click', () => {
+            playvideo()
         })
 
-        //pause
+        // screen
+
+        this.videoElement.addEventListener('click', () => {
+            playvideo()
+        })
+
+        // keyboard space
+
+        document.addEventListener('keyup', event => {
+            if (event.key == ' ') {
+                playvideo()
+            }
+        })
+
+        // pause button
         const pauseElement = this.element.querySelector('.js-pause')
         pauseElement.addEventListener('click', () => {
             this.videoElement.pause()
@@ -209,34 +225,52 @@ class Player {
         const windowElement = document.querySelector('.js-window')
         const windowSiteElement = document.querySelector('.js-window-site')
 
-        fullScreenElement.addEventListener('click', () => {
-            videoContainerElement.style.width = ('100%')
-            videoContainerElement.style.padding = ('0px')
-            windowElement.style.height = ('100%')
-            windowSiteElement.style.height = ('100%')
-            infosVideoElement.classList.add('hidden')
-            videoPlaylistElement.classList.add('hidden')
-            fullScreenElement.classList.add('hidden')
-            mainBarElement.classList.add('hidden')
-            navElement.classList.add('hidden')
-            minimizeScreenElement.classList.remove('hidden')
-            bgCommandsElement.style.height = ('5%')
-            seekBarElement.style.bottom = ('5.5%')
+        // fullscreen
+        function fullscreen() {
+            if (minimizeScreenElement.classList.contains('hidden')) {
+                videoContainerElement.style.width = ('100%')
+                videoContainerElement.style.height = ('100%')
+                videoContainerElement.style.padding = ('0px')
+                windowElement.style.height = ('100%')
+                windowSiteElement.style.height = ('100%')
+                infosVideoElement.classList.add('hidden')
+                videoPlaylistElement.classList.add('hidden')
+                fullScreenElement.classList.add('hidden')
+                mainBarElement.classList.add('hidden')
+                navElement.classList.add('hidden')
+                minimizeScreenElement.classList.remove('hidden')
+                bgCommandsElement.style.height = ('5%')
+                seekBarElement.style.bottom = ('5.5%')
+            } else {
+                videoContainerElement.style.width = ('70%')
+                videoContainerElement.style.height = ('67%')
+                videoContainerElement.style.padding = ('3px')
+                windowElement.style.height = ('97%')
+                windowSiteElement.style.height = ('96%')
+                infosVideoElement.classList.remove('hidden')
+                videoPlaylistElement.classList.remove('hidden')
+                fullScreenElement.classList.remove('hidden')
+                mainBarElement.classList.remove('hidden')
+                navElement.classList.remove('hidden')
+                minimizeScreenElement.classList.add('hidden')
+                bgCommandsElement.style.height = ('7%')
+                seekBarElement.style.bottom = ('8%')
+            }
+        }
+
+        document.addEventListener('keyup', event => {
+            if (event.key == 'f') {
+                fullscreen()
+            }
         })
 
+        fullScreenElement.addEventListener('click', () => {
+            fullscreen()
+        })
+
+        // minimize
         minimizeScreenElement.addEventListener('click', () => {
-            videoContainerElement.style.width = ('70%')
-            videoContainerElement.style.padding = ('3px')
-            windowElement.style.height = ('97%')
-            windowSiteElement.style.height = ('96%')
-            infosVideoElement.classList.remove('hidden')
-            videoPlaylistElement.classList.remove('hidden')
-            fullScreenElement.classList.remove('hidden')
-            mainBarElement.classList.remove('hidden')
-            navElement.classList.remove('hidden')
-            minimizeScreenElement.classList.add('hidden')
-            bgCommandsElement.style.height = ('7%')
-            seekBarElement.style.bottom = ('8%')
+            fullscreen()
         })
     }
 

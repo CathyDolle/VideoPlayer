@@ -43,7 +43,8 @@ body {
     width: 100%;
     height: 100%;
     transition: 1s ease-in-out;
-    &_scale{
+
+    &_scale {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -86,21 +87,21 @@ body {
         height: 100%;
 
         &_window {
-            
+
             width: 350px;
             height: 500px;
             background-image: url('../images/paris.svg');
             background-size: cover;
             border: solid 6px black;
             cursor: pointer;
-            z-index : 3;
+            z-index: 3;
         }
 
         &_plant {
             position: absolute;
             bottom: 0;
             left: 110px;
-            z-index : 3;
+            z-index: 3;
 
             & img {
                 width: 180px;
@@ -279,7 +280,7 @@ body {
                                 top: 1;
                                 z-index: 1;
                                 cursor: pointer;
-                            
+
                             }
                         }
 
@@ -338,7 +339,7 @@ body {
                                     padding: 3px;
                                     box-sizing: border-box;
                                     width: 70%;
-                                    height: 100%;
+                                    height: 67%;
                                     // background:pink;
                                     display: flex;
                                     flex-direction: column;
@@ -390,6 +391,8 @@ body {
 
                                         // video commands
                                         &_commands {
+                                            display: flex;
+                                            align-items: center;
                                             bottom: 0;
                                             position: absolute;
                                             width: 100%;
@@ -403,30 +406,41 @@ body {
                                             &_minimize,
                                             &_high-volume,
                                             &_muted-volume {
-                                                left: 5;
-                                                bottom: 3.5;
-                                                position: absolute;
+                                                margin-left: 5;
                                                 width: 5px;
                                                 cursor: pointer;
                                             }
 
-                                            &_next {
-
-                                                left: 15px;
-                                                bottom: 4;
-                                            }
-
                                             &_high-volume,
                                             &_muted-volume {
-                                                left: 25px;
                                                 width: 7px;
 
+                                            }
 
+                                            &_volume {
+                                                margin: 0 4px 0 2px;
+                                                width: 20px;
+                                                height: 1px;
+                                                background: rgba(255, 255, 255, 0.185);
+
+                                                &_fill {
+                                                    width: 50%;
+                                                    height: 100%;
+                                                    background: white;
+                                                }
+                                            }
+
+                                            & h3 {
+                                                color: white;
+                                                font-family: 'lato';
+                                                font-size: 4px;
+                                                font-weight: 300;
                                             }
 
                                             &_fullscreen,
                                             &_minimize {
-                                                left: 96.5%;
+                                                position: absolute;
+                                                right: 5px;
                                                 width: 6px;
                                             }
                                         }
@@ -556,9 +570,9 @@ body {
                 cursor: pointer;
             }
 
-            & img:hover{
+            & img:hover {
                 transition-duration: 0.5s;
-                transform : scale(1.03);
+                transform: scale(1.03);
             }
 
             &_idk {
@@ -573,6 +587,7 @@ body {
             align-items: flex-end;
             width: 95%;
             height: 30%;
+
             &_coffee {
                 display: flex;
                 justify-content: center;
@@ -580,11 +595,13 @@ body {
                 // background: red;
                 height: 70%;
                 width: 30%;
-                &_smoke{
+
+                &_smoke {
                     width: 30px;
                     animation: smoke 2s infinite;
                 }
-                &_cup{
+
+                &_cup {
                     width: 90px;
                     position: absolute;
                     bottom: 0;
@@ -632,7 +649,7 @@ body {
                             border-radius: 7px;
                             cursor: pointer;
 
-                            & h1{
+                            & h1 {
                                 text-align: center;
                                 margin: 0;
                                 color: white;
@@ -641,78 +658,90 @@ body {
                                 letter-spacing: 1px;
                                 font-size: 6px;
                             }
-                            & h2{
+
+                            & h2 {
                                 text-align: center;
                                 color: white;
                                 font-weight: 300;
                                 font-family: 'lato';
                                 font-size: 3px;
                             }
-                            &_album{
+
+                            &_album {
                                 margin: 5px 0 10px 0;
                                 width: 50px;
                                 height: 50px;
                                 background: white;
                             }
-                            &_time{
+
+                            &_time {
                                 display: flex;
                                 align-items: center;
                                 align-content: center;
                                 justify-content: center;
                                 width: 100%;
                                 height: 3%;
+
                                 // background: red;
-                                & h3{
+                                & h3 {
                                     color: white;
                                     font-family: 'lato';
                                     font-size: 3px;
                                     font-weight: 300;
                                 }
-                                &_bar{
+
+                                &_bar {
                                     margin: 0 2px 0 2px;
                                     width: 65%;
                                     height: 1px;
                                     background: black;
                                     border-radius: 1px;
-                                    &_fill{
-                                        width : 100%;
-                                        height : 100%;
-                                        background : $timebar;
+
+                                    &_fill {
+                                        width: 100%;
+                                        height: 100%;
+                                        background: $timebar;
                                     }
                                 }
                             }
-                            &_controls{
+
+                            &_controls {
                                 width: 70%;
                                 height: 15%;
                                 // background: blue;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                & img{
+
+                                & img {
                                     width: 5px;
                                 }
                             }
-                            &_volume{
+
+                            &_volume {
                                 display: flex;
                                 align-items: center;
                                 align-content: center;
                                 justify-content: center;
                                 width: 100%;
                                 height: 3%;
+
                                 // background: red;
-                                & img{
+                                & img {
                                     width: 3px;
                                 }
-                                &_bar{
+
+                                &_bar {
                                     margin: 0 1px 0 1px;
                                     width: 80%;
                                     height: 1px;
                                     background: black;
                                     border-radius: 1px;
-                                    &_fill{
-                                        width : 100%;
-                                        height : 100%;
-                                        background : $timebar;
+
+                                    &_fill {
+                                        width: 100%;
+                                        height: 100%;
+                                        background: $timebar;
                                     }
                                 }
                             }
@@ -842,10 +871,20 @@ DESK
 }
 
 @keyframes smoke {
-    0%{transform: translateY(0px); opacity: 1;}
-    50%{ opacity: .5;}
-    100%{transform: translateY(-10px); opacity: 0;}
-  }
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
 
 @keyframes scale {
     0% {
