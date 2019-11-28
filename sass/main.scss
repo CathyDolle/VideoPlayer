@@ -23,6 +23,8 @@ $desk : white;
 $desk-shadow : #F5F5F5;
 $handle : black;
 
+$timebar : rgb(255, 0, 179);
+
 
 // BODY
 body {
@@ -380,7 +382,7 @@ body {
                                                 transform: scaleX(0);
                                                 transform-origin: 0 0;
                                                 will-change: transform;
-                                                background: rgb(255, 0, 179);
+                                                background: $timebar;
                                                 cursor: pointer;
                                                 z-index: 1;
                                             }
@@ -612,8 +614,8 @@ body {
                     z-index: 3;
 
                     &_inside {
-                        width: 65px;
-                        height: 135px;
+                        width: 66px;
+                        height: 136px;
                         background: rgb(26, 26, 26);
                         border-radius: 8px;
                         will-change: background-image;
@@ -621,17 +623,98 @@ body {
                         &_unlocked {
                             position: relative;
                             display: flex;
+                            flex-direction: column;
                             justify-content: center;
                             align-items: center;
-                            width: 65px;
-                            height: 135px;
+                            width: 66px;
+                            height: 136px;
                             background: rgb(26, 26, 26);
                             border-radius: 7px;
                             cursor: pointer;
+
+                            & h1{
+                                text-align: center;
+                                margin: 0;
+                                color: white;
+                                // font-weight: 300;
+                                font-family: 'lato';
+                                letter-spacing: 1px;
+                                font-size: 6px;
+                            }
+                            & h2{
+                                text-align: center;
+                                color: white;
+                                font-weight: 300;
+                                font-family: 'lato';
+                                font-size: 3px;
+                            }
                             &_album{
-                                width: 45px;
-                                height: 45px;
+                                margin: 5px 0 10px 0;
+                                width: 50px;
+                                height: 50px;
                                 background: white;
+                            }
+                            &_time{
+                                display: flex;
+                                align-items: center;
+                                align-content: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 3%;
+                                // background: red;
+                                & h3{
+                                    color: white;
+                                    font-family: 'lato';
+                                    font-size: 3px;
+                                    font-weight: 300;
+                                }
+                                &_bar{
+                                    margin: 0 2px 0 2px;
+                                    width: 65%;
+                                    height: 1px;
+                                    background: black;
+                                    border-radius: 1px;
+                                    &_fill{
+                                        width : 100%;
+                                        height : 100%;
+                                        background : $timebar;
+                                    }
+                                }
+                            }
+                            &_controls{
+                                width: 70%;
+                                height: 15%;
+                                // background: blue;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                & img{
+                                    width: 5px;
+                                }
+                            }
+                            &_volume{
+                                display: flex;
+                                align-items: center;
+                                align-content: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 3%;
+                                // background: red;
+                                & img{
+                                    width: 3px;
+                                }
+                                &_bar{
+                                    margin: 0 1px 0 1px;
+                                    width: 80%;
+                                    height: 1px;
+                                    background: black;
+                                    border-radius: 1px;
+                                    &_fill{
+                                        width : 100%;
+                                        height : 100%;
+                                        background : $timebar;
+                                    }
+                                }
                             }
                         }
                     }
