@@ -457,7 +457,10 @@ body {
                   background: black;
                   border-radius: 1px; }
                   .deco_part3_bot_iphone_screen_inside_unlocked_time_bar_fill {
-                    width: 100%;
+                    left: 0;
+                    transform: scaleX(0);
+                    transform-origin: 0 0;
+                    will-change: transform;
                     height: 100%;
                     background: #b1b0fb; }
               .deco_part3_bot_iphone_screen_inside_unlocked_controls {

@@ -702,7 +702,10 @@ body {
                                     border-radius: 1px;
 
                                     &_fill {
-                                        width: 100%;
+                                        left: 0;
+                                        transform: scaleX(0);
+                                        transform-origin: 0 0;
+                                        will-change: transform;
                                         height: 100%;
                                         background: $timebar;
                                     }

@@ -377,6 +377,59 @@ const audioPrev = document.querySelector('.js-prev-audio')
 const audioNext = document.querySelector('.js-next-audio')
 const audioPlay = document.querySelector('.js-play-audio')
 const audioPause = document.querySelector('.js-pause-audio')
+const audioCurrentTime = document.querySelector('.js-audio-current-time')
+const audioDuration = document.querySelector('.js-audio-duration')
+
+// IPHONE AUDIO < TIMEBAR
+
+const audioTimeBar = document.querySelector('.js-audio-time-bar')
+const audioTimeBarFill = document.querySelector('.js-audio-time-bar-fill')
+
+audio.addEventListener('timeupdate', () => {
+    const ratioAudio =  audio.currentTime / audio.duration
+    audioTimeBarFill.style.transform = `scaleX(${ratioAudio})`
+
+})
+
+audioTimeBar .addEventListener('click', (_event) => {
+    const boundingAudio = audioTimeBar.getBoundingClientRect() //réccupérer la distance de la vidéo, le padding marge etc.
+    const ratioAudio = (_event.clientX - boundingAudio.left) / boundingAudio.width // clientX -> position de la souris sur l'axe X
+    const timeAudio = ratioAudio * audio.duration
+
+    audio.currentTime = timeAudio
+
+
+})
+
+// TIME
+
+var update = setInterval(() => {
+    // current time
+    var mins = Math.floor(audio.currentTime / 60)
+    var secs = Math.floor(audio.currentTime % 60)
+    if (secs < 10){
+        secs = '0' + String(secs);
+    }
+    // if (mins < 10) {
+    //     mins = '0' + String(mins);
+    // }
+    audioCurrentTime.innerText = mins + ':' + secs
+    // duration
+    var durMins = Math.floor(audio.duration / 60)
+    var durSecs = Math.floor(audio.duration % 60)
+    if (durSecs < 10)  {
+        durSecs = '0' + String(durSecs);
+    }
+    // if (durMins < 10) {
+    //     durMins = '0' + String(durMins);
+    // }
+    audioDuration.innerText = durMins + ':' + durSecs
+}, 10);
+
+
+
+
+// audioDuration.innerText = audio.duration
 
 // Play / pause
 
