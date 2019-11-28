@@ -356,3 +356,75 @@ windowDeco.addEventListener('click', (a) => {
         windowDeco.classList.add('js-day')
     }
 })
+
+// IPHONE AUDIOS
+
+const audioArtist = document.querySelector('.js-audio-artist')
+const audioTitle = document.querySelector('.js-audio-title')
+const audioCover = document.querySelector('.js-audio-cover')
+
+// AUDIO
+
+var audio = new Audio()
+i = 0
+audio.src = audioPlaylist[i].file
+audioTitle.innerText = audioPlaylist[i].title
+audioArtist.innerText = audioPlaylist[i].artist
+
+// IPHONE AUDIOS < COMMANDS
+
+const audioPrev = document.querySelector('.js-prev-audio')
+const audioNext = document.querySelector('.js-next-audio')
+const audioPlay = document.querySelector('.js-play-audio')
+const audioPause = document.querySelector('.js-pause-audio')
+
+// Play / pause
+
+function playAudio() {
+    if (audio.paused == false) {
+        audio.pause()
+        audioPause.classList.add('hidden')
+        audioPlay.classList.remove('hidden')
+    } else {
+        audio.play()
+        audioPause.classList.remove('hidden')
+        audioPlay.classList.add('hidden')
+    }
+}
+
+audioCover.style.backgroundImage = `url(${audioPlaylist[i].cover})`
+
+
+audioPlay.addEventListener('click', () => {
+    playAudio()
+})
+
+audioPause.addEventListener('click', () => {
+    playAudio()
+})
+
+audioNext.addEventListener('click', () => {
+    audioPlaylist[i].currentTime = 0
+    audio.pause()
+    i = (i + 1) % audioPlaylist.length
+    audio.src = audioPlaylist[i].file
+    audioTitle.innerText = audioPlaylist[i].title
+    audioArtist.innerText = audioPlaylist[i].artist
+    audioCover.style.backgroundImage = `url(${audioPlaylist[i].cover})`
+    audio.play()
+})
+
+audioPrev.addEventListener('click', () => {
+    audioPlaylist[i].currentTime = 0
+    audio.pause()
+    if (i === 0) {
+        i = audioPlaylist.length - 1
+    } else {
+        i--
+    }
+    audio.src = audioPlaylist[i].file
+    audioTitle.innerText = audioPlaylist[i].title
+    audioArtist.innerText = audioPlaylist[i].artist
+    audioCover.style.backgroundImage = `url(${audioPlaylist[i].cover})`
+    audio.play()
+})

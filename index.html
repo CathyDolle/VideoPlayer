@@ -245,10 +245,10 @@
                             <!-- IPHONE UNLOCKED -->
                             <div class="deco_part3_bot_iphone_screen_inside_unlocked hidden js-iphone-unlocked">
                                 <!-- ARTIST -->
-                                <h1>ARISTE</h1>
-                                <h2>Music title</h2>
-                                <!-- ALBUM IMAGE -->
-                                <div class="deco_part3_bot_iphone_screen_inside_unlocked_album js-iphone-unlocked">
+                                <h1 class="js-audio-artist">ARISTE</h1>
+                                <h2 class="js-audio-title">Music title</h2>
+                                <!-- COVER IMAGE -->
+                                <div class="deco_part3_bot_iphone_screen_inside_unlocked_cover js-audio-cover js-iphone-unlocked">
 
                                 </div>
                                 <!-- SET TIME -->
@@ -264,9 +264,10 @@
                                 </div>
                                 <!-- CONTROLS -->
                                 <div class="deco_part3_bot_iphone_screen_inside_unlocked_controls js-iphone-unlocked">
-                                    <img src="images/prev.svg" alt="prev">
-                                    <img src="images/play.svg" alt="play">
-                                    <img src="images/next.svg" alt="next">
+                                    <img class="js-prev-audio js-iphone-unlocked " src="images/prev.svg" alt="prev">
+                                    <img class="js-play-audio js-iphone-unlocked " src="images/play.svg" alt="play">
+                                    <img class="js-pause-audio  js-iphone-unlocked hidden" src="images/pause.svg" alt="pause">
+                                    <img class="js-next-audio js-iphone-unlocked " src="images/next.svg" alt="next">
                                 </div>
                                 <!-- SOUND -->
                                 <div class="deco_part3_bot_iphone_screen_inside_unlocked_volume js-iphone-unlocked">
@@ -280,8 +281,10 @@
                                     <img src="images/high-volume.svg" alt="volume">
                                 </div>
                             </div>
+                            <!-- iPHONE CAMERA -->
                             <div class="deco_part3_bot_iphone_screen_camera js-iphone-unlocked"></div>
                         </div>
+                        <!-- IPHONE SUPPORT -->
                         <div class="deco_part3_bot_iphone_support"></div>
                     </div>
 
@@ -304,6 +307,7 @@
         </section>
     </main>
     <!-- <script src="script/gsap.min.js"></script> -->
+    <script src="script/playlist.js"></script>
     <script src="script/main.js"></script>
 </body>
 

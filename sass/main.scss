@@ -23,7 +23,7 @@ $desk : white;
 $desk-shadow : #F5F5F5;
 $handle : black;
 
-$timebar : rgb(255, 0, 179);
+$timebar : rgb(177, 176, 251);
 
 
 // BODY
@@ -657,6 +657,8 @@ body {
                                 font-family: 'lato';
                                 letter-spacing: 1px;
                                 font-size: 6px;
+                                width: 80%;
+                                line-height: 8px;
                             }
 
                             & h2 {
@@ -667,11 +669,13 @@ body {
                                 font-size: 3px;
                             }
 
-                            &_album {
-                                margin: 5px 0 10px 0;
+                            &_cover {
+                                margin: 4px 0 8px 0;
                                 width: 50px;
                                 height: 50px;
                                 background: white;
+                                background-size: contain;
+                                will-change: background;
                             }
 
                             &_time {
