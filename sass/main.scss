@@ -564,6 +564,10 @@ body {
 
             // background: white;
             & img {
+                animation-name: flying;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
                 width: 110px;
                 height: 110px;
                 z-index: 3;
@@ -900,5 +904,20 @@ DESK
 
     100% {
         transform: scale(2.3) translateX(-4.5%) translateY(-8%);
+    }
+}
+
+@keyframes flying{
+    0%{
+        transform-origin: 0px 0px;
+        transform: skew(0deg, 0deg);
+    }
+    50%{
+        transform-origin: 0px 0px;
+        transform: skew(3deg, -1deg);
+    }
+    100%{
+        transform-origin: 0px 0px;
+        transform: skew(0deg, 0deg);
     }
 }

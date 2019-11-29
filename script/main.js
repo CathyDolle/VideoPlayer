@@ -78,7 +78,6 @@ computerScreen.addEventListener('mouseout', () => {
 })
 
 // origin scale
-
 function scaleroom() {
     room.style.transform = ('scale(1)')
     iphoneScreen.classList.remove('hidden')
@@ -314,12 +313,23 @@ class Player {
     setVolume() {
         const highVolumeButton = this.element.querySelector('.js-high-volume')
         const mutedVolumeButton = this.element.querySelector('.js-muted-volume')
+        const volumeBar = this.element.querySelector('.js-volume-bar')
+        const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
+        console.log(volumeBar)
+
+        
+        
+        
+        
+        // HIGH VOLUME
 
         highVolumeButton.addEventListener('click', () => {
             highVolumeButton.classList.add('hidden')
             mutedVolumeButton.classList.remove('hidden')
             this.videoElement.muted = true
         })
+
+        // MUTE
 
         mutedVolumeButton.addEventListener('click', () => {
             mutedVolumeButton.classList.add('hidden')
