@@ -84,10 +84,10 @@ function scaleroom() {
     iphoneScreenUnlocked.classList.add('hidden')
 }
 
-function scalecomputer(){
+function scalecomputer() {
     room.style.transform = ('scale(2.3) translateY(-8%)')
-        computerScreen.classList.add('hidden')
-        computerScreenUnlocked.style.opacity = ('1')
+    computerScreen.classList.add('hidden')
+    computerScreenUnlocked.style.opacity = ('1')
 }
 
 // Event : click the computer or iphone screen -> unlocked + scale
@@ -125,7 +125,7 @@ room.addEventListener('click', (e) => {
 // Escape = origin scale
 document.addEventListener('keyup', event => {
     // console.log(event);
-    
+
     if (event.key == 'Escape') {
         scaleroom()
     }
@@ -133,7 +133,7 @@ document.addEventListener('keyup', event => {
 
 // Enter = computer scale
 document.addEventListener('keyup', event => {
-    
+
     if (event.key == 'Enter') {
         scalecomputer()
     }
@@ -317,10 +317,10 @@ class Player {
         const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
         console.log(volumeBar)
 
-        
-        
-        
-        
+
+
+
+
         // HIGH VOLUME
 
         highVolumeButton.addEventListener('click', () => {
@@ -441,7 +441,12 @@ class Player {
             if (vdurSecs < 10) {
                 vdurSecs = '0' + String(vdurSecs);
             }
-            videoDuration.innerText = vdurMins + ':' + vdurSecs
+            if (isNaN(videoElement.duration)) { 
+                videoDuration.innerText = '0:00'
+            }
+            else if (!isNaN(videoElement.duration)){
+                videoDuration.innerText = vdurMins + ':' + vdurSecs
+            }
         }, 10);
     }
 }
@@ -534,6 +539,7 @@ var update = setInterval(() => {
     // current time
     var mins = Math.floor(audio.currentTime / 60)
     var secs = Math.floor(audio.currentTime % 60)
+    
     if (secs < 10) {
         secs = '0' + String(secs);
     }
@@ -544,13 +550,18 @@ var update = setInterval(() => {
     // duration
     var durMins = Math.floor(audio.duration / 60)
     var durSecs = Math.floor(audio.duration % 60)
-    if (durSecs < 10) {
+    if(durSecs < 10) {
         durSecs = '0' + String(durSecs);
+    } 
+    if (isNaN(audio.duration)) { 
+        audioDuration.innerText = '0:00'
+    }
+    else if (!isNaN(audio.duration)){
+        audioDuration.innerText = durMins + ':' + durSecs
     }
     // if (durMins < 10) {
     //     durMins = '0' + String(durMins);
     // }
-    audioDuration.innerText = durMins + ':' + durSecs
 }, 10);
 
 
