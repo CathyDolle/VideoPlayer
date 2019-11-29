@@ -124,7 +124,7 @@ class Player {
         this.setVolume()
         this.setSeekBar()
         this.setScreen()
-        // this.setNext()
+        this.setDuration()
     }
 
 
@@ -209,12 +209,17 @@ class Player {
                 playElement.classList.add('hidden')
             })
         }
-        newVideo(videoPlaylist[1].file, videoPlaylist[1].cover, videoPlaylist[1].title, videoPlaylist[1].description, videoPlaylist[1].link)
-        newVideo(videoPlaylist[2].file, videoPlaylist[2].cover, videoPlaylist[2].title, videoPlaylist[2].description, videoPlaylist[2].link)
-        newVideo(videoPlaylist[3].file, videoPlaylist[3].cover, videoPlaylist[3].title, videoPlaylist[3].description, videoPlaylist[3].link)
-        newVideo(videoPlaylist[4].file, videoPlaylist[4].cover, videoPlaylist[4].title, videoPlaylist[4].description, videoPlaylist[4].link)
-        newVideo(videoPlaylist[5].file, videoPlaylist[5].cover, videoPlaylist[5].title, videoPlaylist[5].description, videoPlaylist[5].link)
-        newVideo(videoPlaylist[6].file, videoPlaylist[6].cover, videoPlaylist[6].title, videoPlaylist[6].description, videoPlaylist[6].link)
+
+        for (let i = 0; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
+        {
+            newVideo(
+                videoPlaylist[i].file,
+                videoPlaylist[i].cover,
+                videoPlaylist[i].title,
+                videoPlaylist[i].description,
+                videoPlaylist[i].link)
+        }
+
 
     }
 
@@ -376,6 +381,28 @@ class Player {
         minimizeScreenElement.addEventListener('click', () => {
             fullscreen()
         })
+    }
+    setDuration() {
+        // TIME
+        const videoCurrentTime = document.querySelector('.js-video-current-time')
+        const videoDuration = document.querySelector('.js-video-duration')
+
+        var updates = setInterval(() => {
+            // current time
+            var vmins = Math.floor(videoElement.currentTime / 60)
+            var vsecs = Math.floor(videoElement.currentTime % 60)
+            if (vsecs < 10) {
+                vsecs = '0' + String(vsecs);
+            }
+            videoCurrentTime.innerText = vmins + ':' + vsecs
+            // duration
+            var vdurMins = Math.floor(videoElement.duration / 60)
+            var vdurSecs = Math.floor(videoElement.duration % 60)
+            if (vdurSecs < 10) {
+                vdurSecs = '0' + String(vdurSecs);
+            }
+            videoDuration.innerText = vdurMins + ':' + vdurSecs
+        }, 10);
     }
 }
 
