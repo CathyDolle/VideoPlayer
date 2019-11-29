@@ -77,11 +77,25 @@ computerScreen.addEventListener('mouseout', () => {
     digitalClock.classList.add('hidden')
 })
 
+// origin scale
+
+function scaleroom() {
+    room.style.transform = ('scale(1)')
+    iphoneScreen.classList.remove('hidden')
+    iphoneScreenUnlocked.classList.add('hidden')
+}
+
+function scalecomputer(){
+    room.style.transform = ('scale(2.3) translateY(-8%)')
+        computerScreen.classList.add('hidden')
+        computerScreenUnlocked.style.opacity = ('1')
+}
+
 // Event : click the computer or iphone screen -> unlocked + scale
 room.addEventListener('click', (e) => {
     // scale computer screen
     if (e.target.classList.contains("js-room-scale")) {
-        room.style.transform = ('scale(1)')
+        scaleroom()
     }
     // scale iphone screen
     else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
@@ -94,9 +108,9 @@ room.addEventListener('click', (e) => {
         room.style.transform = ('scale(1)')
         computerScreen.classList.remove('hidden')
         computerScreenUnlocked.style.opacity = ('0')
-        videoElement.pause()
         playElement.classList.remove('hidden')
         pauseElement.classList.add('hidden')
+        videoElement.pause()
     }
     // for window & post it
     else if (e.target.classList.contains("js-no-scale")) {
@@ -104,9 +118,25 @@ room.addEventListener('click', (e) => {
     }
     // scale computer
     else {
-        room.style.transform = ('scale(2.3) translateY(-8%)')
-        computerScreen.classList.add('hidden')
-        computerScreenUnlocked.style.opacity = ('1')
+        scalecomputer()
+    }
+
+})
+
+// Escape = origin scale
+document.addEventListener('keyup', event => {
+    // console.log(event);
+    
+    if (event.key == 'Escape') {
+        scaleroom()
+    }
+})
+
+// Enter = computer scale
+document.addEventListener('keyup', event => {
+    
+    if (event.key == 'Enter') {
+        scalecomputer()
     }
 })
 
@@ -210,7 +240,7 @@ class Player {
             })
         }
 
-        for (let i = 0; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
+        for (let i = 1; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
         {
             newVideo(
                 videoPlaylist[i].file,

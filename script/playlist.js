@@ -19,22 +19,22 @@ let audioPlaylist = [
         "file":"audios/zelda-fairy-fontain.mp3"
     },
     {
-        "artist" : "GameChops",
-        "title" : "4",
-        "cover" : "audios/pokemon-gym.png",
-        "file":"audios/pokemon-gym.mp3"
+        "artist" : "College Music",
+        "title" : "Can't Take My Eyes Off You",
+        "cover" : "audios/eyes.png",
+        "file":"audios/eyes.mp3"
     },
     {
-        "artist" : "GameChops",
-        "title" : "Pokemon Gym",
-        "cover" : "audios/pokemon-gym.png",
-        "file":"audios/pokemon-gym.mp3"
+        "artist" : "College Music",
+        "title" : "Sweater Weather",
+        "cover" : "audios/sweater.png",
+        "file":"audios/sweater.mp3"
     },
     {
-        "artist" : "GameChops",
-        "title" : "Pokemon Gym",
-        "cover" : "audios/pokemon-gym.png",
-        "file":"audios/pokemon-gym.mp3"
+        "artist" : "College Music",
+        "title" : "Galdive - Blew me",
+        "cover" : "audios/galdive.png",
+        "file":"audios/galdive.mp3"
     }
 ]
 
