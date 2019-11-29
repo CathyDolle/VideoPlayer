@@ -47,7 +47,7 @@ window.setInterval(digitalTick, 1000)
 // OFF SCREEN
 
 const offScreen = document.querySelector('.js-off-screen')
-const videoElement = document.querySelector('.js-video')
+const videoElement = document.querySelector('.js-main-video')
 const pauseElement = document.querySelector('.js-pause')
 const playElement = document.querySelector('.js-play')
 
@@ -118,13 +118,117 @@ room.addEventListener('click', (e) => {
 class Player {
     constructor(_element) {
         this.element = _element
-        this.videoElement = this.element.querySelector('.js-video')
+        this.videoElement = this.element.querySelector('.js-main-video')
+        this.setVideo()
         this.setPlayPause()
         this.setVolume()
         this.setSeekBar()
         this.setScreen()
-        this.setVideo()
+        // this.setNext()
     }
+
+
+    // VIDEO PLAYLIST 
+    setVideo() {
+        // VIDEO
+        const fillElement = this.element.querySelector('.js-seek-bar-fill')
+        const playlistVideo = document.querySelector('.js-video-playlist')
+
+        // DESCRIPTIONS
+        const videoTitle = document.querySelector('.js-video-title')
+        const videoDescription = document.querySelector('.js-video-description')
+        const videoLink = document.querySelector('.js-video-link')
+
+        // ORIGIN VIDEO
+
+        this.videoElement.src = videoPlaylist[0].file
+        videoTitle.innerText = videoPlaylist[0].title
+        videoLink.href = videoPlaylist[0].link
+        videoDescription.innerHTML = videoPlaylist[0].description
+
+        function mainvideo() {
+            videoElement.src = videoPlaylist[0].file
+            videoTitle.innerText = videoPlaylist[0].title
+            videoLink.href = videoPlaylist[0].link
+            videoDescription.innerHTML = videoPlaylist[0].description
+            videoElement.play()
+            videoElement.currentTime = 0
+            pauseElement.classList.remove('hidden')
+            playElement.classList.add('hidden')
+        }
+
+        // NEXT
+        const nextElement = this.element.querySelector('.js-next')
+
+        function nextvideo() {
+            videoPlaylist.push(videoPlaylist.shift())
+            mainvideo()
+        }
+
+        nextElement.addEventListener('click', () => {
+            nextvideo()
+        })
+
+        document.addEventListener('keyup', event => {
+            if (event.key == 'ArrowRight') {
+                nextvideo()
+            }
+        })
+
+        // PREV
+        const prevElement = this.element.querySelector('.js-prev')
+
+        function prevvideo() {
+            videoPlaylist.unshift(videoPlaylist.pop())
+            mainvideo()
+        }
+
+        prevElement.addEventListener('click', () => {
+            prevvideo()
+        })
+
+        document.addEventListener('keyup', event => {
+            if (event.key == 'ArrowLeft') {
+                prevvideo()
+            }
+        })
+
+        function newVideo(source, cover, title, description, link) {
+            const video = document.createElement('video')
+            playlistVideo.appendChild(video)
+            video.src = source
+            video.poster = cover
+            video.addEventListener('click', () => {
+                videoElement.src = video.src
+                videoTitle.innerText = title
+                videoDescription.innerHTML = description
+                videoLink.href = link
+                videoElement.play()
+                videoElement.currentTime = 0
+                pauseElement.classList.remove('hidden')
+                playElement.classList.add('hidden')
+            })
+        }
+        newVideo(videoPlaylist[1].file, videoPlaylist[1].cover, videoPlaylist[1].title, videoPlaylist[1].description, videoPlaylist[1].link)
+        newVideo(videoPlaylist[2].file, videoPlaylist[2].cover, videoPlaylist[2].title, videoPlaylist[2].description, videoPlaylist[2].link)
+        newVideo(videoPlaylist[3].file, videoPlaylist[3].cover, videoPlaylist[3].title, videoPlaylist[3].description, videoPlaylist[3].link)
+        newVideo(videoPlaylist[4].file, videoPlaylist[4].cover, videoPlaylist[4].title, videoPlaylist[4].description, videoPlaylist[4].link)
+        newVideo(videoPlaylist[5].file, videoPlaylist[5].cover, videoPlaylist[5].title, videoPlaylist[5].description, videoPlaylist[5].link)
+        newVideo(videoPlaylist[6].file, videoPlaylist[6].cover, videoPlaylist[6].title, videoPlaylist[6].description, videoPlaylist[6].link)
+
+    }
+
+    // setNext(){
+    //     const nextElement = this.element.querySelector('.js-next')
+    //     function nextvideo() {
+    //         videoPlaylist.push(videoPlaylist.shift())
+    //         newVideo()
+    //     } 
+
+    //     nextElement.addEventListener('click', () =>{
+    //         nextvideo()
+    //     })
+    // }
 
     setPlayPause() {
         //play
@@ -243,7 +347,7 @@ class Player {
                 seekBarElement.style.bottom = ('5.5%')
             } else {
                 videoContainerElement.style.width = ('70%')
-                videoContainerElement.style.height = ('67%')
+                videoContainerElement.style.height = ('66.5%')
                 videoContainerElement.style.padding = ('3px')
                 windowElement.style.height = ('97%')
                 windowSiteElement.style.height = ('96%')
@@ -271,50 +375,6 @@ class Player {
         // minimize
         minimizeScreenElement.addEventListener('click', () => {
             fullscreen()
-        })
-    }
-
-    setVideo() {
-        const video1 = document.querySelector('.js-video')
-        const video2 = document.querySelector('.js-video2')
-        const video3 = document.querySelector('.js-video3')
-        const video4 = document.querySelector('.js-video4')
-        const infosVideo1 = document.querySelector('.js-infos-video1')
-        const infosVideo2 = document.querySelector('.js-infos-video2')
-        const infosVideo3 = document.querySelector('.js-infos-video3')
-        const fillElement = this.element.querySelector('.js-seek-bar-fill')
-
-        video2.addEventListener('click', () => {
-            video1.src = 'videos/phoenix.mp4'
-            pauseElement.classList.remove('hidden')
-            playElement.classList.add('hidden')
-            video1.play()
-            fillElement.style.transform = `scaleX(${0})`
-            infosVideo2.classList.remove('hidden')
-            infosVideo3.classList.add('hidden')
-            infosVideo1.classList.add('hidden')
-        })
-
-        video3.addEventListener('click', () => {
-            video1.src = 'videos/truedamage.mp4'
-            pauseElement.classList.remove('hidden')
-            playElement.classList.add('hidden')
-            video1.play()
-            fillElement.style.transform = `scaleX(${0})`
-            infosVideo3.classList.remove('hidden')
-            infosVideo2.classList.add('hidden')
-            infosVideo1.classList.add('hidden')
-        })
-
-        video4.addEventListener('click', () => {
-            video1.src = 'videos/miso.mp4'
-            pauseElement.classList.remove('hidden')
-            playElement.classList.add('hidden')
-            video1.play()
-            fillElement.style.transform = `scaleX(${0})`
-            infosVideo1.classList.remove('hidden')
-            infosVideo2.classList.add('hidden')
-            infosVideo3.classList.add('hidden')
         })
     }
 }
@@ -386,12 +446,12 @@ const audioTimeBar = document.querySelector('.js-audio-time-bar')
 const audioTimeBarFill = document.querySelector('.js-audio-time-bar-fill')
 
 audio.addEventListener('timeupdate', () => {
-    const ratioAudio =  audio.currentTime / audio.duration
+    const ratioAudio = audio.currentTime / audio.duration
     audioTimeBarFill.style.transform = `scaleX(${ratioAudio})`
 
 })
 
-audioTimeBar .addEventListener('click', (_event) => {
+audioTimeBar.addEventListener('click', (_event) => {
     const boundingAudio = audioTimeBar.getBoundingClientRect() //réccupérer la distance de la vidéo, le padding marge etc.
     const ratioAudio = (_event.clientX - boundingAudio.left) / boundingAudio.width // clientX -> position de la souris sur l'axe X
     const timeAudio = ratioAudio * audio.duration
@@ -407,7 +467,7 @@ var update = setInterval(() => {
     // current time
     var mins = Math.floor(audio.currentTime / 60)
     var secs = Math.floor(audio.currentTime % 60)
-    if (secs < 10){
+    if (secs < 10) {
         secs = '0' + String(secs);
     }
     // if (mins < 10) {
@@ -417,7 +477,7 @@ var update = setInterval(() => {
     // duration
     var durMins = Math.floor(audio.duration / 60)
     var durSecs = Math.floor(audio.duration % 60)
-    if (durSecs < 10)  {
+    if (durSecs < 10) {
         durSecs = '0' + String(durSecs);
     }
     // if (durMins < 10) {
@@ -456,6 +516,7 @@ audioPause.addEventListener('click', () => {
     playAudio()
 })
 
+// NEXT 
 audioNext.addEventListener('click', () => {
     audioPlaylist[i].currentTime = 0
     audio.pause()
@@ -465,7 +526,12 @@ audioNext.addEventListener('click', () => {
     audioArtist.innerText = audioPlaylist[i].artist
     audioCover.style.backgroundImage = `url(${audioPlaylist[i].cover})`
     audio.play()
+    audioPause.classList.remove('hidden')
+    audioPlay.classList.add('hidden')
+
 })
+
+// PREV
 
 audioPrev.addEventListener('click', () => {
     audioPlaylist[i].currentTime = 0
@@ -480,4 +546,6 @@ audioPrev.addEventListener('click', () => {
     audioArtist.innerText = audioPlaylist[i].artist
     audioCover.style.backgroundImage = `url(${audioPlaylist[i].cover})`
     audio.play()
+    audioPause.classList.remove('hidden')
+    audioPlay.classList.add('hidden')
 })
