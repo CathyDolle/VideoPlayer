@@ -156,9 +156,24 @@ class videoPlayer {
     setVolume() {
         const highVolumeButton = this.element.querySelector('.js-high-volume')
         const mutedVolumeButton = this.element.querySelector('.js-muted-volume')
+        // fill bar volume
         const volumeBar = this.element.querySelector('.js-volume-bar')
-        const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
+        // const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
         console.log(volumeBar)
+
+        // volumeBar.addEventListener('mousedown', (_e) =>{
+        //     this.userIsDraggingSeekBar = true
+        // })
+
+        // volumeBar.addEventListener('mousemove', (_e) =>{
+        //     if (this.userIsDraggingSeekBar){
+
+        //     }
+        // })
+
+        // volumeBar.addEventListener('click', (_e) =>{
+        //     this.userIsDraggingSeekBar = false
+        // })
 
 
 
@@ -186,22 +201,31 @@ class videoPlayer {
         const seekBarElement = this.element.querySelector('.js-seek-bar')
         const fillElement = this.element.querySelector('.js-seek-bar-fill')
 
+        // Drag & Drop
+        seekBarElement.addEventListener('mousedown', (_e) =>{
+            this.userIsDraggingSeekBar = true
+        })
 
+        seekBarElement.addEventListener('mousemove', (_e) =>{
+            if (this.userIsDraggingSeekBar){
+                const bounding = seekBarElement.getBoundingClientRect() //distance of the video (padding etc.)
+                const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
+                const time = ratio * this.videoElement.duration
+                fillElement.style.transform = `scaleX(${ratio})`
+                this.videoElement.currentTime = time
+            }
+        })
+
+        seekBarElement.addEventListener('click', (_e) =>{
+            this.userIsDraggingSeekBar = false
+        })
+
+        // time update 
         this.videoElement.addEventListener('timeupdate', () => {
             const ratio = this.videoElement.currentTime / this.videoElement.duration
             fillElement.style.transform = `scaleX(${ratio})`
-
         })
 
-        seekBarElement.addEventListener('click', (_event) => {
-            const bounding = seekBarElement.getBoundingClientRect() //réccupérer la distance de la vidéo, le padding marge etc.
-            const ratio = (_event.clientX - bounding.left) / bounding.width // clientX -> position de la souris sur l'axe X
-            const time = ratio * this.videoElement.duration
-
-            this.videoElement.currentTime = time
-
-
-        })
     }
 
     setHideCommands() {

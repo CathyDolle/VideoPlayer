@@ -624,7 +624,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(1deg, 0deg); }
+    transform: skew(0.5deg, 0deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
