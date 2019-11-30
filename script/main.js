@@ -429,6 +429,7 @@ const iphoneScreen = document.querySelector('.js-iphone-locked')
 const offScreen = document.querySelector('.js-off-screen')
 const pauseElement = document.querySelector('.js-pause')
 const playElement = document.querySelector('.js-play')
+const videoElement = document.querySelector('.js-main-video')
 
 // origin scale
 function scaleroom() {
@@ -723,8 +724,16 @@ windowDeco.addEventListener('click', (a) => {
 })
 
 if (window.innerWidth < 1301 ) {
+    videoElement.controls = false
     room.addEventListener('click', (e) => {
         computerScreen.classList.add('hidden')
         computerScreenUnlocked.style.opacity = ('1')
+        if (e.target.classList.contains("js-off-screen")) {
+            computerScreen.classList.remove('hidden')
+            computerScreenUnlocked.style.opacity = ('0')
+            playElement.classList.remove('hidden')
+            pauseElement.classList.add('hidden')
+            videoElement.pause()
+        }
     })
 }
