@@ -639,7 +639,7 @@ DESK
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
-@media (max-width: 1300px) and (min-width: 950px) {
+@media (max-width: 1350px) and (min-width: 950px) {
   .deco_part3 {
     display: none; }
 

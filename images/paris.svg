@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="713" height="932" viewBox="0 0 713 932">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_292" data-name="Rectangle 292" width="713" height="932" transform="translate(0 -6)" fill="#fff"/>
+      <rect id="Rectangle_292" data-name="Rectangle 292" width="713" height="932" transform="translate(-219 -6)" fill="#fff"/>
     </clipPath>
     <clipPath id="clip-path-2">
       <rect id="Rectangle_281" data-name="Rectangle 281" width="1865" height="1554" transform="translate(0 0.093)"/>
@@ -31,9 +31,9 @@
       <stop offset="1" stop-color="#ffe5df" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <g id="Groupe_de_masques_2" data-name="Groupe de masques 2" transform="translate(0 6)" clip-path="url(#clip-path)">
-    <g id="Layer_1" transform="translate(-361 1.907)">
-      <g id="Groupe_3527" data-name="Groupe 3527" transform="translate(0 -7)">
+  <g id="Groupe_de_masques_2" data-name="Groupe de masques 2" transform="translate(219 6)" clip-path="url(#clip-path)">
+    <g id="Layer_1" transform="translate(-795 1.907)">
+      <g id="Groupe_3527" data-name="Groupe 3527" transform="translate(109 -7)">
         <g id="Groupe_3517" data-name="Groupe 3517" transform="translate(0 0)" clip-path="url(#clip-path-2)">
           <rect id="Rectangle_280" data-name="Rectangle 280" width="1864.871" height="720.118" transform="translate(-0.28 0.073)" fill="url(#linear-gradient)"/>
         </g>
