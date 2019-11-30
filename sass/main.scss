@@ -88,7 +88,8 @@ body {
         align-items: center;
         width: 30%;
         height: 100%;
-        &_curtain{
+
+        &_curtain {
             height: 37px;
         }
 
@@ -99,12 +100,13 @@ body {
             background-image: url('../images/paris.svg');
             background-size: cover;
             // border: inset 6px rgb(22, 22, 22);
-            box-shadow:inset 0px 0px 0px 6px #212121;
+            box-shadow: inset 0px 0px 0px 6px #212121;
             // border-style: inset;
             cursor: pointer;
             z-index: 3;
+
             &_curtain_1,
-            &_curtain_2{
+            &_curtain_2 {
                 position: absolute;
                 animation-name: flyingCurtain;
                 animation-duration: 3s;
@@ -115,10 +117,12 @@ body {
                 // width: 65px;
                 // background: $curtain;
             }
-            &_curtain_1{
+
+            &_curtain_1 {
                 left: -10px;
             }
-            &_curtain_2{
+
+            &_curtain_2 {
                 right: -10px;
             }
         }
@@ -365,7 +369,7 @@ body {
                                     padding: 3px;
                                     box-sizing: border-box;
                                     width: 70%;
-                                    height: 66.5%;
+                                    height: 67.5%;
                                     // background:pink;
                                     display: flex;
                                     flex-direction: column;
@@ -382,11 +386,9 @@ body {
                                         cursor: pointer;
 
                                         & video {
-                                            width: 100%;
+                                            width: 99.8%;
                                             height: 100%;
                                             object-fit: cover;
-                                            -webkit-object-fit: cover;
-                                            -moz-object-fit: cover;
                                         }
 
                                         // seek bar
@@ -394,7 +396,7 @@ body {
                                             position: absolute;
                                             bottom: 8%;
                                             width: 100%;
-                                            height: 1px;
+                                            height: 2px;
                                             background: rgba(255, 255, 255, 0.226);
                                             cursor: pointer;
 
@@ -402,16 +404,15 @@ body {
 
                                             &_fill {
                                                 position: absolute;
-                                                bottom: 8%;
                                                 width: 100%;
-                                                height: 1px;
+                                                height: 100%;
                                                 left: 0;
                                                 transform: scaleX(0);
                                                 transform-origin: 0 0;
                                                 will-change: transform;
                                                 background: $timebar;
-                                                cursor: pointer;
                                                 z-index: 1;
+                                                cursor: pointer;
                                             }
                                         }
 
@@ -450,7 +451,10 @@ body {
                                                 background: rgba(255, 255, 255, 0.185);
 
                                                 &_fill {
-                                                    width: 50%;
+                                                    left: 0;
+                                                    transform: scaleX(1);
+                                                    transform-origin: 0 0;
+                                                    width: 100%;
                                                     height: 100%;
                                                     background: white;
                                                 }
@@ -459,7 +463,7 @@ body {
                                             & h3 {
                                                 color: white;
                                                 font-family: 'lato';
-                                                font-size: 4px;
+                                                font-size: 5px;
                                                 font-weight: 300;
                                             }
 
@@ -519,7 +523,7 @@ body {
                                 &_list {
                                     width: 30%;
                                     height: 100%;
-                                    padding: 0px 3px 3px 0px;
+                                    padding-right: 3px;
                                     box-sizing: border-box;
                                     // background: blue;
                                     display: flex;
@@ -590,7 +594,7 @@ body {
             // background: white;
             & img {
                 animation-name: flying;
-                animation-duration: 3s;
+                animation-duration: 4s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-out;
                 width: 110px;
@@ -775,6 +779,10 @@ body {
                                     border-radius: 1px;
 
                                     &_fill {
+                                        left: 0;
+                                        transform: scaleX(1);
+                                        transform-origin: 0 0;
+                                        will-change: transform;
                                         width: 100%;
                                         height: 100%;
                                         background: $timebar;
@@ -932,31 +940,35 @@ DESK
     }
 }
 
-@keyframes flying{
-    0%{
+@keyframes flying {
+    0% {
         transform-origin: 0px 0px;
         transform: skew(0deg, 0deg);
     }
-    50%{
+
+    50% {
         transform-origin: 0px 0px;
-        transform: skew(1deg, -1deg);
+        transform: skew(2.5deg, -1deg);
     }
-    100%{
+
+    100% {
         transform-origin: 0px 0px;
         transform: skew(0deg, 0deg);
     }
 }
 
-@keyframes flyingCurtain{
-    0%{
+@keyframes flyingCurtain {
+    0% {
         transform-origin: 0px 0px;
         transform: skew(0deg, 0deg);
     }
-    50%{
+
+    50% {
         transform-origin: 0px 0px;
-        transform: skew(0.5deg, 0deg);
+        transform: skew(0.8deg, 0deg);
     }
-    100%{
+
+    100% {
         transform-origin: 0px 0px;
         transform: skew(0deg, 0deg);
     }

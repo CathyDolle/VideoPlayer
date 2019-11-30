@@ -230,7 +230,7 @@ body {
                   padding: 3px;
                   box-sizing: border-box;
                   width: 70%;
-                  height: 66.5%;
+                  height: 67.5%;
                   display: flex;
                   flex-direction: column;
                   align-items: flex-start; }
@@ -241,30 +241,27 @@ body {
                     background: #050505;
                     cursor: pointer; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_video video {
-                      width: 100%;
+                      width: 99.8%;
                       height: 100%;
-                      object-fit: cover;
-                      -webkit-object-fit: cover;
-                      -moz-object-fit: cover; }
+                      object-fit: cover; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar {
                       position: absolute;
                       bottom: 8%;
                       width: 100%;
-                      height: 1px;
+                      height: 2px;
                       background: rgba(255, 255, 255, 0.226);
                       cursor: pointer; }
                       .deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar_fill {
                         position: absolute;
-                        bottom: 8%;
                         width: 100%;
-                        height: 1px;
+                        height: 100%;
                         left: 0;
                         transform: scaleX(0);
                         transform-origin: 0 0;
                         will-change: transform;
                         background: #b1b0fb;
-                        cursor: pointer;
-                        z-index: 1; }
+                        z-index: 1;
+                        cursor: pointer; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands {
                       display: flex;
                       align-items: center;
@@ -285,13 +282,16 @@ body {
                         height: 1px;
                         background: rgba(255, 255, 255, 0.185); }
                         .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_volume_fill {
-                          width: 50%;
+                          left: 0;
+                          transform: scaleX(1);
+                          transform-origin: 0 0;
+                          width: 100%;
                           height: 100%;
                           background: white; }
                       .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands h3 {
                         color: white;
                         font-family: 'lato';
-                        font-size: 4px;
+                        font-size: 5px;
                         font-weight: 300; }
                       .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_fullscreen, .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_minimize {
                         position: absolute;
@@ -327,7 +327,7 @@ body {
                 .deco_part2_bot_computer_screen_unlocked_window_site_list {
                   width: 30%;
                   height: 100%;
-                  padding: 0px 3px 3px 0px;
+                  padding-right: 3px;
                   box-sizing: border-box;
                   display: flex;
                   flex-direction: column;
@@ -369,7 +369,7 @@ body {
       height: 70%; }
       .deco_part3_post img {
         animation-name: flying;
-        animation-duration: 3s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
         width: 110px;
@@ -506,6 +506,10 @@ body {
                   background: black;
                   border-radius: 1px; }
                   .deco_part3_bot_iphone_screen_inside_unlocked_volume_bar_fill {
+                    left: 0;
+                    transform: scaleX(1);
+                    transform-origin: 0 0;
+                    will-change: transform;
                     width: 100%;
                     height: 100%;
                     background: #b1b0fb; }
@@ -614,7 +618,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(1deg, -1deg); }
+    transform: skew(2.5deg, -1deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
@@ -624,7 +628,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(0.5deg, 0deg); }
+    transform: skew(0.8deg, 0deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }

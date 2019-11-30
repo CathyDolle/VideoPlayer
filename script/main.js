@@ -50,7 +50,7 @@ class videoPlayer {
         }
 
         // ADAPT INFO FROM ARRAY FOR EACH VIDEO
-        for (let i = 1; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
+        for (let i = 0; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
         {
             newVideo(
                 videoPlaylist[i].file,
@@ -158,26 +158,25 @@ class videoPlayer {
         const mutedVolumeButton = this.element.querySelector('.js-muted-volume')
         // fill bar volume
         const volumeBar = this.element.querySelector('.js-volume-bar')
-        // const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
+        const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
         console.log(volumeBar)
 
-        // volumeBar.addEventListener('mousedown', (_e) =>{
-        //     this.userIsDraggingSeekBar = true
-        // })
+        volumeBar.addEventListener('mousedown', (_e) => {
+            this.userIsDraggingSeekBar = true
+        })
 
-        // volumeBar.addEventListener('mousemove', (_e) =>{
-        //     if (this.userIsDraggingSeekBar){
+        volumeBar.addEventListener('mousemove', (_e) => {
+            if (this.userIsDraggingSeekBar) {
+                const bounding = volumeBar.getBoundingClientRect() //distance of the video (padding etc.)
+                const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
+                volumeBarFill.style.transform = `scaleX(${ratio})`
+                this.videoElement.volume = ratio
+            }
+        })
 
-        //     }
-        // })
-
-        // volumeBar.addEventListener('click', (_e) =>{
-        //     this.userIsDraggingSeekBar = false
-        // })
-
-
-
-
+        volumeBar.addEventListener('mouseup', (_e) => {
+            this.userIsDraggingSeekBar = false
+        })
 
         // HIGH VOLUME
 
@@ -202,12 +201,12 @@ class videoPlayer {
         const fillElement = this.element.querySelector('.js-seek-bar-fill')
 
         // Drag & Drop
-        seekBarElement.addEventListener('mousedown', (_e) =>{
+        seekBarElement.addEventListener('mousedown', (_e) => {
             this.userIsDraggingSeekBar = true
         })
 
-        seekBarElement.addEventListener('mousemove', (_e) =>{
-            if (this.userIsDraggingSeekBar){
+        seekBarElement.addEventListener('mousemove', (_e) => {
+            if (this.userIsDraggingSeekBar) {
                 const bounding = seekBarElement.getBoundingClientRect() //distance of the video (padding etc.)
                 const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
                 const time = ratio * this.videoElement.duration
@@ -216,7 +215,7 @@ class videoPlayer {
             }
         })
 
-        seekBarElement.addEventListener('click', (_e) =>{
+        seekBarElement.addEventListener('mouseup', (_e) => {
             this.userIsDraggingSeekBar = false
         })
 
@@ -547,11 +546,24 @@ audio.addEventListener('timeupdate', () => {
 })
 
 // Time bar update currentTime on click
-audioTimeBar.addEventListener('click', (_event) => {
-    const boundingAudio = audioTimeBar.getBoundingClientRect() //réccupérer la distance de la vidéo, le padding marge etc.
-    const ratioAudio = (_event.clientX - boundingAudio.left) / boundingAudio.width // clientX -> position de la souris sur l'axe X
-    const timeAudio = ratioAudio * audio.duration
-    audio.currentTime = timeAudio
+
+// Drag & Drop
+audioTimeBar.addEventListener('mousedown', (_e) => {
+    this.userIsDraggingSeekBar = true
+})
+
+audioTimeBar.addEventListener('mousemove', (_e) => {
+    if (this.userIsDraggingSeekBar) {
+        const boundingAudio = audioTimeBar.getBoundingClientRect() //réccupérer la distance de la vidéo, le padding marge etc.
+        const ratioAudio = (_e.clientX - boundingAudio.left) / boundingAudio.width // clientX -> position de la souris sur l'axe X
+        const timeAudio = ratioAudio * audio.duration
+        audioTimeBarFill.style.transform = `scaleX(${ratioAudio})`
+        audio.currentTime = timeAudio
+    }
+})
+
+audioTimeBar.addEventListener('mouseup', (_e) => {
+    this.userIsDraggingSeekBar = false
 })
 
 // AUDIO SHOW TIME
@@ -601,8 +613,8 @@ audioPause.addEventListener('click', () => {
 })
 
 // pause on P Key
-document.addEventListener('keyup', event =>{    
-    if (event.key == 'p'){
+document.addEventListener('keyup', event => {
+    if (event.key == 'p') {
         playPauseAudio()
     }
 })
@@ -645,14 +657,14 @@ audioPrev.addEventListener('click', () => {
 })
 
 // Next on up key ArrowUp
-document.addEventListener('keyup', event => {    
+document.addEventListener('keyup', event => {
     if (event.key == 'ArrowUp') {
         nextaudio()
     }
 })
 
 // Prev on up key ArrowDown
-document.addEventListener('keyup', event => {    
+document.addEventListener('keyup', event => {
     if (event.key == 'ArrowDown') {
         prevaudio()
     }
@@ -661,4 +673,30 @@ document.addEventListener('keyup', event => {
 //autoplay
 audio.addEventListener('ended', () => {
     nextaudio()
+})
+
+// Iphone volume
+
+// fill bar volume
+const volumeAudioBar = document.querySelector('.js-volume-audio-bar')
+const volumeAudioBarFill = document.querySelector('.js-volume-audio-bar-fill')
+
+volumeAudioBar.addEventListener('mousedown', (_e) => {
+    userIsDraggingSeekBar = true
+})
+
+volumeAudioBar.addEventListener('mousemove', (_e) => {
+    if (userIsDraggingSeekBar) {
+        const bounding = volumeAudioBar.getBoundingClientRect() //distance of the video (padding etc.)
+        const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
+        volumeAudioBarFill.style.transform = `scaleX(${ratio})`
+        audio.volume = ratio
+        if(audio.volume < 0){
+            ratio === 0
+        }
+    }
+})
+
+volumeAudioBar.addEventListener('mouseup', (_e) => {
+    userIsDraggingSeekBar = false
 })
