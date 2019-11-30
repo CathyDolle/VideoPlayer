@@ -20,6 +20,11 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2; }
+  .room_no-scale {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3; }
 
 .scale {
   animation-name: scale;
@@ -634,7 +639,7 @@ DESK
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
-@media (max-width: 1300px) {
+@media (max-width: 1300px) and (min-width: 950px) {
   .deco_part3 {
     display: none; }
 
@@ -643,7 +648,7 @@ DESK
 
   .deco_part1 {
     width: 40vw; } }
-@media (max-width: 950px) {
+@media (max-width: 950px) and (min-width: 600px) {
   .deco_part3 {
     display: none; }
 
@@ -659,7 +664,13 @@ DESK
   .desk_bot_drawer {
     width: 40px; }
 
+  .deco_part2 {
+    display: none; }
+
   .desk_bot_drawer_handle {
-    display: none; } }
+    display: none; }
+
+  .deco_part3 {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

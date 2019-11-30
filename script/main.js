@@ -720,3 +720,12 @@ windowDeco.addEventListener('click', (a) => {
         nav.style.background = '#e5e5e5'
     }
 })
+
+// const roomNoScale = document.querySelector('.js-room-no-scale')
+// if (window.matchMedia( "(max-width: 1300px)" )) {
+//     roomNoScale.classList.remove('hidden')
+//  }
+
+//  roomNoScale.addEventListener('click', () =>{
+//      scaleroom()
+//  })
