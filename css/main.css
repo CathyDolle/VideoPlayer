@@ -33,6 +33,7 @@ body {
 .deco {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 90%;
   height: 80%; }
   .deco_part1 {
@@ -633,5 +634,32 @@ DESK
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
+@media (max-width: 1300px) {
+  .deco_part3 {
+    display: none; }
+
+  .deco_part2 {
+    width: 50vw; }
+
+  .deco_part1 {
+    width: 40vw; } }
+@media (max-width: 950px) {
+  .deco_part3 {
+    display: none; }
+
+  .deco_part2 {
+    width: 100vw; }
+
+  .deco_part1 {
+    display: none; } }
+@media (max-width: 600px) {
+  .deco_part1 {
+    display: none; }
+
+  .desk_bot_drawer {
+    width: 40px; }
+
+  .desk_bot_drawer_handle {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
