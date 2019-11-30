@@ -49,7 +49,7 @@ let videoPlaylist = [
         "link" : "https://www.youtube.com/watch?v=8GGGliIxpgc"
     },
     {
-        "title" : "Joy Crookes - Mother May I Sleep With Danger?",
+        "title" : "Joy Crookes - Mother May I",
         "description" : "South London songstress Joy Crookes show us why she’s one of the most exciting artists around <br>with a mesmerising performance of “Mother May I Sleep With Danger?” which is taken from her <br> Influence EP.",
         "cover" : "videos/joy.jpg",
         "file":"videos/joy.mp4",
