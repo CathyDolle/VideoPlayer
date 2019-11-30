@@ -232,22 +232,22 @@ class videoPlayer {
 
     setHideCommands() {
         // hide commands on hover
-        const videoBoard = document.querySelector('.js-video-board')
+        const videoCommands = document.querySelector('.js-video-commands')
 
         this.videoElement.addEventListener('mouseover', () => {
-            videoBoard.classList.remove('hidden')
+            videoCommands.classList.remove('hidden')
         })
 
-        videoBoard.addEventListener('mouseover', () => {
-            videoBoard.classList.remove('hidden')
+        videoCommands.addEventListener('mouseover', () => {
+            videoCommands.classList.remove('hidden')
         })
 
-        videoBoard.addEventListener('mouseout', () => {
-            videoBoard.classList.add('hidden')
+        videoCommands.addEventListener('mouseout', () => {
+            videoCommands.classList.add('hidden')
         })
 
         this.videoElement.addEventListener('mouseout', () => {
-            videoBoard.classList.add('hidden')
+            videoCommands.classList.add('hidden')
         })
     }
 
@@ -724,11 +724,13 @@ windowDeco.addEventListener('click', (a) => {
 })
 
 // Responsive
+// const videoCommands = document.querySelector('.js-video-commands')
 
 if (window.innerWidth < 1301 ) {
-    videoElement.controls = false
+    videoElement.removeAttribute("controls") 
     room.addEventListener('click', (e) => {
         computerScreen.classList.add('hidden')
+        // videoCommands.classList.add('hidden')
         computerScreenUnlocked.style.opacity = ('1')
         if (e.target.classList.contains("js-off-screen")) {
             computerScreen.classList.remove('hidden')
