@@ -170,7 +170,7 @@ class videoPlayer {
                 const bounding = volumeBar.getBoundingClientRect() //distance of the video (padding etc.)
                 const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
                 volumeBarFill.style.transform = `scaleX(${ratio})`
-                if (ratio < 0.0043) {
+                if (ratio < 0) {
                     this.userIsDraggingSeekBar = false
                 }
                 this.videoElement.volume = ratio
@@ -268,6 +268,7 @@ class videoPlayer {
         // fullscreen
         function fullscreen() {
             if (minimizeScreenElement.classList.contains('hidden')) {
+                // full screen
                 videoContainerElement.style.width = ('100%')
                 videoContainerElement.style.height = ('100%')
                 videoContainerElement.style.padding = ('0px')
@@ -279,9 +280,10 @@ class videoPlayer {
                 mainBarElement.classList.add('hidden')
                 navElement.classList.add('hidden')
                 minimizeScreenElement.classList.remove('hidden')
-                bgCommandsElement.style.height = ('5%')
+                bgCommandsElement.style.height = ('6%')
                 seekBarElement.style.bottom = ('5.5%')
             } else {
+                // minim screen
                 videoContainerElement.style.width = ('70%')
                 videoContainerElement.style.height = ('66.5%')
                 videoContainerElement.style.padding = ('3px')
@@ -293,7 +295,7 @@ class videoPlayer {
                 mainBarElement.classList.remove('hidden')
                 navElement.classList.remove('hidden')
                 minimizeScreenElement.classList.add('hidden')
-                bgCommandsElement.style.height = ('7%')
+                bgCommandsElement.style.height = ('8%')
                 seekBarElement.style.bottom = ('8%')
             }
         }
@@ -677,7 +679,7 @@ volumeAudioBar.addEventListener('mousemove', (_e) => {
         const bounding = volumeAudioBar.getBoundingClientRect() //distance of the video (padding etc.)
         const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
         volumeAudioBarFill.style.transform = `scaleX(${ratio})`
-        if (ratio < 0.004) {
+        if (ratio < 0) {
             this.userIsDraggingSeekBar = false
         }
         audio.volume = ratio
