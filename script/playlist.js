@@ -49,11 +49,11 @@ let videoPlaylist = [
         "link" : "https://www.youtube.com/watch?v=8GGGliIxpgc"
     },
     {
-        "title" : "Billie Eilish - idontwannabeyouanymore",
-        "description" : "Billie Eilish, Los Angeles-based pop starlet, is back with an astonishing <br>and deeply introspective rendition of 'idontwannabeyouanymore,' <br>lifted from her debut EP Do not Smile at Me.",
-        "cover" : "videos/billi.jpg",
-        "file":"videos/billi.mp4",
-        "link" : "https://www.youtube.com/watch?v=DSbqyWXVDYg"
+        "title" : "Joy Crookes - Mother May I Sleep With Danger?",
+        "description" : "South London songstress Joy Crookes show us why she’s one of the most exciting artists around <br>with a mesmerising performance of “Mother May I Sleep With Danger?” which is taken from her <br> Influence EP.",
+        "cover" : "videos/joy.jpg",
+        "file":"videos/joy.mp4",
+        "link" : "https://www.youtube.com/watch?v=xuTDKlyXbQg"
     },
     {
         "title" : "Dennis Lloyd - Restes",
@@ -61,6 +61,13 @@ let videoPlaylist = [
         "cover" : "videos/dennis.jpg",
         "file":"videos/dennis.mp4",
         "link" : "https://www.youtube.com/watch?v=WYeAUpvWeI8"
+    },
+    {
+        "title" : "Billie Eilish - idontwannabeyouanymore",
+        "description" : "Billie Eilish, Los Angeles-based pop starlet, is back with an astonishing <br>and deeply introspective rendition of 'idontwannabeyouanymore,' <br>lifted from her debut EP Do not Smile at Me.",
+        "cover" : "videos/billi.jpg",
+        "file":"videos/billi.mp4",
+        "link" : "https://www.youtube.com/watch?v=DSbqyWXVDYg"
     },
     {
         "title" : "DEAN - love",
@@ -82,13 +89,6 @@ let videoPlaylist = [
         "cover" : "videos/mabel.jpg",
         "file":"videos/mabel.mp4",
         "link" : "https://www.youtube.com/watch?v=8jr_zoRpt6o"
-    },
-    {
-        "title" : "Joy Crookes - Mother May I Sleep With Danger?",
-        "description" : "South London songstress Joy Crookes show us why she’s one of the most exciting artists around <br>with a mesmerising performance of “Mother May I Sleep With Danger?” which is taken from her <br> Influence EP.",
-        "cover" : "videos/joy.jpg",
-        "file":"videos/joy.mp4",
-        "link" : "https://www.youtube.com/watch?v=xuTDKlyXbQg"
     },
     {
         "title" : "MISO - Take Me",

@@ -8,14 +8,19 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Groupe_3626" data-name="Groupe 3626" transform="translate(6.557)">
-    <g id="Groupe_1091" data-name="Groupe 1091">
-      <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(17.902 13.292)">
-        <g transform="matrix(1, 0, 0, 1, -24.46, -13.29)" filter="url(#Rectangle_103)">
-          <rect id="Rectangle_103-2" data-name="Rectangle 103" width="179" height="179" transform="translate(24 13)" fill="#fff"/>
+  <g id="Groupe_3633" data-name="Groupe 3633" transform="translate(1850 -11377)">
+    <g id="Groupe_3632" data-name="Groupe 3632" transform="translate(-1843.443 11377)">
+      <g id="Groupe_1091" data-name="Groupe 1091">
+        <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(17.902 13.292)">
+          <g transform="matrix(1, 0, 0, 1, -24.46, -13.29)" filter="url(#Rectangle_103)">
+            <rect id="Rectangle_103-2" data-name="Rectangle 103" width="179" height="179" transform="translate(24 13)" fill="#fff"/>
+          </g>
         </g>
+        <rect id="Rectangle_104" data-name="Rectangle 104" width="71.841" height="18.342" transform="matrix(-0.788, 0.616, -0.616, -0.788, 67.349, 14.454)" fill="#dba692" opacity="0.278"/>
       </g>
-      <rect id="Rectangle_104" data-name="Rectangle 104" width="71.841" height="18.342" transform="matrix(-0.788, 0.616, -0.616, -0.788, 67.349, 14.454)" fill="#dba692" opacity="0.278"/>
     </g>
+    <text id="Features_List_on_construction" data-name="Features
+List on 
+construction" transform="translate(-1738 11463)" font-size="26" font-family="Lato-Light, Lato" font-weight="300" letter-spacing="0.03em"><tspan x="-51.708" y="0">Features</tspan><tspan x="-41.775" y="32">List on </tspan><tspan x="-74.392" y="64">construction</tspan></text>
   </g>
 </svg>

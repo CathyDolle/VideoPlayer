@@ -187,7 +187,7 @@ body {
               position: relative;
               width: 100%;
               height: 3%;
-              background: #f1efff;
+              background: white;
               z-index: 1; }
               .deco_part2_bot_computer_screen_unlocked_main-bar_off {
                 position: absolute;
@@ -199,7 +199,7 @@ body {
             .deco_part2_bot_computer_screen_unlocked_window {
               width: 100%;
               height: 97%;
-              background: #1a1a1a; }
+              background: white; }
               .deco_part2_bot_computer_screen_unlocked_window_nav {
                 display: flex;
                 align-items: center;
@@ -207,7 +207,7 @@ body {
                 height: 4%;
                 padding-left: 2px;
                 box-sizing: border-box;
-                background: #050505;
+                background: #e5e5e5;
                 border-radius: 3px 3px 0px 0px; }
                 .deco_part2_bot_computer_screen_unlocked_window_nav_close, .deco_part2_bot_computer_screen_unlocked_window_nav_mini, .deco_part2_bot_computer_screen_unlocked_window_nav_resize {
                   width: 4px;
@@ -279,12 +279,14 @@ body {
                       .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_volume {
                         margin: 0 4px 0 2px;
                         width: 20px;
-                        height: 1px;
-                        background: rgba(255, 255, 255, 0.185); }
+                        height: 2px;
+                        border-radius: 1px;
+                        background: rgba(223, 221, 221, 0.301); }
                         .deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_volume_fill {
                           left: 0;
                           transform: scaleX(1);
                           transform-origin: 0 0;
+                          border-radius: 1px;
                           width: 100%;
                           height: 100%;
                           background: white; }
@@ -304,14 +306,13 @@ body {
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
                       margin: 0;
                       padding-top: 7px;
-                      color: white;
+                      color: black;
                       font-family: lato;
                       font-weight: 700;
-                      font-size: 10px;
-                      letter-spacing: 1px; }
+                      font-size: 10px; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
                       margin: 8px 0 8px 0;
-                      color: white;
+                      color: black;
                       font-family: 'Lato', sans-serif;
                       font-weight: 300;
                       font-size: 7px;

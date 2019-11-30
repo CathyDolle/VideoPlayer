@@ -1,30 +1,30 @@
 /*
 COLORS
 */
-// dark mode
-// $bg : rgb(88, 88, 110);
-$description : white;
-$link : rgb(255, 139, 230);
-$main-bar : rgb(241, 239, 255);
-$screen-window : rgb(26, 26, 26);
-$nav : rgb(5, 5, 5);
-// $desk : rgb(33, 33, 47);
-// $desk-shadow : rgb(37, 37, 51);
-// $handle : rgb(0, 0, 0);
-
-// light mode
-// $bg : rgb(207, 195, 191);
+// background colors
 $bg : #D2D2E0;
-// $description : black;
-// $link : rgb(255, 139, 230);
-// $main-bar : rgb(255, 255, 255);
-// $screen-window : white;
-// $nav : #e5e5e5;
+
+// light mode website
+$description : black;
+$link : rgb(255, 139, 230);
+$main-bar : rgb(255, 255, 255);
+$screen-window : white;
+$nav : #e5e5e5;
+
+// Desk colors
 $desk : white;
 $desk-shadow : #F5F5F5;
 $handle : black;
 
+// dark mode
+// $desk : rgb(33, 33, 47);
+// $desk-shadow : rgb(37, 37, 51);
+// $handle : rgb(0, 0, 0);
+
+// Deco colors
 $curtain : rgba(255, 255, 255, 0.623);
+
+// Commands colors
 $timebar : rgb(177, 176, 251);
 
 
@@ -447,13 +447,15 @@ body {
                                             &_volume {
                                                 margin: 0 4px 0 2px;
                                                 width: 20px;
-                                                height: 1px;
-                                                background: rgba(255, 255, 255, 0.185);
+                                                height: 2px;
+                                                border-radius: 1px;
+                                                background: rgba(223, 221, 221, 0.301);
 
                                                 &_fill {
                                                     left: 0;
                                                     transform: scaleX(1);
                                                     transform-origin: 0 0;
+                                                    border-radius: 1px;
                                                     width: 100%;
                                                     height: 100%;
                                                     background: white;
@@ -492,7 +494,7 @@ body {
                                             font-family: lato;
                                             font-weight: 700;
                                             font-size: 10px;
-                                            letter-spacing: 1px;
+                                            // letter-spacing: 1px;
 
                                         }
 

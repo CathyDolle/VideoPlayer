@@ -170,6 +170,9 @@ class videoPlayer {
                 const bounding = volumeBar.getBoundingClientRect() //distance of the video (padding etc.)
                 const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
                 volumeBarFill.style.transform = `scaleX(${ratio})`
+                if (ratio < 0.0043) {
+                    this.userIsDraggingSeekBar = false
+                }
                 this.videoElement.volume = ratio
             }
         })
@@ -488,22 +491,6 @@ document.addEventListener('keyup', event => {
     }
 })
 
-//DAY/NIGHT MODE
-
-const windowDeco = document.querySelector('.js-window-deco')
-
-windowDeco.addEventListener('click', (a) => {
-    if (a.target.classList.contains("js-day")) {
-        windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
-        document.body.style.background = "rgb(88, 88, 110)"
-        windowDeco.classList.remove('js-day')
-    } else {
-        windowDeco.style.backgroundImage = "url('images/paris.svg')"
-        document.body.style.background = "#D2D2E0"
-        windowDeco.classList.add('js-day')
-    }
-})
-
 // IPHONE AUDIO PLAYER 
 
 // AUDIO
@@ -682,21 +669,52 @@ const volumeAudioBar = document.querySelector('.js-volume-audio-bar')
 const volumeAudioBarFill = document.querySelector('.js-volume-audio-bar-fill')
 
 volumeAudioBar.addEventListener('mousedown', (_e) => {
-    userIsDraggingSeekBar = true
+    this.userIsDraggingSeekBar = true
 })
 
 volumeAudioBar.addEventListener('mousemove', (_e) => {
-    if (userIsDraggingSeekBar) {
+    if (this.userIsDraggingSeekBar) {
         const bounding = volumeAudioBar.getBoundingClientRect() //distance of the video (padding etc.)
         const ratio = (_e.clientX - bounding.left) / bounding.width // clientX position mouse on X axe
         volumeAudioBarFill.style.transform = `scaleX(${ratio})`
-        audio.volume = ratio
-        if(audio.volume < 0){
-            ratio === 0
+        if (ratio < 0.004) {
+            this.userIsDraggingSeekBar = false
         }
+        audio.volume = ratio
     }
 })
 
 volumeAudioBar.addEventListener('mouseup', (_e) => {
-    userIsDraggingSeekBar = false
+    this.userIsDraggingSeekBar = false
+})
+
+//DAY/NIGHT MODE
+
+const windowDeco = document.querySelector('.js-window-deco')
+const titleSong = document.querySelector('h1')
+const descSong = document.querySelector('p')
+const site = document.querySelector('.js-window-site')
+const nav = document.querySelector('.js-nav')
+
+windowDeco.addEventListener('click', (a) => {
+    // night
+    if (a.target.classList.contains("js-day")) {
+        windowDeco.style.backgroundImage = "url('images/parisNight.svg')"
+        document.body.style.background = "rgb(88, 88, 110)"
+        windowDeco.classList.remove('js-day')
+        titleSong.style.color = 'white'
+        descSong.style.color = 'white'
+        site.style.background = 'rgb(26, 26, 26)'
+        nav.style.background = 'rgb(5, 5, 5)'
+    }
+    // day
+    else {
+        windowDeco.style.backgroundImage = "url('images/paris.svg')"
+        document.body.style.background = "#D2D2E0"
+        windowDeco.classList.add('js-day')
+        titleSong.style.color = 'black'
+        descSong.style.color = 'black'
+        site.style.background = 'white'
+        nav.style.background = '#e5e5e5'
+    }
 })
