@@ -89,32 +89,37 @@ body {
         width: 30%;
         height: 100%;
         &_curtain{
-            height: 35px;
+            height: 37px;
         }
 
         &_window {
             position: relative;
-            width: 310px;
-            height: 450px;
+            width: 350px;
+            height: 440px;
             background-image: url('../images/paris.svg');
             background-size: cover;
-            // border: solid 4px black;
+            // border: inset 6px rgb(22, 22, 22);
+            box-shadow:inset 0px 0px 0px 6px #212121;
+            // border-style: inset;
             cursor: pointer;
             z-index: 3;
             &_curtain_1,
             &_curtain_2{
+                position: absolute;
                 animation-name: flyingCurtain;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-out;
-                top: 0;
-                position: absolute;
+                top: -1px;
                 height: 105%;
-                width: 65px;
-                background: $curtain;
+                // width: 65px;
+                // background: $curtain;
+            }
+            &_curtain_1{
+                left: -10px;
             }
             &_curtain_2{
-                right: 0;
+                right: -10px;
             }
         }
 
@@ -934,7 +939,7 @@ DESK
     }
     50%{
         transform-origin: 0px 0px;
-        transform: skew(2deg, -1deg);
+        transform: skew(1deg, -1deg);
     }
     100%{
         transform-origin: 0px 0px;
@@ -949,7 +954,7 @@ DESK
     }
     50%{
         transform-origin: 0px 0px;
-        transform: skew(0.5deg, 0deg);
+        transform: skew(1deg, 0deg);
     }
     100%{
         transform-origin: 0px 0px;

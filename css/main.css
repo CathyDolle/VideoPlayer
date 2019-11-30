@@ -44,27 +44,28 @@ body {
     width: 30%;
     height: 100%; }
     .deco_part1_curtain {
-      height: 35px; }
+      height: 37px; }
     .deco_part1_window {
       position: relative;
-      width: 310px;
-      height: 450px;
+      width: 350px;
+      height: 440px;
       background-image: url("../images/paris.svg");
       background-size: cover;
+      box-shadow: inset 0px 0px 0px 6px #212121;
       cursor: pointer;
       z-index: 3; }
       .deco_part1_window_curtain_1, .deco_part1_window_curtain_2 {
+        position: absolute;
         animation-name: flyingCurtain;
         animation-duration: 3s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
-        top: 0;
-        position: absolute;
-        height: 105%;
-        width: 65px;
-        background: rgba(255, 255, 255, 0.623); }
+        top: -1px;
+        height: 105%; }
+      .deco_part1_window_curtain_1 {
+        left: -10px; }
       .deco_part1_window_curtain_2 {
-        right: 0; }
+        right: -10px; }
     .deco_part1_plant {
       position: absolute;
       bottom: 0;
@@ -613,7 +614,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(2deg, -1deg); }
+    transform: skew(1deg, -1deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
@@ -623,7 +624,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(0.5deg, 0deg); }
+    transform: skew(1deg, 0deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }

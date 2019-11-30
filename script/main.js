@@ -405,8 +405,9 @@ const playElement = document.querySelector('.js-play')
 // origin scale
 function scaleroom() {
     room.style.transform = ('scale(1)')
-    // iphoneScreen.classList.remove('hidden')
-    // iphoneScreenUnlocked.classList.add('hidden')
+    // Hide Iphone -> Its locked when user unscale the Iphone
+    iphoneScreen.classList.remove('hidden')
+    iphoneScreenUnlocked.classList.add('hidden')
 }
 
 // computer scale

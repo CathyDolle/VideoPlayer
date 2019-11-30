@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Video Player</title>
+    <title>Player</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/icon.png" />
@@ -13,34 +13,42 @@
 <body>
     <!-- ROOM -->
     <main class="room">
+        <!-- Invisible room for scaling -->
         <div class="room_scale js-room-scale"></div>
         <!-- DECO ON THE DESK/WALL -->
         <section class="deco">
-            <!-- WINDOW + PLANT -->
+            <!-- Part 1 : WINDOW + PLANT + CURTAIN -->
             <div class="deco_part1">
-                <img class="deco_part1_curtain" src="images/curtain.svg" alt="curtain">
+                <!-- Curtain container-->
+                <img class="deco_part1_curtain js-no-scale" src="images/curtain.svg" alt="curtain">
+                <!-- WINDOW + CURTAIN -->
                 <div class="deco_part1_window js-window-deco js-day js-no-scale">
-                    <div class="deco_part1_window_curtain_1"></div>
-                    <div class="deco_part1_window_curtain_2"></div>
+                    <img class="deco_part1_window_curtain_1 js-no-scale" src="images/left-curtain.svg" alt="curtain">
+                    <img class="deco_part1_window_curtain_2 js-no-scale" src="images/right-curtain.svg" alt="curtain">
+                    <!-- <div class="deco_part1_window_curtain_1"></div>
+                    <div class="deco_part1_window_curtain_2"></div> -->
                 </div>
-                <div class="deco_part1_plant js-no-scale">
-                    <img src="images/plant.svg" alt="plant">
+                <!-- PLANT on the left -->
+                <div class="deco_part1_plant">
+                    <img class="js-no-scale" src="images/plant.svg" alt="plant">
                 </div>
             </div>
-            <!-- COMPUTER + CLOCK -->
+            <!-- Part 2 COMPUTER + CLOCK -->
             <div class="deco_part2">
                 <!-- CLOCK -->
                 <div class="deco_part2_top">
-
-                    <!-- CLOCK FUNCTION -->
+                    <!-- clock function needles -->
                     <div class="deco_part2_top_clock js-clock">
                         <div class="deco_part2_top_clock_middle"></div>
+                        <!-- hours needle -->
                         <div class="deco_part2_top_clock_hours js-hours">
                             <div class="deco_part2_top_clock_hours_needle"></div>
                         </div>
+                        <!-- minutes needle -->
                         <div class="deco_part2_top_clock_minutes js-minutes">
                             <div class="deco_part2_top_clock_minutes_needle"></div>
                         </div>
+                        <!-- seconds needle -->
                         <div class="deco_part2_top_clock_seconds js-seconds">
                             <div class="deco_part2_top_clock_seconds_needle"></div>
                         </div>
@@ -50,23 +58,23 @@
                 <div class="deco_part2_bot js-bg-computer">
                     <div class="deco_part2_bot_computer">
                         <div class="deco_part2_bot_computer_screen">
-                            <!--INSIDE THE SCREEN-->
+                            <!--Inside the screen-->
                             <!-- LOCKED SCREEN -->
                             <div class="deco_part2_bot_computer_screen_inside js-computer-locked">
                                 <div class="deco_part2_bot_computer_screen_inside_digital-clock">
                                     <h3 class="js-digital-clock hidden"></h3>
                                 </div>
                             </div>
-                            <!-- UNLOCKED WINDOW -> video player -->
+                            <!-- UNLOCKED SCREEN -> video player -->
                             <div class="deco_part2_bot_computer_screen_unlocked  js-computer-unlocked">
-                                <!-- MAIN BAR USER -->
+                                <!-- main bar user -->
                                 <div class="deco_part2_bot_computer_screen_unlocked_main-bar js-main-bar ">
-                                    <!-- OFF SCREEN -->
+                                    <!-- off screen -->
                                     <img src="images/off.svg"
                                         class="deco_part2_bot_computer_screen_unlocked_main-bar_off js-off-screen">
 
                                 </div>
-                                <!-- WINDOW -->
+                                <!-- Window on the unlocked screen -->
                                 <div class="deco_part2_bot_computer_screen_unlocked_window js-window ">
                                     <!--  NAV -->
                                     <div class="deco_part2_bot_computer_screen_unlocked_window_nav js-nav ">
@@ -81,16 +89,16 @@
                                     <div class="deco_part2_bot_computer_screen_unlocked_window_site js-window-site ">
                                         <div
                                             class="deco_part2_bot_computer_screen_unlocked_window_site_main js-video-container  js-player">
-                                            <!-- VIDEO MAIN -->
+                                            <!-- Video container  -->
                                             <div
                                                 class="deco_part2_bot_computer_screen_unlocked_window_site_main_video ">
-                                                <!-- VIDEO MAIN SRC -->
+                                                <!-- Video main (created with js) -->
                                                 <video class="js-main-video"></video>
                                                 <div class="js-video-board">
-                                                    <!-- SEEK BAR -->
+                                                    <!-- seek bar video -->
                                                     <div
                                                         class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar js-seek-bar ">
-                                                        <!-- SEEK BAR FILL -->
+                                                        <!-- seek bar video fill -->
                                                         <div
                                                             class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar_fill js-seek-bar-fill ">
                                                         </div>
@@ -122,16 +130,13 @@
                                                         <img src="images/muted-volume.svg"
                                                             class="js-next deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_muted-volume hidden js-muted-volume "
                                                             alt="muted-volume">
-
                                                         <!-- VOLUME BAR -->
                                                         <div
                                                             class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_volume js-volume-bar">
                                                             <div
                                                                 class="deco_part2_bot_computer_screen_unlocked_window_site_main_video_commands_volume_fill js-volume-bar-fill">
-
                                                             </div>
                                                         </div>
-
                                                         <!-- VIDEO TIMER -->
                                                         <!-- Current time video -->
                                                         <h3 class="js-video-current-time">/</h3>
@@ -154,11 +159,14 @@
                                                 </div>
                                             </div>
                                             <div class="js-infos-video">
-                                                <!-- VIDEO TEXT INFOS VIDEO 1 -->
+                                                <!-- VIDEO TEXT INFOS (created with js) -->
                                                 <div
                                                     class="deco_part2_bot_computer_screen_unlocked_window_site_main_text">
+                                                    <!-- title -->
                                                     <h1 class="js-video-title"></h1>
+                                                    <!-- description -->
                                                     <p class="js-video-description"></p>
+                                                    <!-- link on youtube -->
                                                     <a class="js-video-link" href="" target="blank_">Listen on
                                                         youtube</a>
                                                 </div>
