@@ -723,6 +723,8 @@ windowDeco.addEventListener('click', (a) => {
     }
 })
 
+// Responsive
+
 if (window.innerWidth < 1301 ) {
     videoElement.controls = false
     room.addEventListener('click', (e) => {
