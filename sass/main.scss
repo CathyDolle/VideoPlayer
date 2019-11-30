@@ -45,20 +45,13 @@ body {
     width: 100%;
     height: 100%;
     transition: 1s ease-in-out;
-
+    // Invisible part for scale room
     &_scale {
         position: absolute;
         width: 100%;
         height: 100%;
         // background: red;
         z-index: 2;
-    }
-    &_no-scale{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        // background: red;
-        z-index: 3;
     }
 }
 
@@ -986,7 +979,7 @@ DESK
 
 // RESPONSIVE
 
-@media (max-width:1350px) and (min-width:950px)  {
+@media (max-width:1300px) and (min-width:950px) {
     .deco_part3 {
         display: none;
     }
@@ -1000,7 +993,7 @@ DESK
     }
 }
 
-@media (max-width:950px) and (min-width:600px)  {
+@media (max-width:950px) and (min-width:600px) {
     .deco_part3 {
         display: none;
     }
@@ -1019,16 +1012,50 @@ DESK
         display: none;
     }
 
-    .desk_bot_drawer {
-        width: 40px;
+    .desk_bot_drawer,
+    .desk_bot_foot {
+        width: 30px;
     }
-    .deco_part2{
-        display: none;
+
+    .deco_part2 {
+        width: 100vw;
     }
+
     .desk_bot_drawer_handle {
         display: none;
     }
-    .deco_part3{
-        width: 100vw;
+
+    .deco_part3 {
+        display: none;
+    }
+
+    .deco_part2_bot {
+        --width_computer: 310px;
+        --height_computer: 240px;
+    }
+
+    .deco_part2_bot_computer_bot {
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .deco_part2_bot_computer_screen {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .deco_part2_bot_computer_screen_unlocked_window_site_main_text {
+        h1 {
+            padding-top: 1;
+        }
+
+        p {
+            margin: 2px 0px 2px 0px;
+            font-size: 6px;
+            line-height: 8px;
+        }
+    }
+    .deco_part2_top_clock{
+        width: 130px;
+        height: 130px;
+        border: solid 3px black;
     }
 }

@@ -20,11 +20,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2; }
-  .room_no-scale {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3; }
 
 .scale {
   animation-name: scale;
@@ -639,7 +634,7 @@ DESK
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
-@media (max-width: 1350px) and (min-width: 950px) {
+@media (max-width: 1300px) and (min-width: 950px) {
   .deco_part3 {
     display: none; }
 
@@ -661,16 +656,39 @@ DESK
   .deco_part1 {
     display: none; }
 
-  .desk_bot_drawer {
-    width: 40px; }
+  .desk_bot_drawer,
+  .desk_bot_foot {
+    width: 30px; }
 
   .deco_part2 {
-    display: none; }
+    width: 100vw; }
 
   .desk_bot_drawer_handle {
     display: none; }
 
   .deco_part3 {
-    width: 100vw; } }
+    display: none; }
+
+  .deco_part2_bot {
+    --width_computer: 310px;
+    --height_computer: 240px; }
+
+  .deco_part2_bot_computer_bot {
+    border-radius: 0px 0px 5px 5px; }
+
+  .deco_part2_bot_computer_screen {
+    border-radius: 5px 5px 0px 0px; }
+
+  .deco_part2_bot_computer_screen_unlocked_window_site_main_text h1 {
+    padding-top: 1; }
+  .deco_part2_bot_computer_screen_unlocked_window_site_main_text p {
+    margin: 2px 0px 2px 0px;
+    font-size: 6px;
+    line-height: 8px; }
+
+  .deco_part2_top_clock {
+    width: 130px;
+    height: 130px;
+    border: solid 3px black; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -446,36 +446,37 @@ function scalecomputer() {
 }
 
 // Event : click the computer or iphone screen -> unlocked + scale
-room.addEventListener('click', (e) => {
-    // scale computer screen
-    if (e.target.classList.contains("js-room-scale")) {
-        scaleroom()
-    }
-    // scale iphone screen
-    else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
-        room.style.transform = ('scale(4) translateX(-30%) translateY(-20%)')
-        iphoneScreen.classList.add('hidden')
-        iphoneScreenUnlocked.classList.remove('hidden')
-    }
-    // off screen
-    else if (e.target.classList.contains("js-off-screen")) {
-        room.style.transform = ('scale(1)')
-        computerScreen.classList.remove('hidden')
-        computerScreenUnlocked.style.opacity = ('0')
-        playElement.classList.remove('hidden')
-        pauseElement.classList.add('hidden')
-        videoElement.pause()
-    }
-    // for window & post it
-    else if (e.target.classList.contains("js-no-scale")) {
-        room.style.transform = ('scale(1)')
-    }
-    // scale computer
-    else {
-        scalecomputer()
-    }
-})
-
+if (window.innerWidth > 1300) {
+    room.addEventListener('click', (e) => {
+        // scale computer screen
+        if (e.target.classList.contains("js-room-scale")) {
+            scaleroom()
+        }
+        // scale iphone screen
+        else if (e.target.classList.contains("js-iphone-locked") || e.target.classList.contains("js-iphone-unlocked")) {
+            room.style.transform = ('scale(4) translateX(-30%) translateY(-20%)')
+            iphoneScreen.classList.add('hidden')
+            iphoneScreenUnlocked.classList.remove('hidden')
+        }
+        // off screen
+        else if (e.target.classList.contains("js-off-screen")) {
+            room.style.transform = ('scale(1)')
+            computerScreen.classList.remove('hidden')
+            computerScreenUnlocked.style.opacity = ('0')
+            playElement.classList.remove('hidden')
+            pauseElement.classList.add('hidden')
+            videoElement.pause()
+        }
+        // for window & post it
+        else if (e.target.classList.contains("js-no-scale")) {
+            room.style.transform = ('scale(1)')
+        }
+        // scale computer
+        else {
+            scalecomputer()
+        }
+    })
+}
 // Escape = origin scale
 document.addEventListener('keyup', event => {
     // console.log(event);
@@ -721,11 +722,9 @@ windowDeco.addEventListener('click', (a) => {
     }
 })
 
-// const roomNoScale = document.querySelector('.js-room-no-scale')
-// if (window.matchMedia( "(max-width: 1300px)" )) {
-//     roomNoScale.classList.remove('hidden')
-//  }
-
-//  roomNoScale.addEventListener('click', () =>{
-//      scaleroom()
-//  })
+if (window.innerWidth < 1301 ) {
+    room.addEventListener('click', (e) => {
+        computerScreen.classList.add('hidden')
+        computerScreenUnlocked.style.opacity = ('1')
+    })
+}
