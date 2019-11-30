@@ -144,7 +144,7 @@ document.addEventListener('keyup', event => {
 
 // PLAYER
 
-class Player {
+class videoPlayer {
     constructor(_element) {
         this.element = _element
         this.videoElement = this.element.querySelector('.js-main-video')
@@ -156,25 +156,23 @@ class Player {
         this.setDuration()
     }
 
-
     // VIDEO PLAYLIST 
     setVideo() {
-        // VIDEO
+        // VIDEO CONST
         const fillElement = this.element.querySelector('.js-seek-bar-fill')
         const playlistVideo = document.querySelector('.js-video-playlist')
 
-        // DESCRIPTIONS
+        // DESCRIPTIONS CONST
         const videoTitle = document.querySelector('.js-video-title')
         const videoDescription = document.querySelector('.js-video-description')
         const videoLink = document.querySelector('.js-video-link')
 
-        // ORIGIN VIDEO
-
+        // ORIGIN VIDEO INOS
         this.videoElement.src = videoPlaylist[0].file
         videoTitle.innerText = videoPlaylist[0].title
         videoLink.href = videoPlaylist[0].link
         videoDescription.innerHTML = videoPlaylist[0].description
-
+        // Main video playing
         function mainvideo() {
             videoElement.src = videoPlaylist[0].file
             videoTitle.innerText = videoPlaylist[0].title
@@ -186,42 +184,7 @@ class Player {
             playElement.classList.add('hidden')
         }
 
-        // NEXT
-        const nextElement = this.element.querySelector('.js-next')
-
-        function nextvideo() {
-            videoPlaylist.push(videoPlaylist.shift())
-            mainvideo()
-        }
-
-        nextElement.addEventListener('click', () => {
-            nextvideo()
-        })
-
-        document.addEventListener('keyup', event => {
-            if (event.key == 'ArrowRight') {
-                nextvideo()
-            }
-        })
-
-        // PREV
-        const prevElement = this.element.querySelector('.js-prev')
-
-        function prevvideo() {
-            videoPlaylist.unshift(videoPlaylist.pop())
-            mainvideo()
-        }
-
-        prevElement.addEventListener('click', () => {
-            prevvideo()
-        })
-
-        document.addEventListener('keyup', event => {
-            if (event.key == 'ArrowLeft') {
-                prevvideo()
-            }
-        })
-
+        // CREATE VIDEO
         function newVideo(source, cover, title, description, link) {
             const video = document.createElement('video')
             playlistVideo.appendChild(video)
@@ -239,6 +202,7 @@ class Player {
             })
         }
 
+        // VIDEO ADAPT INFO
         for (let i = 1; i < videoPlaylist.length; i++) //Si videoPlaylist est un tableau
         {
             newVideo(
@@ -249,20 +213,46 @@ class Player {
                 videoPlaylist[i].link)
         }
 
+        // NEXT
+        const nextElement = this.element.querySelector('.js-next')
 
+        function nextvideo() {
+            videoPlaylist.push(videoPlaylist.shift())
+            mainvideo()
+        }
+
+        // Next video button
+        nextElement.addEventListener('click', () => {
+            nextvideo()
+        })
+        // Next video keyboard
+        document.addEventListener('keyup', event => {
+            if (event.key == 'ArrowRight') {
+                nextvideo()
+            }
+        })
+        // Autoplay video
+        videoElement.addEventListener('ended', () => {
+            nextvideo()
+        })
+        // PREV CONST
+        const prevElement = this.element.querySelector('.js-prev')
+        // Function prev 
+        function prevvideo() {
+            videoPlaylist.unshift(videoPlaylist.pop())
+            mainvideo()
+        }
+        // Button prev
+        prevElement.addEventListener('click', () => {
+            prevvideo()
+        })
+        // Button key prev
+        document.addEventListener('keyup', event => {
+            if (event.key == 'ArrowLeft') {
+                prevvideo()
+            }
+        })
     }
-
-    // setNext(){
-    //     const nextElement = this.element.querySelector('.js-next')
-    //     function nextvideo() {
-    //         videoPlaylist.push(videoPlaylist.shift())
-    //         newVideo()
-    //     } 
-
-    //     nextElement.addEventListener('click', () =>{
-    //         nextvideo()
-    //     })
-    // }
 
     setPlayPause() {
         //play
@@ -441,19 +431,18 @@ class Player {
             if (vdurSecs < 10) {
                 vdurSecs = '0' + String(vdurSecs);
             }
-            if (isNaN(videoElement.duration)) { 
+            if (isNaN(videoElement.duration)) {
                 videoDuration.innerText = '0:00'
-            }
-            else if (!isNaN(videoElement.duration)){
+            } else if (!isNaN(videoElement.duration)) {
                 videoDuration.innerText = vdurMins + ':' + vdurSecs
             }
         }, 10);
     }
 }
 
-const player1 = new Player(document.querySelector('.js-player'))
+const videoPlayer1 = new videoPlayer(document.querySelector('.js-player'))
 
-// hide commands
+// hide commands on hover
 const videoBoard = document.querySelector('.js-video-board')
 
 videoElement.addEventListener('mouseover', () => {
@@ -499,11 +488,14 @@ const audioCover = document.querySelector('.js-audio-cover')
 
 var audio = new Audio()
 i = 0
+
+// INITIAL AUDIO
+
 audio.src = audioPlaylist[i].file
 audioTitle.innerText = audioPlaylist[i].title
 audioArtist.innerText = audioPlaylist[i].artist
 
-// IPHONE AUDIOS < COMMANDS
+// IPHONE AUDIOS < COMMANDS CONST
 
 const audioPrev = document.querySelector('.js-prev-audio')
 const audioNext = document.querySelector('.js-next-audio')
@@ -539,7 +531,7 @@ var update = setInterval(() => {
     // current time
     var mins = Math.floor(audio.currentTime / 60)
     var secs = Math.floor(audio.currentTime % 60)
-    
+
     if (secs < 10) {
         secs = '0' + String(secs);
     }
@@ -550,22 +542,18 @@ var update = setInterval(() => {
     // duration
     var durMins = Math.floor(audio.duration / 60)
     var durSecs = Math.floor(audio.duration % 60)
-    if(durSecs < 10) {
+    if (durSecs < 10) {
         durSecs = '0' + String(durSecs);
-    } 
-    if (isNaN(audio.duration)) { 
-        audioDuration.innerText = '0:00'
     }
-    else if (!isNaN(audio.duration)){
+    if (isNaN(audio.duration)) {
+        audioDuration.innerText = '0:00'
+    } else if (!isNaN(audio.duration)) {
         audioDuration.innerText = durMins + ':' + durSecs
     }
     // if (durMins < 10) {
     //     durMins = '0' + String(durMins);
     // }
 }, 10);
-
-
-
 
 // audioDuration.innerText = audio.duration
 
@@ -595,7 +583,7 @@ audioPause.addEventListener('click', () => {
 })
 
 // NEXT 
-audioNext.addEventListener('click', () => {
+function nextaudio() {
     audioPlaylist[i].currentTime = 0
     audio.pause()
     i = (i + 1) % audioPlaylist.length
@@ -607,7 +595,18 @@ audioNext.addEventListener('click', () => {
     audioPause.classList.remove('hidden')
     audioPlay.classList.add('hidden')
 
+}
+// Next button
+
+audioNext.addEventListener('click', () => {
+    nextaudio()
 })
+
+//autoplay
+audio.addEventListener('ended', () => {
+    nextaudio()
+})
+
 
 // PREV
 
