@@ -284,9 +284,9 @@ class videoPlayer {
             } else {
                 // minim screen
                 videoContainerElement.style.width = ('70%')
-                videoContainerElement.style.height = ('66.5%')
+                videoContainerElement.style.height = ('67.5%')
                 videoContainerElement.style.padding = ('3px')
-                windowElement.style.height = ('97%')
+                windowElement.style.height = ('96%')
                 windowSiteElement.style.height = ('96%')
                 infosVideoElement.classList.remove('hidden')
                 videoPlaylistElement.classList.remove('hidden')
