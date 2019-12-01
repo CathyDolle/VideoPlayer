@@ -304,7 +304,8 @@ body {
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_video video {
                       width: 100%;
                       height: 100%;
-                      object-fit: cover; }
+                      object-fit: cover;
+                      -webkit-object-fit: cover; }
                     .deco_part2_bot_computer_screen_unlocked_window_site_main_video_seek-bar {
                       position: absolute;
                       bottom: 8%;
@@ -399,6 +400,7 @@ body {
                     width: 100%;
                     height: 32%;
                     object-fit: cover;
+                    -webkit-object-fit: cover;
                     cursor: pointer; }
                 .deco_part2_bot_computer_screen_unlocked_window_site ::-webkit-scrollbar {
                   display: none; }
