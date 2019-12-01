@@ -534,12 +534,6 @@ body {
                                                 cursor: pointer;
                                             }
 
-                                            &_high-volume,
-                                            &_muted-volume {
-                                                width: 7px;
-
-                                            }
-
                                             &_volume {
                                                 margin: 0 4px 0 2px;
                                                 width: 20px;
@@ -569,7 +563,7 @@ body {
                                             &_minimize {
                                                 position: absolute;
                                                 right: 5px;
-                                                width: 6px;
+                                                width: 7px;
                                             }
                                         }
 
@@ -781,7 +775,6 @@ body {
                             height: 136px;
                             background: rgb(26, 26, 26);
                             border-radius: 7px;
-                            cursor: pointer;
 
                             & h1 {
                                 text-align: center;
@@ -793,6 +786,8 @@ body {
                                 font-size: 6px;
                                 width: 80%;
                                 line-height: 8px;
+                                user-select: none;
+                                pointer-events: none;
                             }
 
                             & h2 {
@@ -801,6 +796,8 @@ body {
                                 font-weight: 300;
                                 font-family: 'lato';
                                 font-size: 3px;
+                                user-select: none;
+                                pointer-events: none;
                             }
 
                             &_cover {
@@ -825,6 +822,8 @@ body {
                                     font-family: 'lato';
                                     font-size: 3px;
                                     font-weight: 300;
+                                    user-select: none;
+                                    pointer-events: none;
                                 }
 
                                 &_bar {
@@ -833,6 +832,7 @@ body {
                                     height: 1px;
                                     background: black;
                                     border-radius: 1px;
+                                    cursor: pointer;
 
                                     &_fill {
                                         left: 0;
@@ -841,6 +841,7 @@ body {
                                         will-change: transform;
                                         height: 100%;
                                         background: $timebar;
+                                        cursor: pointer;
                                     }
                                 }
                             }
@@ -852,6 +853,7 @@ body {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
+                                cursor: pointer;
 
                                 & img {
                                     width: 5px;
@@ -868,6 +870,8 @@ body {
                                 // background: red;
                                 & img {
                                     width: 3px;
+                                    user-select: none;
+                                    pointer-events: none;
                                 }
 
                                 &_bar {
@@ -876,6 +880,7 @@ body {
                                     height: 1px;
                                     background: black;
                                     border-radius: 1px;
+                                    cursor: pointer;
 
                                     &_fill {
                                         left: 0;
@@ -885,6 +890,7 @@ body {
                                         width: 100%;
                                         height: 100%;
                                         background: $timebar;
+                                        cursor: pointer;
                                     }
                                 }
                             }

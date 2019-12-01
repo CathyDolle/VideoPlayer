@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40.037" height="44.193" viewBox="0 0 40.037 44.193">
-  <path id="Tracé_12306" data-name="Tracé 12306" d="M-223.74,4699.445v-44.193l40.037,22.255Z" transform="translate(223.74 -4655.252)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.04" height="74.91" viewBox="0 0 68.04 74.91">
+  <defs>
+    <clipPath id="clip-play">
+      <rect width="68.04" height="74.91"/>
+    </clipPath>
+  </defs>
+  <g id="play" clip-path="url(#clip-play)">
+    <path id="Tracé_12306" data-name="Tracé 12306" d="M-223.74,4729.949v-74.7l67.672,37.616Z" transform="translate(224.182 -4655.252)" fill="#fff"/>
+  </g>
 </svg>

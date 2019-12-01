@@ -160,6 +160,7 @@ class videoPlayer {
         const volumeBar = this.element.querySelector('.js-volume-bar')
         const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
 
+        // Drag yea
         volumeBar.addEventListener('mousedown', (_e) => {
             this.userIsDraggingSeekBar = true
         })
@@ -176,9 +177,14 @@ class videoPlayer {
             }
         })
 
+        // Dont drag
         volumeBar.addEventListener('mouseup', (_e) => {
             this.userIsDraggingSeekBar = false
         })
+
+        volumeBar.addEventListener('mouseleave', (_e)=>{
+            this.userIsDraggingSeekBar = false 
+        } )
 
         // HIGH VOLUME
 
@@ -220,6 +226,10 @@ class videoPlayer {
         seekBarElement.addEventListener('mouseup', (_e) => {
             this.userIsDraggingSeekBar = false
         })
+
+        seekBarElement.addEventListener('mouseleave', (_e)=>{
+            this.userIsDraggingSeekBar = false 
+        } )
 
         // time update 
         this.videoElement.addEventListener('timeupdate', () => {
@@ -556,6 +566,10 @@ audioTimeBar.addEventListener('mouseup', (_e) => {
     this.userIsDraggingSeekBar = false
 })
 
+audioTimeBar.addEventListener('mouseleave', (_e)=>{
+    this.userIsDraggingSeekBar = false 
+} )
+
 // AUDIO SHOW TIME
 var update = setInterval(() => {
     // current time
@@ -690,6 +704,10 @@ volumeAudioBar.addEventListener('mousemove', (_e) => {
 volumeAudioBar.addEventListener('mouseup', (_e) => {
     this.userIsDraggingSeekBar = false
 })
+
+volumeAudioBar.addEventListener('mouseleave', (_e)=>{
+    this.userIsDraggingSeekBar = false 
+} )
 
 //DAY/NIGHT MODE
 

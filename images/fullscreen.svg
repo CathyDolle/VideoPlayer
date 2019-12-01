@@ -1,11 +1,21 @@
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 298.667 298.667" style="enable-background:new 0 0 298.667 298.667;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
-	<g>
-		<g>
-			<polygon points="42.667,192 0,192 0,298.667 106.667,298.667 106.667,256 42.667,256    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="0,106.667 42.667,106.667 42.667,42.667 106.667,42.667 106.667,0 0,0    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="192,0 192,42.667 256,42.667 256,106.667 298.667,106.667 298.667,0    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="256,256 192,256 192,298.667 298.667,298.667 298.667,192 256,192    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-		</g>
-	</g>
-</g></g> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109.04" height="108.91" viewBox="0 0 109.04 108.91">
+  <defs>
+    <clipPath id="clip-fullscreen">
+      <rect width="109.04" height="108.91"/>
+    </clipPath>
+  </defs>
+  <g id="fullscreen" clip-path="url(#clip-fullscreen)">
+    <g id="fullscreen-2" data-name="fullscreen">
+      <g id="Groupe_4497" data-name="Groupe 4497">
+        <g id="Groupe_4496" data-name="Groupe 4496">
+          <g id="Groupe_4495" data-name="Groupe 4495">
+            <path id="Tracé_13391" data-name="Tracé 13391" d="M15.559,192H0v38.9H38.9V215.338H15.559Z" transform="translate(0 -121.986)" fill="#fff"/>
+            <path id="Tracé_13392" data-name="Tracé 13392" d="M0,38.9H15.559V15.559H38.9V0H0Z" fill="#fff"/>
+            <path id="Tracé_13393" data-name="Tracé 13393" d="M192,0V15.559h23.338V38.9H230.9V0Z" transform="translate(-121.986)" fill="#fff"/>
+            <path id="Tracé_13394" data-name="Tracé 13394" d="M215.338,215.338H192V230.9h38.9V192H215.338Z" transform="translate(-121.986 -121.986)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

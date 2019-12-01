@@ -1,11 +1,21 @@
-<?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 298.667 298.667" style="enable-background:new 0 0 298.667 298.667;" xml:space="preserve" width="512px" height="512px"><g><g>
-	<g>
-		<g>
-			<polygon points="0,234.667 64,234.667 64,298.667 106.667,298.667 106.667,192 0,192    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="64,64 0,64 0,106.667 106.667,106.667 106.667,0 64,0    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="234.667,64 234.667,0 192,0 192,106.667 298.667,106.667 298.667,64    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-			<polygon points="192,298.667 234.667,298.667 234.667,234.667 298.667,234.667 298.667,192 192,192    " data-original="#000000" class="active-path" data-old_color="#000000" fill="#FFFFFF"/>
-		</g>
-	</g>
-</g></g> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109.04" height="108.91" viewBox="0 0 109.04 108.91">
+  <defs>
+    <clipPath id="clip-minimize">
+      <rect width="109.04" height="108.91"/>
+    </clipPath>
+  </defs>
+  <g id="minimize" clip-path="url(#clip-minimize)">
+    <g id="minimize-2" data-name="minimize">
+      <g id="Groupe_4500" data-name="Groupe 4500">
+        <g id="Groupe_4499" data-name="Groupe 4499">
+          <g id="Groupe_4498" data-name="Groupe 4498">
+            <path id="Tracé_13395" data-name="Tracé 13395" d="M0,207.559H23.338V230.9H38.9V192H0Z" transform="translate(0 -121.986)" fill="#fff"/>
+            <path id="Tracé_13396" data-name="Tracé 13396" d="M23.338,23.338H0V38.9H38.9V0H23.338Z" fill="#fff"/>
+            <path id="Tracé_13397" data-name="Tracé 13397" d="M207.559,23.338V0H192V38.9h38.9V23.338Z" transform="translate(-121.986)" fill="#fff"/>
+            <path id="Tracé_13398" data-name="Tracé 13398" d="M192,230.9h15.559V207.559H230.9V192H192Z" transform="translate(-121.986 -121.986)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,6 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="44" viewBox="0 0 40 44">
-  <g id="Groupe_3530" data-name="Groupe 3530" transform="translate(-1864 -170)">
-    <rect id="Rectangle_295" data-name="Rectangle 295" width="11" height="44" transform="translate(1864 170)" fill="#fff"/>
-    <rect id="Rectangle_296" data-name="Rectangle 296" width="11" height="44" transform="translate(1893 170)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.04" height="74.91" viewBox="0 0 68.04 74.91">
+  <defs>
+    <clipPath id="clip-pause">
+      <rect width="68.04" height="74.91"/>
+    </clipPath>
+  </defs>
+  <g id="pause" clip-path="url(#clip-pause)">
+    <g id="Groupe_3530" data-name="Groupe 3530" transform="translate(-1864 -170)">
+      <rect id="Rectangle_295" data-name="Rectangle 295" width="19" height="75" transform="translate(1864 170)" fill="#fff"/>
+      <rect id="Rectangle_296" data-name="Rectangle 296" width="19" height="75" transform="translate(1913 170)" fill="#fff"/>
+    </g>
   </g>
 </svg>
