@@ -1,23 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1216" height="1216" viewBox="0 0 1216 1216">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="401" height="401" viewBox="0 0 401 401">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_442" data-name="Rectangle 442" width="1216" height="1216" transform="translate(0.339 0.339)"/>
+      <rect id="Rectangle_442" data-name="Rectangle 442" width="401" height="401" transform="translate(0.339 0.339)"/>
     </clipPath>
     <clipPath id="clip-path-2">
       <rect id="Rectangle_441" data-name="Rectangle 441" width="1216" height="1216"/>
     </clipPath>
+    <clipPath id="clip-post-contain-logo">
+      <rect width="401" height="401"/>
+    </clipPath>
   </defs>
-  <g id="post-contain-logo" clip-path="url(#clip-path-2)">
+  <g id="post-contain-logo" clip-path="url(#clip-post-contain-logo)">
     <g id="iPad_1" data-name="iPad – 1" transform="translate(-0.339 -0.339)" clip-path="url(#clip-path)">
-      <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(0.061 226.087)">
-        <g id="Groupe_2984" data-name="Groupe 2984" transform="translate(296.607 0)">
-          <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.007-1297.92v-738.147l321.544,185.46v369.664Z" transform="translate(-3983.987 2036.089)" fill="none" opacity="0.738"/>
-          <path id="Tracé_12143" data-name="Tracé 12143" d="M4281.323-2036.091l-317.661,186.323v367.284l317.661,184.562v-121.831L4059.8-1536.3v-257.641l221.519-117.723Z" transform="translate(-3963.662 2036.091)" fill="#ada6e2"/>
-          <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.007-1297.92v-738.147l321.544,185.46v369.664Z" transform="translate(-3983.987 2036.089)" fill="none"/>
-          <path id="Tracé_12145" data-name="Tracé 12145" d="M16035.54,5805.6l140.756,56.734v255.244l-140.756,54.207Z" transform="translate(-15627.786 -5618.985)" fill="#ada6e2"/>
+      <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(0.247 74.784)">
+        <g id="Groupe_2984" data-name="Groupe 2984" transform="translate(97.812 0)">
+          <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.007-1792.648v-243.418l106.036,61.159V-1853Z" transform="translate(-4196.463 2036.074)" fill="none" opacity="0.738"/>
+          <path id="Tracé_12143" data-name="Tracé 12143" d="M4068.417-2036.091l-104.755,61.444v121.119l104.755,60.863v-40.176l-73.05-38.434v-84.962l73.05-38.822Z" transform="translate(-3963.662 2036.091)" fill="#ada6e2"/>
+          <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.007-1792.648v-243.418l106.036,61.159V-1853Z" transform="translate(-4196.463 2036.074)" fill="none"/>
+          <path id="Tracé_12145" data-name="Tracé 12145" d="M16035.539,5805.6l46.418,18.709v84.172l-46.418,17.876Z" transform="translate(-15901.074 -5744.061)" fill="#ada6e2"/>
         </g>
-        <text id="CATHY_DOLLE" data-name="CATHY  DOLLE" transform="translate(0 855.132)" fill="#ada6e2" font-size="48" font-family="Lato-Bold, Lato" font-weight="700"><tspan x="0" y="0">C</tspan><tspan y="0" fill="#fff">ATHY </tspan><tspan x="0" y="69">D</tspan><tspan y="69" fill="#fff">OLLE</tspan></text>
-        <text id="negative_space" data-name="negative space" transform="translate(0.549 981.847)" fill="#fff" font-size="35" font-family="Lato-Light, Lato" font-weight="300"><tspan x="0" y="0">negative space</tspan></text>
+        <text id="CATHY_DOLLE" data-name="CATHY  DOLLE" transform="translate(0 281.497)" fill="#ada6e2" font-size="15" font-family="Lato-Bold, Lato" font-weight="700"><tspan x="0" y="0">C</tspan><tspan y="0" fill="#fff">ATHY </tspan><tspan x="0" y="22">D</tspan><tspan y="22" fill="#fff">OLLE</tspan></text>
+        <text id="negative_space" data-name="negative space" transform="translate(0.181 323.241)" fill="#fff" font-size="11" font-family="Lato-Light, Lato" font-weight="300"><tspan x="0" y="0">negative space</tspan></text>
       </g>
     </g>
   </g>

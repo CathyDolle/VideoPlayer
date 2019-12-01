@@ -36,6 +36,9 @@ body {
       align-items: center;
       height: 600px; }
       .room_post_contain_logo {
+        animation-name: opacity-fade;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
         position: relative;
         display: flex;
         justify-content: center;
@@ -50,9 +53,13 @@ body {
           animation-duration: 5s;
           animation-iteration-count: 1;
           position: absolute; }
-      .room_post_contain_key img {
-        width: 100%;
-        height: 100%; }
+      .room_post_contain_key {
+        animation-name: opacity-fade;
+        animation-duration: 1s;
+        animation-iteration-count: 1; }
+        .room_post_contain_key img {
+          width: 100%;
+          height: 100%; }
       .room_post_contain_close {
         position: absolute;
         top: 10px;
@@ -215,7 +222,7 @@ body {
           .deco_part2_bot_computer_screen_inside:hover {
             animation-name: wallpaper-transition;
             animation-duration: 1s;
-            background-image: url("../images/computer-wallpaper.jpg");
+            background-image: url("../images/computer-wallpaper.svg");
             background-size: cover;
             cursor: pointer; }
           .deco_part2_bot_computer_screen_unlocked {
@@ -558,7 +565,7 @@ body {
           .deco_part3_bot_iphone_screen_inside:hover {
             animation-name: wallpaper-transition;
             animation-duration: 1s;
-            background-image: url("../images/iphone-wallpaper.png");
+            background-image: url("../images/iphone-wallpaper.svg");
             background-size: cover;
             cursor: pointer; }
           .deco_part3_bot_iphone_screen_camera {

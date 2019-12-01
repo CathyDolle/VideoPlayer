@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1216" height="1216" viewBox="0 0 1216 1216">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="401" height="401" viewBox="0 0 401 401">
   <defs>
     <clipPath id="clip-post-contain-logo-grid">
-      <rect width="1216" height="1216"/>
+      <rect width="401" height="401"/>
     </clipPath>
   </defs>
   <g id="post-contain-logo-grid" clip-path="url(#clip-post-contain-logo-grid)">
     <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(0.546 -0.244)">
       <g id="Groupe_2984" data-name="Groupe 2984">
-        <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.006-1298.405v-737.662l321.333,185.338v369.42Z" transform="translate(-3688.208 2262.333)" fill="none" opacity="0.738"/>
-        <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.006-1298.405v-737.662l321.333,185.338v369.42Z" transform="translate(-3688.208 2262.333)" fill="none"/>
+        <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.006-1793.031v-243.036L4406.875-1975v121.712Z" transform="translate(-4099.108 2110.614)" fill="none" opacity="0.738"/>
+        <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.006-1793.031v-243.036L4406.875-1975v121.712Z" transform="translate(-4099.108 2110.614)" fill="none"/>
         <g id="Groupe_2986" data-name="Groupe 2986">
-          <line id="Ligne_2" data-name="Ligne 2" x2="1215.455" transform="translate(0 412.608)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_3" data-name="Ligne 3" x2="1215.455" transform="translate(0 468.535)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_4" data-name="Ligne 4" x2="1215.455" transform="translate(0 724.549)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_5" data-name="Ligne 5" x2="1215.455" transform="translate(0 779.235)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_6" data-name="Ligne 6" y2="1217.941" transform="translate(612.699)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_7" data-name="Ligne 7" y2="1217.941" transform="translate(295.787)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_8" data-name="Ligne 8" y2="1217.941" transform="translate(933.338)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_9" data-name="Ligne 9" y2="1217.941" transform="translate(843.86)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_10" data-name="Ligne 10" y2="1217.941" transform="translate(703.424)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
-          <line id="Ligne_11" data-name="Ligne 11" y2="1217.941" transform="translate(392.722)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_2" data-name="Ligne 2" x2="400.454" transform="translate(0 135.941)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_3" data-name="Ligne 3" x2="400.454" transform="translate(0 154.367)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_4" data-name="Ligne 4" x2="400.454" transform="translate(0 238.716)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_5" data-name="Ligne 5" x2="400.454" transform="translate(0 256.733)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_6" data-name="Ligne 6" y2="401.273" transform="translate(201.865)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_7" data-name="Ligne 7" y2="401.273" transform="translate(97.452)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_8" data-name="Ligne 8" y2="401.273" transform="translate(307.505)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_9" data-name="Ligne 9" y2="401.273" transform="translate(278.025)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_10" data-name="Ligne 10" y2="401.273" transform="translate(231.756)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_11" data-name="Ligne 11" y2="401.273" transform="translate(129.389)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
         </g>
       </g>
     </g>

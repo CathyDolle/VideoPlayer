@@ -74,6 +74,9 @@ body {
             // background: pink;
 
             &_logo {
+                animation-name: opacity-fade;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -93,7 +96,12 @@ body {
                     position: absolute;
                 }
             }
-            &_key{
+
+            &_key {
+                animation-name: opacity-fade;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+
                 & img {
                     width: 100%;
                     height: 100%;
@@ -342,7 +350,7 @@ body {
                     &_inside:hover {
                         animation-name: wallpaper-transition;
                         animation-duration: 1s;
-                        background-image: url('../images/computer-wallpaper.jpg');
+                        background-image: url('../images/computer-wallpaper.svg');
                         background-size: cover;
                         cursor: pointer;
                     }
@@ -855,7 +863,7 @@ body {
                     &_inside:hover {
                         animation-name: wallpaper-transition;
                         animation-duration: 1s;
-                        background-image: url('../images/iphone-wallpaper.png');
+                        background-image: url('../images/iphone-wallpaper.svg');
                         background-size: cover;
                         cursor: pointer;
                     }
