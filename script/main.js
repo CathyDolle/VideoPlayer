@@ -159,7 +159,6 @@ class videoPlayer {
         // fill bar volume
         const volumeBar = this.element.querySelector('.js-volume-bar')
         const volumeBarFill = this.element.querySelector('.js-volume-bar-fill')
-        console.log(volumeBar)
 
         volumeBar.addEventListener('mousedown', (_e) => {
             this.userIsDraggingSeekBar = true
