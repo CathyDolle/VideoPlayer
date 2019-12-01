@@ -16,12 +16,12 @@ Video Player (computer):
 - Next/Prev
 - Volume
 - Current Time/Duration
-- Full screen
+- Full/Minimize screen
 - Drag & Drop -> Seek bar + Volume
 - Title + Description + Youtube link
 
 Shortcut Video Player :
-- "F" Fullscreen
+- "F" Full/Minimize screen
 - "ArrowRight" Next video
 - "ArrowLeft" Previous video
 - "Space" Play/Pause (or click on the video)
