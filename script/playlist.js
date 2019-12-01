@@ -7,12 +7,6 @@ let audioPlaylist = [
         "file":"audios/pokemon-gym.mp3"
     },
     {
-        "artist" : "GameChops Pokemon",
-        "title" : "Route 3",
-        "cover" : "audios/pokemon-gym.png",
-        "file":"audios/pokemon-route-3.mp3"
-    },
-    {
         "artist" : "GameChops Zelda",
         "title" : "Fairy fontain",
         "cover" : "audios/zelda-fairy-fontain.jpg",
