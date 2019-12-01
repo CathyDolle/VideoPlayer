@@ -235,21 +235,32 @@ body {
             background: #1a1a1a;
             opacity: 0; }
             .deco_part2_bot_computer_screen_unlocked_main-bar {
+              display: flex;
+              align-items: center;
               position: relative;
               width: 100%;
-              height: 3%;
-              background: white;
+              height: 4%;
+              background: #161616;
               z-index: 1; }
               .deco_part2_bot_computer_screen_unlocked_main-bar_off {
                 position: absolute;
                 width: 5px;
+                top: 2;
                 right: 3;
-                top: 1;
                 z-index: 1;
                 cursor: pointer; }
+              .deco_part2_bot_computer_screen_unlocked_main-bar a {
+                font-family: 'lato';
+                font-size: 5px;
+                font-weight: 600;
+                margin: 0 0 0 3px;
+                text-decoration: none;
+                color: white; }
+              .deco_part2_bot_computer_screen_unlocked_main-bar a:hover {
+                color: #ff8be6; }
             .deco_part2_bot_computer_screen_unlocked_window {
               width: 100%;
-              height: 97%;
+              height: 96%;
               background: white; }
               .deco_part2_bot_computer_screen_unlocked_window_nav {
                 display: flex;
@@ -258,8 +269,7 @@ body {
                 height: 4%;
                 padding-left: 2px;
                 box-sizing: border-box;
-                background: #e5e5e5;
-                border-radius: 3px 3px 0px 0px; }
+                background: #e5e5e5; }
                 .deco_part2_bot_computer_screen_unlocked_window_nav_close, .deco_part2_bot_computer_screen_unlocked_window_nav_mini, .deco_part2_bot_computer_screen_unlocked_window_nav_resize {
                   width: 4px;
                   height: 4px;
