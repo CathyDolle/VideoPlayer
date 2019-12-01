@@ -4,6 +4,9 @@
 *Website on responsive*
 
 Zoom on computer & Iphone
+
+On click 
+
 Shortcut for zoom :
 - "Enter" for zooming computer
 - "Escape" for origin size
@@ -14,8 +17,16 @@ Video Player (computer):
 - Seek Bar 
 - Next/Prev
 - Volume
+- Current Time/Duration
 - Full screen
 - Drag & Drop -> Seek bar + Volume
+- Title + Description + Youtube link
+
+Shortcut Video Player :
+- "F" Fullscreen
+- "ArrowRight" Next video
+- "ArrowLeft" Previous video
+- "Space" Play/Pause (or click on the video)
 
 Audio Player (Iphone):
 - Playlist (6 songs)
@@ -23,13 +34,9 @@ Audio Player (Iphone):
 - Seek Bar 
 - Next/Prev
 - Volume
+- Current Time/Duration
 - Drag & Drop -> Seek bar + Volume
-
-Shortcut Video Player :
-- "F" Fullscreen
-- "ArrowRight" Next video
-- "ArrowLeft" Previous video
-- "Space" Play/Pause (or click on the video)
+- Artist + Title 
 
 Shortcut Iphone Player :
 - "ArrowUp" Next audio
@@ -46,7 +53,7 @@ Day/Night mode : click on the window
 Clock : real time with seconds/minutes/hours needles
 Digital Clock (on locked screen) : real time minutes/hours
 
-Sounds effect on click 
+Autoplay playlist (computer + iphone)
 
 ## Online website
 - https://cathydolle.github.io/VideoPlayer/
