@@ -46,6 +46,8 @@ You can click on "post-it"
 - Bubble tea (project animation/transition)
 - Features
 
+Log out the computer session : click on "off" icon inside the main bar
+
 Day/Night mode : click on the window
 
 Clock : real time with seconds/minutes/hours needles
