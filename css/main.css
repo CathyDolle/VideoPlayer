@@ -97,7 +97,9 @@ body {
     width: 30%;
     height: 100%; }
     .deco_part1_curtain {
-      height: 37px; }
+      height: 37px;
+      user-select: none;
+      pointer-events: none; }
     .deco_part1_window {
       position: relative;
       width: 350px;
@@ -114,7 +116,9 @@ body {
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
         top: -1px;
-        height: 105%; }
+        height: 105%;
+        user-select: none;
+        pointer-events: none; }
       .deco_part1_window_curtain_1 {
         left: -10px; }
       .deco_part1_window_curtain_2 {
@@ -123,7 +127,9 @@ body {
       position: absolute;
       bottom: 0;
       left: 110px;
-      z-index: 3; }
+      z-index: 3;
+      user-select: none;
+      pointer-events: none; }
       .deco_part1_plant img {
         width: 180px; }
   .deco_part2 {
@@ -439,6 +445,7 @@ body {
         animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
+        user-select: none;
         width: 100px;
         height: 100px;
         z-index: 3;
