@@ -374,14 +374,14 @@ body {
         animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
         z-index: 3;
         cursor: pointer; }
       .deco_part3_post img:hover {
         transition-duration: 0.5s;
         transform: scale(1.03); }
-      .deco_part3_post_idk {
+      .deco_part3_post_tea {
         margin-top: 110px;
         z-index: 3; }
     .deco_part3_bot {

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <filter id="Rectangle_103" x="1" y="11" width="299" height="300" filterUnits="userSpaceOnUse">
+      <feOffset dy="13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-post-key">
+      <rect width="300" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="post-key" clip-path="url(#clip-post-key)">
+    <g id="Groupe_3635" data-name="Groupe 3635" transform="translate(-4578.576 -8923.345)">
+      <g id="Groupe_1091" data-name="Groupe 1091" transform="translate(4578.576 8926.608)">
+        <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(25.208 18.716)">
+          <g transform="matrix(1, 0, 0, 1, -25.21, -21.98)" filter="url(#Rectangle_103)">
+            <rect id="Rectangle_103-2" data-name="Rectangle 103" width="251" height="252" transform="translate(25 22)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="101.156" height="25.827" transform="translate(99.616 8.665)" fill="#67ff53" opacity="0.278"/>
+    <g id="keyboard" transform="translate(76 26.959)">
+      <rect id="Rectangle_420" data-name="Rectangle 420" width="49.287" height="53.441" transform="translate(49.307 76.02)" fill="#d0d0d0"/>
+      <rect id="Rectangle_421" data-name="Rectangle 421" width="24.635" height="53.441" transform="translate(73.956 76.02)" fill="#adadad"/>
+      <rect id="Rectangle_422" data-name="Rectangle 422" width="49.287" height="54.885" transform="translate(0 125.116)" fill="#ddd"/>
+      <rect id="Rectangle_423" data-name="Rectangle 423" width="24.635" height="54.885" transform="translate(24.649 125.116)" fill="#c1c1c1"/>
+      <rect id="Rectangle_424" data-name="Rectangle 424" width="49.287" height="54.885" transform="translate(49.307 125.116)" fill="#ddd"/>
+      <rect id="Rectangle_425" data-name="Rectangle 425" width="24.635" height="54.885" transform="translate(73.956 125.116)" fill="#c1c1c1"/>
+      <g id="Groupe_3637" data-name="Groupe 3637" transform="translate(15.583 93.68)">
+        <path id="Tracé_12484" data-name="Tracé 12484" d="M226.477,329.826l-11.993-11.993,6.128-6.128,5.865,5.865,5.865-5.865,6.128,6.128Z" transform="translate(-168.109 -261.284)" fill="#585858"/>
+        <path id="Tracé_12485" data-name="Tracé 12485" d="M232.342,155.276l-5.865-5.865-5.865,5.865-6.128-6.128,11.993-11.993,11.993,11.993Z" transform="translate(-168.109 -137.156)" fill="#585858"/>
+        <path id="Tracé_12486" data-name="Tracé 12486" d="M65.937,323.449,53.944,311.456l11.993-11.992,6.128,6.128L66.2,311.456l5.865,5.865Z" transform="translate(-53.944 -252.578)" fill="#585858"/>
+      </g>
+      <path id="Tracé_12487" data-name="Tracé 12487" d="M94.386,305.591l-6.128-6.128-2.925,2.925v18.135l2.925,2.925,6.128-6.128-5.865-5.865Z" transform="translate(-60.683 -158.898)" fill="#2d2d2d"/>
+      <rect id="Rectangle_426" data-name="Rectangle 426" width="49.287" height="54.885" transform="translate(98.614 125.116)" fill="#c1c1c1"/>
+      <rect id="Rectangle_427" data-name="Rectangle 427" width="24.635" height="54.885" transform="translate(98.614 125.116)" fill="#ddd"/>
+      <path id="Tracé_12488" data-name="Tracé 12488" d="M401.455,323.449l11.993-11.993-11.993-11.992-6.128,6.128,5.865,5.865-5.865,5.865Z" transform="translate(-281.129 -158.898)" fill="#2d2d2d"/>
+      <path id="Tracé_12489" data-name="Tracé 12489" d="M395.327,305.591l6.128-6.128,2.925,2.925v18.135l-2.925,2.925-6.128-6.128,5.865-5.865Z" transform="translate(-281.129 -158.898)" fill="#585858"/>
+      <g id="Groupe_3638" data-name="Groupe 3638" transform="translate(73.951 93.68)">
+        <path id="Tracé_12490" data-name="Tracé 12490" d="M261.865,311.706,256,317.571v12.256l11.993-11.993Z" transform="translate(-256 -261.284)" fill="#2d2d2d"/>
+        <path id="Tracé_12491" data-name="Tracé 12491" d="M256,137.156v12.256l5.865,5.865,6.128-6.127Z" transform="translate(-256 -137.156)" fill="#2d2d2d"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -600,8 +600,8 @@ body {
                 animation-duration: 4s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-out;
-                width: 110px;
-                height: 110px;
+                width: 100px;
+                height: 100px;
                 z-index: 3;
                 cursor: pointer;
             }
@@ -611,7 +611,7 @@ body {
                 transform: scale(1.03);
             }
 
-            &_idk {
+            &_tea {
                 margin-top: 110px;
                 z-index: 3;
             }

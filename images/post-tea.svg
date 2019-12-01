@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <filter id="Rectangle_103" x="1" y="11" width="299" height="300" filterUnits="userSpaceOnUse">
+      <feOffset dy="13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-post-tea">
+      <rect width="300" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="post-tea" clip-path="url(#clip-post-tea)">
+    <g id="Groupe_3635" data-name="Groupe 3635" transform="translate(-4578.576 -8923.345)">
+      <g id="Groupe_1091" data-name="Groupe 1091" transform="translate(4578.576 8926.608)">
+        <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(25.208 18.716)">
+          <g transform="matrix(1, 0, 0, 1, -25.21, -21.98)" filter="url(#Rectangle_103)">
+            <rect id="Rectangle_103-2" data-name="Rectangle 103" width="251" height="252" transform="translate(25 22)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="101.156" height="25.827" transform="translate(99.616 8.665)" fill="#ff53c4" opacity="0.278"/>
+    <g id="tea" transform="translate(-28.384 19.928)">
+      <path id="Tracé_12478" data-name="Tracé 12478" d="M136,179.874V176h92.98v3.874l-15.5,135.6H151.5Z" transform="translate(-4.126 -99.445)" fill="#f4f4f4"/>
+      <path id="Tracé_12479" data-name="Tracé 12479" d="M153.382,336.1h61.987L229.1,216H139.656Z" transform="translate(-6.011 -120.075)" fill="#b9ccf2"/>
+      <path id="Tracé_12481" data-name="Tracé 12481" d="M128,152H228.729v15.5H128Z" transform="translate(0 -87.068)" fill="#ededed"/>
+      <g id="Groupe_3628" data-name="Groupe 3628" transform="translate(146.564 177.278)" opacity="0.304">
+        <ellipse id="Ellipse_44" data-name="Ellipse 44" cx="10.5" cy="9.5" rx="10.5" ry="9.5" transform="translate(-0.18 19.793)" fill="#cd8e5e"/>
+        <ellipse id="Ellipse_45" data-name="Ellipse 45" cx="9" cy="9.5" rx="9" ry="9.5" transform="translate(20.82 19.793)" fill="#cd8e5e"/>
+        <ellipse id="Ellipse_46" data-name="Ellipse 46" cx="10.5" cy="9.5" rx="10.5" ry="9.5" transform="translate(38.82 19.793)" fill="#cd8e5e"/>
+        <ellipse id="Ellipse_47" data-name="Ellipse 47" cx="9.5" cy="10" rx="9.5" ry="10" transform="translate(12.82 -0.207)" fill="#cd8e5e"/>
+        <ellipse id="Ellipse_48" data-name="Ellipse 48" cx="9.5" cy="10" rx="9.5" ry="10" transform="translate(31.82 -0.207)" fill="#cd8e5e"/>
+      </g>
+      <circle id="Ellipse_49" data-name="Ellipse 49" cx="1.5" cy="1.5" r="1.5" transform="translate(163.384 181.072)" fill="#f2f2f2" opacity="0.285"/>
+      <circle id="Ellipse_50" data-name="Ellipse 50" cx="1.5" cy="1.5" r="1.5" transform="translate(182.384 183.072)" fill="#f2f2f2" opacity="0.285"/>
+      <ellipse id="Ellipse_51" data-name="Ellipse 51" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(171.384 201.072)" fill="#f2f2f2" opacity="0.285"/>
+      <ellipse id="Ellipse_52" data-name="Ellipse 52" cx="1" cy="1.5" rx="1" ry="1.5" transform="translate(188.384 202.072)" fill="#f2f2f2" opacity="0.285"/>
+      <ellipse id="Ellipse_53" data-name="Ellipse 53" cx="1.5" cy="1" rx="1.5" ry="1" transform="translate(150.384 201.072)" fill="#f2f2f2" opacity="0.285"/>
+    </g>
+  </g>
+</svg>

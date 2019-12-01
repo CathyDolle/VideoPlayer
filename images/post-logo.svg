@@ -1,28 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="227" height="229" viewBox="0 0 227 229">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
   <defs>
-    <filter id="Rectangle_103" x="0" y="2" width="227" height="227" filterUnits="userSpaceOnUse">
+    <filter id="Rectangle_103" x="1" y="11" width="299" height="300" filterUnits="userSpaceOnUse">
       <feOffset dy="13" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feFlood flood-opacity="0.161"/>
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <clipPath id="clip-post-logo">
+      <rect width="300" height="300"/>
+    </clipPath>
   </defs>
-  <g id="Groupe_1095" data-name="Groupe 1095" transform="translate(6.557)">
-    <g id="Groupe_1091" data-name="Groupe 1091">
-      <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(17.902 13.292)">
-        <g transform="matrix(1, 0, 0, 1, -24.46, -13.29)" filter="url(#Rectangle_103)">
-          <rect id="Rectangle_103-2" data-name="Rectangle 103" width="179" height="179" transform="translate(24 13)" fill="#fff"/>
+  <g id="post-logo" clip-path="url(#clip-post-logo)">
+    <g id="Groupe_3635" data-name="Groupe 3635" transform="translate(-4578.576 -8923.345)">
+      <g id="Groupe_1091" data-name="Groupe 1091" transform="translate(4578.576 8926.608)">
+        <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(25.208 18.716)">
+          <g transform="matrix(1, 0, 0, 1, -25.21, -21.98)" filter="url(#Rectangle_103)">
+            <rect id="Rectangle_103-2" data-name="Rectangle 103" width="251" height="252" transform="translate(25 22)" fill="#fff"/>
+          </g>
         </g>
       </g>
-      <rect id="Rectangle_104" data-name="Rectangle 104" width="71.84" height="18.342" transform="matrix(0.788, 0.616, -0.616, 0.788, 155.738, 0)" fill="#92aedb" opacity="0.278"/>
-      <rect id="Rectangle_105" data-name="Rectangle 105" width="71.84" height="18.342" transform="matrix(0.788, 0.616, -0.616, 0.788, 11.293, 149.031)" fill="#92aedb" opacity="0.278"/>
-    </g>
-    <g id="Groupe_1158" data-name="Groupe 1158" transform="translate(65.339 48.864)">
-      <g id="Groupe_2982" data-name="Groupe 2982" transform="translate(0 0)">
-        <path id="Tracé_121" data-name="Tracé 121" d="M4011.016-2036.091l-47.354,27.776v54.752l47.354,27.513v-18.162l-33.022-17.374v-38.407l33.022-17.549Z" transform="translate(-3963.662 2036.091)"/>
-        <path id="Tracé_143" data-name="Tracé 143" d="M16035.54,5805.6l20.982,8.458V5852.1l-20.982,8.081Z" transform="translate(-15974.756 -5777.778)"/>
+      <g id="Groupe_1158" data-name="Groupe 1158" transform="translate(4670.577 8995.412)">
+        <g id="Groupe_2982" data-name="Groupe 2982" transform="translate(0 0)">
+          <path id="Tracé_121" data-name="Tracé 121" d="M4030.34-2036.091l-66.678,39.11v77.094l66.678,38.74v-25.573l-46.5-24.464v-54.079l46.5-24.71Z" transform="translate(-3963.662 2036.091)"/>
+          <path id="Tracé_143" data-name="Tracé 143" d="M16035.541,5805.6l29.543,11.91v53.576l-29.543,11.378Z" transform="translate(-15949.953 -5766.427)"/>
+        </g>
       </g>
     </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="101.156" height="25.827" transform="translate(99.616 8.665)" fill="#5388ff" opacity="0.278"/>
   </g>
 </svg>
