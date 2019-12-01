@@ -54,6 +54,8 @@ Clock : real time with seconds/minutes/hours needles
 
 Digital Clock (on locked screen) : real time minutes/hours
 
+Drawer : open it but you can't do nothing o/
+
 Autoplay playlist (computer + iphone)
 
 ## Online website

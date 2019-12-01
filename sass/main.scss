@@ -113,10 +113,14 @@ body {
                 }
             }
 
+            &_drawer {
+                width: 100%;
+            }
+
             &_close {
                 position: absolute;
-                top: 10px;
-                right: 10px;
+                top: 0px;
+                right: 0px;
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
@@ -385,7 +389,8 @@ body {
                                 cursor: pointer;
 
                             }
-                            & a{
+
+                            & a {
                                 font-family: 'lato';
                                 font-size: 5px;
                                 font-weight: 600;
@@ -393,7 +398,8 @@ body {
                                 text-decoration: none;
                                 color: white;
                             }
-                            & a:hover{
+
+                            & a:hover {
                                 color: $link;
                             }
                         }
@@ -472,7 +478,7 @@ body {
                                             width: 100%;
                                             height: 100%;
                                             object-fit: cover;
-                                            -webkit-object-fit:cover;
+                                            -webkit-object-fit: cover;
                                         }
 
                                         // seek bar
@@ -621,7 +627,7 @@ body {
                                         width: 100%;
                                         height: 32%;
                                         object-fit: cover;
-                                        -webkit-object-fit:cover;
+                                        -webkit-object-fit: cover;
                                         cursor: pointer;
                                     }
 
@@ -956,6 +962,8 @@ DESK
             background: $desk;
             width: 250px;
             height: 100%;
+            cursor: pointer;
+            z-index: 3;
 
             &_shadow {
                 position: absolute;

@@ -440,7 +440,7 @@ function scaleroom() {
 
 // computer scale
 function scalecomputer() {
-    room.style.transform = ('scale(2.3) translateY(-8%)')
+    room.style.transform = ('scale(2) translateY(-8%)')
     computerScreen.classList.add('hidden')
     computerScreenUnlocked.style.opacity = ('1')
 }
@@ -740,6 +740,7 @@ function removePost() {
     roomPost.classList.add('hidden')
     postContainLogo.classList.add('hidden')
     postContainKey.classList.add('hidden')
+    drawerOpen.classList.add('hidden')
 }
 // Close Post
 closePost.addEventListener('click', () => {
@@ -762,6 +763,17 @@ postKey.addEventListener('click', () => {
     removeRoomPost()
     postContainKey.classList.remove('hidden')
     postContain.style.width = '1100px'
+})
+
+// DRAWER
+
+const drawer = document.querySelector('.js-drawer')
+const drawerOpen = document.querySelector('.js-drawer-open')
+
+drawer.addEventListener('click', () =>{
+    removeRoomPost()
+    drawerOpen.classList.remove('hidden')
+    postContain.style.width = '1000px'
 })
 
 // Responsive
