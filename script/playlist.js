@@ -13,6 +13,12 @@ let audioPlaylist = [
         "file":"audios/zelda-fairy-fontain.mp3"
     },
     {
+        "artist" : "GameChops Pokemon",
+        "title" : "Route 3",
+        "cover" : "audios/pokemon-gym.png",
+        "file":"audios/pokemon-route-3.mp3"
+    },
+    {
         "artist" : "College Music",
         "title" : "Can't Take My Eyes Off You",
         "cover" : "audios/eyes.png",
@@ -57,13 +63,6 @@ let videoPlaylist = [
         "link" : "https://www.youtube.com/watch?v=WYeAUpvWeI8"
     },
     {
-        "title" : "Billie Eilish - idontwannabeyouanymore",
-        "description" : "Billie Eilish, Los Angeles-based pop starlet, is back with an astonishing <br>and deeply introspective rendition of 'idontwannabeyouanymore,' <br>lifted from her debut EP Do not Smile at Me.",
-        "cover" : "videos/billi.jpg",
-        "file":"videos/billi.mp4",
-        "link" : "https://www.youtube.com/watch?v=DSbqyWXVDYg"
-    },
-    {
         "title" : "DEAN - love",
         "description" : "Korean R&B singer DEAN delivers a blisteringly soulful <br> and smooth performance of 'love', his jazzy collaboration <br>with The Internet's Syd.",
         "cover" : "videos/dean.jpg",
@@ -83,26 +82,5 @@ let videoPlaylist = [
         "cover" : "videos/mabel.jpg",
         "file":"videos/mabel.mp4",
         "link" : "https://www.youtube.com/watch?v=8jr_zoRpt6o"
-    },
-    {
-        "title" : "MISO - Take Me",
-        "description" : "Written, produced by MISO 💕 <br> Mixed by MISO and Joppe <br> Mastered by Joppe",
-        "cover" : "videos/miso.png",
-        "file":"videos/miso.mp4",
-        "link" : "https://www.youtube.com/watch?v=pxAiwZlzSD8"
-    },
-    {
-        "title" : "Phoenix Worlds 2019 - League of Legends",
-        "description" : "What are you willing to lose<br>You cover your wounds, but underneath them <br>A million voices in your head that whisper, Stop, now",
-        "cover" : "videos/phoenix.jpg",
-        "file":"videos/phoenix.mp4",
-        "link" : "https://www.youtube.com/watch?v=i1IKnWDecwA"
-    },
-    {
-        "title" : "True Damage - GIANTS",
-        "description" : "Produced by: Riot Music Team<br>>Voice Production: Riot and Benjamin Rice's Music Team<br>Mixing: Riot Music Team",
-        "cover" : "videos/truedamage.png",
-        "file":"videos/truedamage.mp4",
-        "link" : "https://www.youtube.com/watch?v=sVZpHFXcFJw"
     }
 ]
