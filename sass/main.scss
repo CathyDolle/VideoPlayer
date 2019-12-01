@@ -45,6 +45,7 @@ body {
     width: 100%;
     height: 100%;
     transition: 1s ease-in-out;
+
     // Invisible part for scale room
     &_scale {
         position: absolute;
@@ -52,6 +53,62 @@ body {
         height: 100%;
         // background: red;
         z-index: 2;
+    }
+
+    &_post {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+
+        &_contain {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            // background: pink;
+
+            &_logo {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70%;
+                height: 70%;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &_grid {
+                    animation-name: opacity-fade;
+                    animation-duration: 5s;
+                    animation-iteration-count: 1;
+                    position: absolute;
+                }
+            }
+            &_key{
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &_close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -905,11 +962,21 @@ DESK
     }
 }
 
-//animations 
+//ANIMATIONS
 
 @keyframes wallpaper-transition {
     0% {
         opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity-fade {
+    0% {
+        opacity: 0;
     }
 
     100% {
@@ -1053,7 +1120,8 @@ DESK
             line-height: 8px;
         }
     }
-    .deco_part2_top_clock{
+
+    .deco_part2_top_clock {
         width: 130px;
         height: 130px;
         border: solid 3px black;

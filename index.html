@@ -13,7 +13,7 @@
 <body>
     <!-- ROOM -->
     <main class="room">
-        <!-- Invisible room for scaling -->
+        <!-- Invisible room for scaling origin room size-->
         <div class="room_scale js-room-scale"></div>
         <!-- DECO ON THE DESK/WALL -->
         <section class="deco">
@@ -197,11 +197,11 @@
             <div class="deco_part3">
                 <!-- POST IT -->
                 <div class="deco_part3_post">
-                    <img class="js-no-scale" src="images/post-logo.svg" alt="post-logo">
+                    <img class="js-no-scale js-post-logo" src="images/post-logo.svg" alt="post-logo">
                     <a class="deco_part3_post_tea" href="https://cathydolle.github.io/bubbleTea/" target="_blank">
                         <img class="js-no-scale" src="images/post-tea.svg" alt="post-tea">
                     </a>
-                    <img class="deco_part3_post_key js-no-scale" src="images/post-key.svg" alt="post-key">
+                    <img class="deco_part3_post_key js-no-scale js-post-key" src="images/post-key.svg" alt="post-key">
                 </div>
                 <div class="deco_part3_bot">
                     <!-- COFFEE -->
@@ -281,6 +281,24 @@
                 <div class="desk_bot_foot">
                     <div class="desk_bot_foot_shadow"></div>
                 </div>
+            </div>
+        </section>
+        <!-- POST IT OPENS -->
+        <!-- (class no-scale is for not scaling computer) -->
+        <section class="room_post js-no-scale js-room-post hidden">
+            <!-- post contain -->
+            <div class="room_post_contain js-post-contain js-no-scale">
+                <!-- post contain logo -->
+                <div class="room_post_contain_logo js-post-contain-logo hidden js-no-scale">
+                    <img class="js-no-scale" src="images/post-contain-logo.svg" alt="logo">
+                    <img class="js-no-scale room_post_contain_logo_grid" src="images/post-contain-logo-grid.svg"
+                        alt="logo-grid">
+                </div>
+                <!-- post contain shortcut key -->
+                <div class="room_post_contain_key js-post-contain-key hidden js-no-scale">
+                    <img class="js-no-scale" src="images/post-contain-key.svg" alt="key">
+                </div>
+                <img class="js-no-scale room_post_contain_close js-close-post" src="images/close.svg" alt="close">
             </div>
         </section>
     </main>

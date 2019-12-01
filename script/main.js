@@ -723,11 +723,53 @@ windowDeco.addEventListener('click', (a) => {
     }
 })
 
+// POST IT
+const roomPost = document.querySelector('.js-room-post')
+const closePost = document.querySelector('.js-close-post')
+const postLogo = document.querySelector('.js-post-logo')
+const postContainLogo = document.querySelector('.js-post-contain-logo')
+const postKey = document.querySelector('.js-post-key')
+const postContainKey = document.querySelector('.js-post-contain-key')
+const postContain = document.querySelector('.js-post-contain')
+
+// Remove Room Post
+function removeRoomPost() {
+    roomPost.classList.remove('hidden')
+}
+// Close post
+function removePost() {
+    roomPost.classList.add('hidden')
+    postContainLogo.classList.add('hidden')
+    postContainKey.classList.add('hidden')
+}
+// Close Post
+closePost.addEventListener('click', () => {
+    removePost()
+})
+// Shortcut for close post
+document.addEventListener('keyup', event => {
+    if (event.key == 'Escape') {
+        removePost()
+    }
+})
+// Open Post Logo
+postLogo.addEventListener('click', () => {
+    removeRoomPost()
+    postContainLogo.classList.remove('hidden')
+    postContain.style.width = '600px'
+})
+// Open Post Key
+postKey.addEventListener('click', () => {
+    removeRoomPost()
+    postContainKey.classList.remove('hidden')
+    postContain.style.width = '1100px'
+})
+
 // Responsive
 // const videoCommands = document.querySelector('.js-video-commands')
 
-if (window.innerWidth < 1301 ) {
-    videoElement.removeAttribute("controls") 
+if (window.innerWidth < 1301) {
+    videoElement.removeAttribute("controls")
     room.addEventListener('click', (e) => {
         computerScreen.classList.add('hidden')
         // videoCommands.classList.add('hidden')

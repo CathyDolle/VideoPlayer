@@ -70,11 +70,11 @@ let videoPlaylist = [
         "link" : "https://www.youtube.com/watch?v=SkNB5AsgZOc"
     },
     {
-        "title" : "Jorja Smith - Blue Lights",
-        "description" : "The wonderful Jorja Smith brings us back to where it all began, <br>with a moving performance from her hit viral hit, 'Blue Lights.'",
-        "cover" : "videos/jorja.jpg",
-        "file":"videos/jorja.mp4",
-        "link" : "https://www.youtube.com/watch?v=fYwRsJAPfec"
+        "title" : "Mahalia - Sober",
+        "description" : "Rising British singer Mahalia impresses with her sultry vocals on her sensationally smooth throwback R&B gem and debut single “Sober”.",
+        "cover" : "videos/sober.jpg",
+        "file":"videos/sober.mp4",
+        "link" : "https://www.youtube.com/watch?v=QK7JQl9jNzM"
     },
     {
         "title" : "Mabel - Ivy",

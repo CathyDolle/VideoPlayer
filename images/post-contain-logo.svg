@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1216" height="1216" viewBox="0 0 1216 1216">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_442" data-name="Rectangle 442" width="1216" height="1216" transform="translate(0.339 0.339)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_441" data-name="Rectangle 441" width="1216" height="1216"/>
+    </clipPath>
+  </defs>
+  <g id="post-contain-logo" clip-path="url(#clip-path-2)">
+    <g id="iPad_1" data-name="iPad – 1" transform="translate(-0.339 -0.339)" clip-path="url(#clip-path)">
+      <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(0.061 226.087)">
+        <g id="Groupe_2984" data-name="Groupe 2984" transform="translate(296.607 0)">
+          <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.007-1297.92v-738.147l321.544,185.46v369.664Z" transform="translate(-3983.987 2036.089)" fill="none" opacity="0.738"/>
+          <path id="Tracé_12143" data-name="Tracé 12143" d="M4281.323-2036.091l-317.661,186.323v367.284l317.661,184.562v-121.831L4059.8-1536.3v-257.641l221.519-117.723Z" transform="translate(-3963.662 2036.091)" fill="#ada6e2"/>
+          <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.007-1297.92v-738.147l321.544,185.46v369.664Z" transform="translate(-3983.987 2036.089)" fill="none"/>
+          <path id="Tracé_12145" data-name="Tracé 12145" d="M16035.54,5805.6l140.756,56.734v255.244l-140.756,54.207Z" transform="translate(-15627.786 -5618.985)" fill="#ada6e2"/>
+        </g>
+        <text id="CATHY_DOLLE" data-name="CATHY  DOLLE" transform="translate(0 855.132)" fill="#ada6e2" font-size="48" font-family="Lato-Bold, Lato" font-weight="700"><tspan x="0" y="0">C</tspan><tspan y="0" fill="#fff">ATHY </tspan><tspan x="0" y="69">D</tspan><tspan y="69" fill="#fff">OLLE</tspan></text>
+        <text id="negative_space" data-name="negative space" transform="translate(0.549 981.847)" fill="#fff" font-size="35" font-family="Lato-Light, Lato" font-weight="300"><tspan x="0" y="0">negative space</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
