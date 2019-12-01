@@ -3,9 +3,7 @@
 ## Features
 *Website on responsive*
 
-Zoom on computer & Iphone
-
-On click 
+- Zoom on computer & Iphone : Click on the item
 
 Shortcut for zoom :
 - "Enter" for zooming computer
@@ -51,6 +49,7 @@ You can click on "post-it"
 Day/Night mode : click on the window
 
 Clock : real time with seconds/minutes/hours needles
+
 Digital Clock (on locked screen) : real time minutes/hours
 
 Autoplay playlist (computer + iphone)
