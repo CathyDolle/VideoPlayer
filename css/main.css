@@ -44,7 +44,8 @@ body {
         justify-content: center;
         align-items: center;
         width: 70%;
-        height: 70%; }
+        height: 70%;
+        will-change: opacity; }
         .room_post_contain_logo img {
           width: 100%;
           height: 100%; }
@@ -52,11 +53,13 @@ body {
           animation-name: opacity-fade;
           animation-duration: 5s;
           animation-iteration-count: 1;
-          position: absolute; }
+          position: absolute;
+          will-change: opacity; }
       .room_post_contain_key {
         animation-name: opacity-fade;
         animation-duration: 1s;
-        animation-iteration-count: 1; }
+        animation-iteration-count: 1;
+        will-change: opacity; }
         .room_post_contain_key img {
           width: 100%;
           height: 100%; }
@@ -142,8 +145,8 @@ body {
           background: black;
           top: 50%;
           left: 50%;
-          will-change: transform;
-          transition: transform 0.5s cubic-bezier(0.75, 1, 0.45, 2.35); }
+          transition: transform 0.5s cubic-bezier(0.75, 1, 0.45, 2.35);
+          will-change: transform; }
         .deco_part2_top_clock_middle {
           position: absolute;
           top: calc(50% - 3px);
@@ -203,7 +206,6 @@ body {
             width: 97%;
             height: 95%;
             background: #1a1a1a;
-            will-change: background-image;
             z-index: 3; }
             .deco_part2_bot_computer_screen_inside_digital-clock {
               display: flex;
@@ -222,6 +224,7 @@ body {
           .deco_part2_bot_computer_screen_inside:hover {
             animation-name: wallpaper-transition;
             animation-duration: 1s;
+            will-change: opacity;
             background-image: url("../images/computer-wallpaper.svg");
             background-size: cover;
             cursor: pointer; }
@@ -406,7 +409,8 @@ body {
           width: 25%;
           height: 6%;
           background: white;
-          clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%); }
+          clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%);
+          -webkit-clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%); }
   .deco_part3 {
     width: 30%;
     height: 100%; }
@@ -504,8 +508,7 @@ body {
                 width: 50px;
                 height: 50px;
                 background: white;
-                background-size: contain;
-                will-change: background; }
+                background-size: contain; }
               .deco_part3_bot_iphone_screen_inside_unlocked_time {
                 display: flex;
                 align-items: center;
@@ -565,6 +568,7 @@ body {
           .deco_part3_bot_iphone_screen_inside:hover {
             animation-name: wallpaper-transition;
             animation-duration: 1s;
+            will-change: opacity;
             background-image: url("../images/iphone-wallpaper.svg");
             background-size: cover;
             cursor: pointer; }
@@ -672,7 +676,7 @@ DESK
     transform: skew(0deg, 0deg); }
   50% {
     transform-origin: 0px 0px;
-    transform: skew(2.5deg, -1deg); }
+    transform: skew(2deg, -1deg); }
   100% {
     transform-origin: 0px 0px;
     transform: skew(0deg, 0deg); } }
