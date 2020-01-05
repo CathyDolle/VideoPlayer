@@ -347,7 +347,7 @@ body {
   padding: 3px;
   box-sizing: border-box;
   width: 70%;
-  height: 67.5%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -355,7 +355,7 @@ body {
 .deco_part2_bot_computer_screen_unlocked_window_site_main_video {
   position: relative;
   width: 100%;
-  height: 155px;
+  height: 67.5%;
   background: #050505;
   cursor: pointer;
 }

@@ -464,7 +464,7 @@ body {
                                     padding: 3px;
                                     box-sizing: border-box;
                                     width: 70%;
-                                    height: 67.5%;
+                                    height: 100%;
                                     // background:pink;
                                     display: flex;
                                     flex-direction: column;
@@ -475,7 +475,7 @@ body {
                                     &_video {
                                         position: relative;
                                         width: 100%;
-                                        height: 155px;
+                                        height: 67.5%;
                                         // overflow: hidden;
                                         background: rgb(5, 5, 5);
                                         cursor: pointer;
